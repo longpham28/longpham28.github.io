@@ -2,7 +2,7 @@ baseURL: "https://longpham28.github.io" # if your site is in 'https', then make 
 title: longpham28.github.io
 paginate: 5
 theme: PaperMod
-
+publishDir: docs
 enableInlineShortcodes: true
 enableRobotsTXT: true
 buildDrafts: false
