@@ -7,7 +7,7 @@ paginate = 6
 enableEmoji = true
 publishDir = "./docs"
 # Enable Disqus comments
-# disqusShortname = "yourdiscussshortname"
+disqusShortname = "longpham28"
 
 [markup.highlight]
 noClasses = false
