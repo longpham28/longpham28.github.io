@@ -160,7 +160,7 @@
             </span>
             <span class="reading-time">
               <i class="fa fa-clock-o" aria-hidden="true"></i>
-              2-minute read
+              5-minute read
             </span>
           </div>
           <div class="authors">
@@ -187,19 +187,27 @@
 
       <div class="post-content">
         
-        <h2 id="why-using-langchains-prompt-template">
-  Why using Langchain&rsquo;s Prompt Template
-  <a class="heading-link" href="#why-using-langchains-prompt-template">
+        <h1 id="why-you-should-use-langchains-prompt-template">
+  Why You Should Use Langchain&rsquo;s Prompt Template
+  <a class="heading-link" href="#why-you-should-use-langchains-prompt-template">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>When working with language models like ChatGPT, it&rsquo;s common to encounter scenarios where you need to provide specific instructions or prompts to generate desired content. This can sometimes lead to complex and hard-to-maintain code, especially when dealing with intricate tasks. In this article, we&rsquo;ll explore how Langchain&rsquo;s Prompt Template can simplify and streamline the process, making it easier to work with large language models.</p>
+<h2 id="the-challenge-of-complex-prompts">
+  The Challenge of Complex Prompts
+  <a class="heading-link" href="#the-challenge-of-complex-prompts">
     <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h2>
-<p>Consider the following example of asking ChatGPT to write a program for us in a specified language, using <code>openai</code> package only.</p>
+<p>Let&rsquo;s begin by examining a common scenario: requesting a program from ChatGPT in a specific programming language using the <code>openai</code> package. Here&rsquo;s an example:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">openai</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">client</span> <span class="o">=</span> <span class="n">OpenAI</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="n">prompt</span> <span class="o">=</span> <span class="s2">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s2">Create a program in python that statisfies the following specifications:
+</span></span></span><span class="line"><span class="cl"><span class="s2">Create a program in python that satisfies the following specifications:
 </span></span></span><span class="line"><span class="cl"><span class="s2">implement quick sort
 </span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">chat</span><span class="o">.</span><span class="n">completions</span><span class="o">.</span><span class="n">create</span><span class="p">(</span>
@@ -210,34 +218,22 @@
 </span></span><span class="line"><span class="cl"><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">choices</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">message</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># Sure! Here&#39;s an implementation of the Quick Sort algorithm in Python:</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ```python</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># def partition(arr, low, high):</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#     i = low - 1</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#     pivot = arr[high]</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#    </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#     for j in range(low, high):</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#         if arr[j] &lt;= pivot:</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#             i += 1</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#             arr[i], arr[j] = arr[j], arr[i]</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#    </span>
-</span></span><span class="line"><span class="cl"><span class="c1">#     arr[i + 1], arr[high] = arr[high], arr[i + 1]</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#     return i + 1</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># def quick_sort(arr, low, high):</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#     if low &lt; high:</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#         pivot = partition(arr, low, high)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#         quick_sort(arr, low, pivot - 1)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#         quick_sort(arr, pivot + 1, high)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ```</span>
-</span></span></code></pre></div><p>Obviously, there is no problem with the above approach. However, when the prompt becomes much complex, it would be difficult maintaining our code&rsquo;s readability. Therefore, there is an alternative way using langchain&rsquo;s prompt template.</p>
+</span></span><span class="line"><span class="cl"><span class="c1"># ...</span>
+</span></span></code></pre></div><p>This approach works fine for simple tasks. However, as prompts become more complex, maintaining code readability becomes increasingly challenging.</p>
+<h2 id="introducing-langchains-prompt-template">
+  Introducing Langchain&rsquo;s Prompt Template
+  <a class="heading-link" href="#introducing-langchains-prompt-template">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>To address this issue, Langchain offers a powerful alternative using its prompt template feature. Let&rsquo;s see how it simplifies the process:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">langchain.prompts</span> <span class="kn">import</span> <span class="n">ChatPromptTemplate</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">langchain.chat_models</span> <span class="kn">import</span> <span class="n">ChatOpenAI</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">chat</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">()</span>
 </span></span><span class="line"><span class="cl"><span class="n">prompt_template</span> <span class="o">=</span> <span class="n">ChatPromptTemplate</span><span class="o">.</span><span class="n">from_template</span><span class="p">(</span><span class="s2">&#34;&#34;&#34;
-</span></span></span><span class="line"><span class="cl"><span class="s2">Create a program in </span><span class="si">{language}</span><span class="s2"> that statisfies the following specifications:
+</span></span></span><span class="line"><span class="cl"><span class="s2">Create a program in </span><span class="si">{language}</span><span class="s2"> that satisfies the following specifications:
 </span></span></span><span class="line"><span class="cl"><span class="s2"></span><span class="si">{specifications}</span><span class="s2">
 </span></span></span><span class="line"><span class="cl"><span class="s2">&#34;&#34;&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">messages</span> <span class="o">=</span> <span class="n">prompt_template</span><span class="o">.</span><span class="n">format_messages</span><span class="p">(</span>
@@ -247,17 +243,160 @@
 </span></span><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">chat</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># Sure! Here&#39;s an implementation of the Quick Sort algorithm in Ruby:</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># ```ruby</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># def quick_sort(arr)</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#   return arr if arr.length &lt;= 1</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#   pivot = arr.delete_at(rand(arr.length))</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#   less, greater = arr.partition { |num| num &lt; pivot }</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#</span>
-</span></span><span class="line"><span class="cl"><span class="c1">#   return *quick_sort(less), pivot, *quick_sort(greater)</span>
-</span></span><span class="line"><span class="cl"><span class="c1"># end</span>
-</span></span></code></pre></div>
+</span></span><span class="line"><span class="cl"><span class="c1"># ...</span>
+</span></span></code></pre></div><p>With Langchain&rsquo;s Prompt Template, you can easily customize prompts by filling in placeholders, making your code more organized and maintainable.</p>
+<h2 id="chaining-langchain-features">
+  Chaining Langchain Features
+  <a class="heading-link" href="#chaining-langchain-features">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Langchain&rsquo;s capabilities go beyond prompt templates. You can also chain various features together to enhance your interactions with language models. Let&rsquo;s explore a few examples.</p>
+<h3 id="langchains-output-parsers">
+  Langchain&rsquo;s Output Parsers
+  <a class="heading-link" href="#langchains-output-parsers">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>You can modify the output of language models and transform it into a desired format. By default, output from <code>langchain.chat_models</code> are <code>Message</code> objects:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">langchain.chat_models</span> <span class="kn">import</span> <span class="n">ChatOpenAI</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">chat</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">prompt</span> <span class="o">=</span> <span class="s2">&#34;Git command to discard unstaged changes&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">chat</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">response</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># AIMessage(content=&#39;The git command to discard unstaged changes is &#34;git checkout -- &lt;file&gt;&#34;.&#39;)</span>
+</span></span></code></pre></div><p>However, by chaining the <code>StrOutputParser</code> with chat models, you can easily transform the output into a string:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">langchain.chat_models</span> <span class="kn">import</span> <span class="n">ChatOpenAI</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">langchain_core.output_parsers</span> <span class="kn">import</span> <span class="n">StrOutputParser</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">chat</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">output_parser</span> <span class="o">=</span> <span class="n">StrOutputParser</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">chat_chained</span> <span class="o">=</span> <span class="n">chat</span> <span class="o">|</span> <span class="n">output_parser</span>
+</span></span><span class="line"><span class="cl"><span class="n">prompt</span> <span class="o">=</span> <span class="s2">&#34;Git command to discard staged changes&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">chat_chained</span><span class="o">.</span><span class="n">invoke</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">response</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># To discard staged changes in Git, you can use the &#34;git reset&#34; command with the &#34;--mixed&#34; option. </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ...</span>
+</span></span></code></pre></div><p>In this example, we&rsquo;ve chained a chat model with an output parser, demonstrating the flexibility of Langchain.</p>
+<h3 id="chaining-prompt-templates-and-output-parsers">
+  Chaining Prompt Templates and Output Parsers
+  <a class="heading-link" href="#chaining-prompt-templates-and-output-parsers">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>You can combine prompt templates, chat models, and output parsers to create powerful workflows. Here&rsquo;s an example that demonstrates this approach:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">langchain.chat_models</span> <span class="kn">import</span> <span class="n">ChatOpenAI</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">langchain.prompts</span> <span class="kn">import</span> <span class="n">ChatPromptTemplate</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">langchain_core.output_parsers</span> <span class="kn">import</span> <span class="n">StrOutputParser</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">prompt_template</span> <span class="o">=</span> <span class="n">ChatPromptTemplate</span><span class="o">.</span><span class="n">from_messages</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="s2">&#34;system&#34;</span><span class="p">,</span> <span class="s2">&#34;You are a great teacher who can explain difficult concepts to even primary school students&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="s2">&#34;user&#34;</span><span class="p">,</span> <span class="s2">&#34;</span><span class="si">{input}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="n">chat</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">output_parser</span> <span class="o">=</span> <span class="n">StrOutputParser</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">chat_chained</span> <span class="o">=</span> <span class="n">prompt_template</span> <span class="o">|</span> <span class="n">chat</span> <span class="o">|</span> <span class="n">output_parser</span>
+</span></span><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">chat_chained</span><span class="o">.</span><span class="n">invoke</span><span class="p">({</span><span class="s2">&#34;input&#34;</span><span class="p">:</span> <span class="s2">&#34;What is Transformer Encoder&#34;</span><span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="n">response</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># A Transformer encoder is a part of a machine learning model called the Transformer, </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># which is used for tasks like natural language processing and machine translation. </span>
+</span></span><span class="line"><span class="cl"><span class="c1"># ...</span>
+</span></span></code></pre></div><p>By chaining prompt templates, chat models, and output parsers, you can create seamless and customized interactions with language models.</p>
+<h3 id="structured-output-parsing">
+  Structured Output Parsing
+  <a class="heading-link" href="#structured-output-parsing">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Langchain&rsquo;s Output Parsers can even transform language models&rsquo; output into complex objects, such as Python dictionaries. For example, you can extract information from code snippets, including the programming language used, a summary of the code, and the libraries used:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">langchain.chat_models</span> <span class="kn">import</span> <span class="n">ChatOpenAI</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">langchain.prompts</span> <span class="kn">import</span> <span class="n">ChatPromptTemplate</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">langchain.output_parsers</span> <span class="kn">import</span> <span class="n">ResponseSchema</span><span class="p">,</span> <span class="n">StructuredOutputParser</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Define output schema</span>
+</span></span><span class="line"><span class="cl"><span class="n">language_schema</span> <span class="o">=</span> <span class="n">ResponseSchema</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">name</span><span class="o">=</span><span class="s2">&#34;language&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">description</span><span class="o">=</span><span class="s2">&#34;programming language used&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">type</span><span class="o">=</span><span class="s2">&#34;str&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">summary_schema</span> <span class="o">=</span> <span class="n">ResponseSchema</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">name</span><span class="o">=</span><span class="s2">&#34;summary&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">description</span><span class="o">=</span><span class="s2">&#34;brief summary of the code&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">type</span><span class="o">=</span><span class="s2">&#34;str&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">libraries_schema</span> <span class="o">=</span> <span class="n">ResponseSchema</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">name</span><span class="o">=</span><span class="s2">&#34;libraries&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">description</span><span class="o">=</span><span class="s2">&#34;libraries used as list&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">type</span><span class="o">=</span><span class="s2">&#34;list&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create a structured output parser</span>
+</span></span><span class="line"><span class="cl"><span class="n">output_parser</span> <span class="o">=</span> <span class="n">StructuredOutputParser</span><span class="o">.</span><span class="n">from_response_schemas</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="n">language_schema</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">summary_schema</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="n">libraries_schema</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">prompt_template</span> <span class="o">=</span> <span class="n">ChatPromptTemplate</span><span class="o">.</span><span class="n">from_messages</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="s2">&#34;system&#34;</span><span class="p">,</span> <span class="s2">&#34;You are the best programmer ever&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="s2">&#34;user&#34;</span><span class="p">,</span> <span class="s2">&#34;&#34;&#34;Given the following program, extract information described in format instructions
+</span></span></span><span class="line"><span class="cl"><span class="s2">    
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Program:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    </span><span class="si">{program}</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    Format Instructions:
+</span></span></span><span class="line"><span class="cl"><span class="s2">    </span><span class="si">{format_instructions}</span><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">    &#34;&#34;&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">])</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">chat</span> <span class="o">=</span> <span class="n">ChatOpenAI</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">chat_chained</span> <span class="o">=</span> <span class="n">prompt_template</span> <span class="o">|</span> <span class="n">chat</span> <span class="o">|</span> <span class="n">output_parser</span>
+</span></span><span class="line"><span class="cl"><span class="n">response</span> <span class="o">=</span> <span class="n">chat_chained</span><span class="o">.</span><span class="n">invoke</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;program&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">        # Importing libraries 
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">        import numpy as np 
+</span></span></span><span class="line"><span class="cl"><span class="s2">        import pandas as pd 
+</span></span></span><span class="line"><span class="cl"><span class="s2">        import scipy as stats 
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">        # calculateMahalanobis function to calculate 
+</span></span></span><span class="line"><span class="cl"><span class="s2">        # the Mahalanobis distance 
+</span></span></span><span class="line"><span class="cl"><span class="s2">        def calculateMahalanobis(y=None, data=None, cov=None): 
+</span></span></span><span class="line"><span class="cl"><span class="s2">            y_mu = y - np.mean(data) 
+</span></span></span><span class="line"><span class="cl"><span class="s2">            if not cov: 
+</span></span></span><span class="line"><span class="cl"><span class="s2">                cov = np.cov(data.values.T) 
+</span></span></span><span class="line"><span class="cl"><span class="s2">            inv_covmat = np.linalg.inv(cov) 
+</span></span></span><span class="line"><span class="cl"><span class="s2">            left = np.dot(y_mu, inv_covmat) 
+</span></span></span><span class="line"><span class="cl"><span class="s2">            mahal = np.dot(left, y_mu.T) 
+</span></span></span><span class="line"><span class="cl"><span class="s2">            return mahal.diagonal() 
+</span></span></span><span class="line"><span class="cl"><span class="s2">        &#34;&#34;&#34;</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">   <span class="s2">&#34;format_instructions&#34;</span><span class="p">:</span> <span class="n">output_parser</span><span class="o">.</span><span class="n">get_format_instructions</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># {</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#     &#39;language&#39;: &#39;Python&#39;, </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#     &#39;summary&#39;: &#39;This code calculates the Mahalanobis distance using the provided data and covariance matrix.&#39;, </span>
+</span></span><span class="line"><span class="cl"><span class="c1">#     &#39;libraries&#39;: [&#39;numpy, pandas, scipy&#39;]</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#  }</span>
+</span></span></code></pre></div><h2 id="conclusion">
+  Conclusion
+  <a class="heading-link" href="#conclusion">
+    <i class="fa fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Langchain&rsquo;s Prompt Templates and Output Parsers provide powerful tools to simplify and enhance your interactions with large language models. Whether you need to create custom prompts, transform output, or extract structured information, Langchain makes it easier to work with language models effectively and efficiently.</p>
+
       </div>
 
 
