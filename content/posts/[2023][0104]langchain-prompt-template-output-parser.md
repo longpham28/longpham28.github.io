@@ -1,6 +1,6 @@
 +++
 authors = ["Huu-Long Pham"]
-date = "2023-07-08"
+date = "2023-01-04"
 title = "Prompt Template and Output Parser in Langchain"
 description = "Why and how to use Prompt Template and Output Parser in Langchain"
 tags = [
