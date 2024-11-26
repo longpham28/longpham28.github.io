@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://longpham28.github.io</id>
+    <title>longpham28 Blog</title>
+    <updated>2024-09-05T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://longpham28.github.io"/>
+    <subtitle>longpham28 Blog</subtitle>
+    <icon>https://longpham28.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[welcome]]></title>
+        <id>https://longpham28.github.io/welcome</id>
+        <link href="https://longpham28.github.io/welcome"/>
+        <updated>2024-09-05T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome to my blog]]></summary>
+        <content type="html"><![CDATA[<p>Welcome to my blog</p>]]></content>
+    </entry>
+</feed>
