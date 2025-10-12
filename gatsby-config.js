@@ -61,6 +61,14 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              terminal: "carbon",
+              theme: "one-dark",
+            },
+          },
+
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 630,

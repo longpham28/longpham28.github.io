@@ -72,7 +72,7 @@ $ python3 convert_hf_to_gguf.py <ダウンロードしたHugging Faceモデル�
 $ vim Modelfile
 ```
 
-```text
+```
 FROM <GGUFモデルのパス>
 ```
 
