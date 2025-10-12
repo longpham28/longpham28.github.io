@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Personal blog]]></description><link>https://longpham28.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 12 Oct 2025 15:56:08 GMT</lastBuildDate><item><title><![CDATA[Hugging FaceのモデルをOllamaで使用する方法]]></title><description><![CDATA[Introduction 形式の Hugging Face のモデルを Ollama で使用する方法を紹介する。 Overview モデルを直接 Ollama に取り込むことはできない。
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[Personal blog]]></description><link>https://longpham28.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 12 Oct 2025 16:05:00 GMT</lastBuildDate><item><title><![CDATA[Hugging FaceのモデルをOllamaで使用する方法]]></title><description><![CDATA[Introduction 形式の Hugging Face のモデルを Ollama で使用する方法を紹介する。 Overview モデルを直接 Ollama に取り込むことはできない。
 そのため、まず Hugging Face…]]></description><link>https://longpham28.github.io/[2025][1012]huggingface-ollama/</link><guid isPermaLink="false">https://longpham28.github.io/[2025][1012]huggingface-ollama/</guid><pubDate>Sun, 12 Oct 2025 00:00:00 GMT</pubDate><content:encoded>&lt;h2&gt;Introduction&lt;/h2&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;.safetensors&lt;/code&gt;形式の Hugging Face のモデルを Ollama で使用する方法を紹介する。&lt;/p&gt;
 &lt;h2&gt;Overview&lt;/h2&gt;
@@ -15,36 +15,48 @@
 &lt;h2&gt;Step by Step&lt;/h2&gt;
 &lt;h3&gt;事前準備&lt;/h3&gt;
 &lt;p&gt;モデル変換に用いる&lt;a href=&quot;https://github.com/ggml-org/llama.cpp/discussions/2948&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;llama.cpp&lt;/code&gt;&lt;/a&gt; というプログラムをダウンロードし、必要な外部ライブラリーをダウンロードする&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;git&lt;/span&gt; clone git@github.com:ggml-org/llama.cpp.git
-$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; llama.cpp
-$ pip &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-r&lt;/span&gt; requirements.txt&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ git clone git@github.com:ggml-org/llama.cpp.git
+$ cd llama.cpp
+$ pip install -r requirements.txt&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;h3&gt;Hugging Face モデルのダウンロード&lt;/h3&gt;
 &lt;p&gt;Python スクリプトで Hugging Face モデルをダウンロードする。
 モデルのダウンロードは&lt;code class=&quot;language-text&quot;&gt;huggingface_hub&lt;/code&gt;というライブラリを用いて行う。
 例えば、以下のコマンドで&lt;code class=&quot;language-text&quot;&gt;SakanaAI/EvoVLM-JP-v1-7B&lt;/code&gt;というモデルをダウンロードする。&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;モデルファイルのダウンロード先フォルダー&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-$ pip &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; huggingface_hub
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ cd &amp;lt;モデルファイルのダウンロード先フォルダー&amp;gt;
+$ pip install huggingface_hub
 $ python
-&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; from huggingface_hub &lt;span class=&quot;token function&quot;&gt;import&lt;/span&gt; snapshot_download
-&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; model_id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;SakanaAI/EvoVLM-JP-v1-7B&quot;&lt;/span&gt;
-&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; snapshot_download&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;token assign-left variable&quot;&gt;repo_id&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;model_id,
-        &lt;span class=&quot;token assign-left variable&quot;&gt;local_dir&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;sakanai-evovlm&quot;&lt;/span&gt;,
-        &lt;span class=&quot;token assign-left variable&quot;&gt;local_dir_use_symlinks&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;False,
-        &lt;span class=&quot;token assign-left variable&quot;&gt;revision&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;main&quot;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; exit&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&amp;gt;&amp;gt;&amp;gt; from huggingface_hub import snapshot_download
+&amp;gt;&amp;gt;&amp;gt; model_id = &amp;quot;SakanaAI/EvoVLM-JP-v1-7B&amp;quot;
+&amp;gt;&amp;gt;&amp;gt; snapshot_download(
+        repo_id=model_id,
+        local_dir=&amp;quot;sakanai-evovlm&amp;quot;,
+        local_dir_use_symlinks=False,
+        revision=&amp;quot;main&amp;quot;
+    )
+&amp;gt;&amp;gt;&amp;gt; exit()&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;h3&gt;モデルファイルの変換&lt;/h3&gt;
 &lt;p&gt;事前準備でダウンロードした&lt;code class=&quot;language-text&quot;&gt;llama.cpp&lt;/code&gt;を使いモデルファイルを&lt;code class=&quot;language-text&quot;&gt;.safetensors&lt;/code&gt;から&lt;code class=&quot;language-text&quot;&gt;GGUF&lt;/code&gt;に変換する&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;ダウンロードしたllama.cppのフォルダー&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-$ python3 convert_hf_to_gguf.py &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;ダウンロードしたHugging Faceモデルのフォルダー&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ cd &amp;lt;ダウンロードしたllama.cppのフォルダー&amp;gt;
+$ python3 convert_hf_to_gguf.py &amp;lt;ダウンロードしたHugging Faceモデルのフォルダー&amp;gt;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;p&gt;上記コマンドを実行すると、&lt;code class=&quot;language-text&quot;&gt;.safetensors&lt;/code&gt;モデルと同じフォルダーに&lt;code class=&quot;language-text&quot;&gt;GGUF&lt;/code&gt;形式ファイルが出力される。&lt;/p&gt;
 &lt;h3&gt;モデルの Ollama への取り込み&lt;/h3&gt;
 &lt;p&gt;定義ファイルを&lt;code class=&quot;language-text&quot;&gt;vim&lt;/code&gt;などで作成する&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ &lt;span class=&quot;token function&quot;&gt;vim&lt;/span&gt; Modelfile&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;FROM &amp;lt;GGUFモデルのパス&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ vim Modelfile&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
+&lt;deckgo-highlight-code  terminal=&quot;carbon&quot; theme=&quot;one-dark&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;FROM &amp;lt;GGUFモデルのパス&amp;gt;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;p&gt;Ollama でモデルをビルドし、起動する&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;$ ollama create &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;任意のモデル名&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token parameter variable&quot;&gt;-f&lt;/span&gt; ./Modelfile
-$ ollama run &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;任意のモデル名&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;deckgo-highlight-code language=&quot;bash&quot; terminal=&quot;carbon&quot; theme=&quot;one-dark&quot;  &gt;
+          &lt;code slot=&quot;code&quot;&gt;$ ollama create &amp;lt;任意のモデル名&amp;gt; -f ./Modelfile
+$ ollama run &amp;lt;任意のモデル名&amp;gt;&lt;/code&gt;
+        &lt;/deckgo-highlight-code&gt;
 &lt;h2&gt;Conclusion&lt;/h2&gt;
 &lt;p&gt;今回は Hugging Face の&lt;code class=&quot;language-text&quot;&gt;.safetensors&lt;/code&gt;形式モデルを Ollama で使用する方法について紹介した。&lt;/p&gt;</content:encoded></item></channel></rss>
