@@ -5,6 +5,7 @@
  */
 
 const path = require(`path`)
+const fs = require("fs")
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 // Define the template for blog post
@@ -122,4 +123,29 @@ exports.createSchemaCustomization = ({ actions }) => {
       slug: String
     }
   `)
+}
+
+exports.onPreInit = () => {
+  if (process.argv[2] === "build") {
+    // if "docs" folder exists, remove it
+    if (fs.existsSync(path.join(__dirname, "docs"))) {
+      fs.rmdirSync(path.join(__dirname, "docs"), { recursive: true })
+    }
+    // rename "public" folder to "public_dev" if "public" folder exists
+    if (fs.existsSync(path.join(__dirname, "public"))) {
+      fs.renameSync(
+        path.join(__dirname, "public"),
+        path.join(__dirname, "public_dev")
+      )
+    }
+  }
+}
+
+exports.onPostBuild = () => {
+  // rename "public" folder to "docs" and "public_dev" folder to "public"
+  fs.renameSync(path.join(__dirname, "public"), path.join(__dirname, "docs"))
+  fs.renameSync(
+    path.join(__dirname, "public_dev"),
+    path.join(__dirname, "public")
+  )
 }
