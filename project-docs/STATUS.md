@@ -25,6 +25,7 @@ Initial implementation, validation, and deployment are complete. The Astro site 
 - Added the user-supplied illustrated avatar to both language versions. Astro converts the 1 MB source PNG into an approximately 8 KB WebP asset during the build.
 - Simplified the home-page publication labels in both English and Japanese.
 - Replaced the boxed `HLP` header mark with a restrained `Huu-Long Pham` typographic wordmark.
+- Refined the visual hierarchy with slightly larger navy section headings and one subtle vertical accent in the hero.
 
 ## Next steps
 

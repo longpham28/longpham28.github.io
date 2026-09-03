@@ -34,4 +34,4 @@ Publications and achievements are grouped by year. MISC uses a native disclosure
 
 Status: Accepted
 
-The initial visual system uses white, charcoal, and navy, with a light theme only. Typography and spacing carry the design; portraits and decorative imagery are deferred.
+The initial visual system uses white, charcoal, and navy, with a light theme only. Typography and spacing carry the design; portraits and decorative imagery are deferred. Later refinements should favor stronger heading hierarchy and a single restrained hero accent over alternating section backgrounds or repeated decorative rules.
