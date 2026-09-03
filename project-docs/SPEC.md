@@ -28,7 +28,7 @@ Blog functionality is explicitly out of scope for the initial release. The struc
 
 1. Name: `Huu-Long Pham`
 2. Japanese name: `ファムフーロン`
-3. Current affiliation and position
+3. Current affiliation, position, and degree: Ph.D. in Information Science / 博士（情報科学）
 4. Concise biography
 5. Research interests
 6. The three most recent published papers
@@ -38,6 +38,8 @@ Blog functionality is explicitly out of scope for the initial release. The struc
 10. Links to GitHub, ORCID, and researchmap
 
 An illustrated avatar is included on both home pages. No photographic portrait or email address is included. The affiliation does not need to be linked.
+
+The displayed research fields are Information Retrieval and Machine Learning / 情報検索、機械学習.
 
 ## Biography
 
@@ -56,6 +58,7 @@ I am a Specially Appointed Assistant Professor at the Institute of Library, Info
 - Show all MISC records in a compact, initially collapsed section, grouped by year.
 - Use native HTML disclosure elements where collapsing is useful; do not add JavaScript for this behavior.
 - Show titles prominently and keep authors, venue, date, volume, pages, and DOI compact.
+- Preserve Japanese-language publication and presentation titles in Japanese on both language versions.
 - Link DOI and other authoritative publication URLs when present.
 - Present experience, education, awards, and service as compact chronological lists with dates in a narrow column.
 

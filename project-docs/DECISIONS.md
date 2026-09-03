@@ -22,7 +22,7 @@ Status: Accepted
 
 Status: Accepted
 
-The site uses curated local data derived from the supplied researchmap export. Runtime fetching is avoided for speed and reliability. Only publicly disclosed records are eligible, and the source export itself is not published.
+The site uses curated local data derived from the supplied researchmap export. Runtime fetching is avoided for speed and reliability. Only publicly disclosed records are eligible, and the source export itself is not published. User-confirmed corrections override imported values. Japanese-language research titles remain in their original language on the English site, while surrounding profile labels and metadata may be translated when the meaning is clear.
 
 ## ADR-005: Compact achievement presentation
 

@@ -29,4 +29,4 @@ Last reviewed: 2026-09-03
 
 ## Manual content
 
-The bilingual biography, academic-membership list, and illustrated avatar were approved by the user and are maintained as site content rather than imported from researchmap.
+The bilingual biography, academic-membership list, illustrated avatar, research-field labels, degree, and corrections to employment and education records were approved by the user and are maintained as site content rather than imported from researchmap. User-approved English labels include `Uekawa Prize`, `Sponsor Award`, `Student Presentation Award`, and `Sponsor Chair` rendered as `スポンサー担当` in Japanese. Japanese-language publication and presentation titles remain in Japanese on both language versions.

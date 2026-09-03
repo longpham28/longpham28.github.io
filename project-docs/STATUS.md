@@ -26,6 +26,7 @@ Initial implementation, validation, and deployment are complete. The Astro site 
 - Simplified the home-page publication labels in both English and Japanese.
 - Replaced the boxed `HLP` header mark with a restrained `Huu-Long Pham` typographic wordmark.
 - Refined the visual hierarchy with slightly larger navy section headings and one subtle vertical accent in the hero.
+- Corrected the bilingual research fields, Kobelco Systems role and end date, graduate-program dates and labels, degree, service-role translations, award labels, and publication-page introductory copy.
 
 ## Next steps
 
