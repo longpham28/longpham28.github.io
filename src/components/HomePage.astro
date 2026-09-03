@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PublicationItem from "./PublicationItem.astro";
+import Timeline from "./Timeline.astro";
+import { profile } from "../data/profile";
+import { formatDate, formatRange, research, text, type Locale, type Publication } from "../lib/content";
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const isJa = locale === "ja";
+const home = isJa ? "/ja/" : "/";
+const publicationPath = isJa ? "/ja/publications/" : "/publications/";
+const latestPapers = research.papers.slice(0, 3) as Publication[];
+const labels = isJa ? {
+  pageTitle: `${profile.name} — 研究者プロフィール`,
+  description: "ファムフーロンの研究、論文、経歴、学術活動。筑波大学図書館情報メディア系。",
+  eyebrow: "情報検索 × 機械学習",
+  links: "プロフィール", research: "研究", interests: "研究キーワード", field: "研究分野",
+  publications: "主な論文", allPublications: "すべての研究業績", cv: "経歴", experience: "職歴",
+  education: "学歴", recognition: "受賞・学術活動", awards: "受賞", service: "委員歴", memberships: "所属学会",
+} : {
+  pageTitle: `${profile.name} — Academic Profile`,
+  description: "Research, publications, experience, and academic activities of Huu-Long Pham at the University of Tsukuba.",
+  eyebrow: "Information Retrieval × Machine Learning",
+  links: "Profiles", research: "Research", interests: "Research interests", field: "Research field",
+  publications: "Selected publications", allPublications: "View all research outputs", cv: "Curriculum vitae", experience: "Experience",
+  education: "Education", recognition: "Recognition & service", awards: "Awards", service: "Academic service", memberships: "Memberships",
+};
+---
+
+<BaseLayout locale={locale} title={labels.pageTitle} description={labels.description} path={home} alternatePath={isJa ? "/" : "/ja/"}>
+  <section class="hero shell" id="about">
+    <div class="hero-index" aria-hidden="true">01</div>
+    <div class="hero-content">
+      <p class="eyebrow">{labels.eyebrow}</p>
+      <h1>{profile.name}</h1>
+      <p class="japanese-name" lang="ja">{profile.japaneseName}</p>
+      <p class="position">{profile.role[locale]}<br />{profile.affiliation[locale]}</p>
+      <p class="lede">{profile.biography[locale]}</p>
+      <div class="profile-links" aria-label={labels.links}>
+        {profile.links.map((link) => <a href={link.href}>{link.label}<span aria-hidden="true">↗</span></a>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell" id="research">
+    <div class="section-heading"><p class="section-number">02</p><h2>{labels.research}</h2></div>
+    <div class="section-body research-grid">
+      <div>
+        <h3 class="minor-heading">{labels.interests}</h3>
+        <ul class="keyword-list">{research.interests.map((interest) => <li>{text(interest.label, locale)}</li>)}</ul>
+      </div>
+      <div>
+        <h3 class="minor-heading">{labels.field}</h3>
+        {research.areas.map((area) => <p class="field-name">{text(area.field, locale)}<span>{text(area.discipline, locale)}</span></p>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section shell" id="publications">
+    <div class="section-heading"><p class="section-number">03</p><h2>{labels.publications}</h2></div>
+    <div class="section-body">
+      <div class="publication-list selected-list">{latestPapers.map((paper) => <PublicationItem item={paper} locale={locale} compact />)}</div>
+      <a class="text-link" href={publicationPath}>{labels.allPublications}<span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="section shell" id="cv">
+    <div class="section-heading"><p class="section-number">04</p><h2>{labels.cv}</h2></div>
+    <div class="section-body split-grid">
+      <div><h3 class="minor-heading">{labels.experience}</h3><Timeline items={research.experience} locale={locale} /></div>
+      <div><h3 class="minor-heading">{labels.education}</h3><Timeline items={research.education} locale={locale} /></div>
+    </div>
+  </section>
+
+  <section class="section shell" id="recognition">
+    <div class="section-heading"><p class="section-number">05</p><h2>{labels.recognition}</h2></div>
+    <div class="section-body split-grid">
+      <div>
+        <h3 class="minor-heading">{labels.awards}</h3>
+        <ol class="compact-list">
+          {research.awards.map((award) => (
+            <li><time datetime={award.date}>{formatDate(award.date, locale)}</time><div><strong>{text(award.name, locale)}</strong><p>{text(award.organization, locale)}</p></div></li>
+          ))}
+        </ol>
+      </div>
+      <div>
+        <h3 class="minor-heading">{labels.service}</h3>
+        <ol class="compact-list">
+          {research.service.map((service) => (
+            <li><span>{formatRange(service.fromDate, service.toDate, locale)}</span><div><strong>{text(service.role, locale)}</strong><p>{text(service.organization, locale)}</p></div></li>
+          ))}
+        </ol>
+        <h3 class="minor-heading memberships-heading">{labels.memberships}</h3>
+        <ul class="membership-list">
+          {profile.memberships.map((membership) => <li><a href={membership.href}>{membership.name[locale]}<span aria-hidden="true">↗</span></a></li>)}
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PublicationItem from "./PublicationItem.astro";
+import { groupByYear, research, type Locale, type Publication } from "../lib/content";
+import { profile } from "../data/profile";
+
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const isJa = locale === "ja";
+const path = isJa ? "/ja/publications/" : "/publications/";
+const alternatePath = isJa ? "/publications/" : "/ja/publications/";
+const paperGroups = groupByYear(research.papers as Publication[]);
+const miscGroups = groupByYear(research.misc as Publication[]);
+const labels = isJa ? {
+  title: `研究業績 — ${profile.name}`, description: "ファムフーロンの論文および研究発表一覧。", eyebrow: "研究業績", heading: "Publications",
+  intro: "査読論文・国際会議論文と、その他の研究発表を新しい順に掲載しています。", papers: "論文", misc: "その他の研究発表",
+  miscSummary: `その他の研究発表 ${research.misc.length}件を表示`, back: "プロフィールに戻る",
+} : {
+  title: `Publications — ${profile.name}`, description: "Published papers and other research outputs by Huu-Long Pham.", eyebrow: "Research output", heading: "Publications",
+  intro: "Peer-reviewed papers, conference proceedings, and other research presentations in reverse chronological order.", papers: "Published papers",
+  misc: "Other publications & presentations", miscSummary: `Show ${research.misc.length} other publications and presentations`, back: "Back to profile",
+};
+---
+
+<BaseLayout locale={locale} title={labels.title} description={labels.description} path={path} alternatePath={alternatePath}>
+  <header class="page-intro shell"><p class="eyebrow">{labels.eyebrow}</p><h1>{labels.heading}</h1><p>{labels.intro}</p></header>
+  <section class="section shell publication-section">
+    <div class="section-heading"><p class="section-number">01</p><h2>{labels.papers}<sup>{research.papers.length}</sup></h2></div>
+    <div class="section-body year-groups">
+      {paperGroups.map(([year, papers]) => (
+        <section class="year-group" aria-labelledby={`papers-${year}`}><h3 id={`papers-${year}`}>{year}</h3><div class="publication-list">{papers.map((paper) => <PublicationItem item={paper} locale={locale} />)}</div></section>
+      ))}
+    </div>
+  </section>
+  <section class="section shell publication-section misc-section">
+    <div class="section-heading"><p class="section-number">02</p><h2>{labels.misc}<sup>{research.misc.length}</sup></h2></div>
+    <div class="section-body">
+      <details class="misc-disclosure">
+        <summary>{labels.miscSummary}<span aria-hidden="true">＋</span></summary>
+        <div class="year-groups">
+          {miscGroups.map(([year, items]) => (
+            <section class="year-group" aria-labelledby={`misc-${year}`}><h3 id={`misc-${year}`}>{year}</h3><div class="publication-list">{items.map((item) => <PublicationItem item={item} locale={locale} />)}</div></section>
+          ))}
+        </div>
+      </details>
+    </div>
+  </section>
+  <div class="shell page-end"><a class="text-link" href={isJa ? "/ja/" : "/"}><span aria-hidden="true">←</span>{labels.back}</a></div>
+</BaseLayout>

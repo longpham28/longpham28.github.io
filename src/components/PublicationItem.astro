@@ -1,0 +1,29 @@
+---
+import { formatDate, isSelf, text, type Locale, type Publication } from "../lib/content";
+
+interface Props { item: Publication; locale: Locale; compact?: boolean }
+const { item, locale, compact = false } = Astro.props;
+const names = item.authors[locale].length ? item.authors[locale] : item.authors.en;
+const link = item.doi ? `https://doi.org/${item.doi}` : item.url;
+const details = [
+  text(item.venue, locale),
+  item.volume ? `${locale === "ja" ? "Vol." : "vol."} ${item.volume}${item.issue ? `(${item.issue})` : ""}` : "",
+  item.pages ? `pp. ${item.pages}` : "",
+].filter(Boolean);
+---
+
+<article class:list={["publication", { compact }]}>
+  <p class="publication-date"><time datetime={item.date}>{formatDate(item.date, locale)}</time></p>
+  <div>
+    <h3>{link ? <a href={link}>{text(item.title, locale)}</a> : text(item.title, locale)}</h3>
+    {!compact && names.length > 0 && (
+      <p class="authors">
+        {names.map((name, index) => (
+          <>{isSelf(name) ? <strong>{name}</strong> : name}{index < names.length - 1 ? ", " : ""}</>
+        ))}
+      </p>
+    )}
+    {details.length > 0 && <p class="publication-meta"><cite>{details[0]}</cite>{details.slice(1).map((detail) => ` · ${detail}`)}</p>}
+    {!compact && item.doi && <p class="doi">DOI: <a href={`https://doi.org/${item.doi}`}>{item.doi}</a></p>}
+  </div>
+</article>

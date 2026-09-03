@@ -1,0 +1,36 @@
+---
+import { formatRange, text, type Locale, type Localized } from "../lib/content";
+
+interface Item {
+  id: string;
+  fromDate: string;
+  toDate: string;
+  affiliation?: Localized;
+  section?: Localized;
+  role?: Localized;
+  department?: Localized;
+  organization?: Localized;
+}
+interface Props { items: Item[]; locale: Locale }
+const { items, locale } = Astro.props;
+---
+
+<ol class="timeline">
+  {items.map((item) => {
+    const organization = item.affiliation ?? item.organization;
+    const detail = item.section ?? item.department;
+    const roleText = item.role ? text(item.role, locale) : "";
+    const organizationText = organization ? text(organization, locale) : "";
+    const detailText = detail ? text(detail, locale) : "";
+    return (
+      <li>
+        <p class="timeline-date">{formatRange(item.fromDate, item.toDate, locale)}</p>
+        <div>
+          {roleText && <p class="timeline-title">{roleText}</p>}
+          {organizationText && <p>{organizationText}</p>}
+          {detailText && <p class="muted">{detailText}</p>}
+        </div>
+      </li>
+    );
+  })}
+</ol>

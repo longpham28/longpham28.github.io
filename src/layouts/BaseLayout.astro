@@ -1,0 +1,76 @@
+---
+import "../styles/global.css";
+import { profile } from "../data/profile";
+import type { Locale } from "../lib/content";
+
+interface Props {
+  locale: Locale;
+  title: string;
+  description: string;
+  path: string;
+  alternatePath: string;
+}
+
+const { locale, title, description, path, alternatePath } = Astro.props;
+const origin = "https://longpham28.github.io";
+const labels = locale === "ja"
+  ? { about: "概要", research: "研究", publications: "業績", cv: "経歴", language: "English" }
+  : { about: "About", research: "Research", publications: "Publications", cv: "CV", language: "日本語" };
+const home = locale === "ja" ? "/ja/" : "/";
+const publications = locale === "ja" ? "/ja/publications/" : "/publications/";
+const englishPath = locale === "en" ? path : alternatePath;
+const japanesePath = locale === "ja" ? path : alternatePath;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: profile.name,
+  alternateName: profile.japaneseName,
+  jobTitle: profile.role.en,
+  affiliation: { "@type": "Organization", name: "University of Tsukuba" },
+  sameAs: profile.links.map((link) => link.href),
+  url: origin,
+};
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#15395b" />
+    <link rel="canonical" href={new URL(path, origin)} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={new URL(path, origin)} />
+    <link rel="alternate" hreflang="en" href={new URL(englishPath, origin)} />
+    <link rel="alternate" hreflang="ja" href={new URL(japanesePath, origin)} />
+    <link rel="alternate" hreflang="x-default" href={`${origin}/`} />
+    <title>{title}</title>
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">{locale === "ja" ? "本文へ移動" : "Skip to content"}</a>
+    <header class="site-header">
+      <div class="shell header-inner">
+        <a class="wordmark" href={home} aria-label={`${profile.name} — Home`}><span>HLP</span></a>
+        <nav aria-label={locale === "ja" ? "メインナビゲーション" : "Main navigation"}>
+          <a href={`${home}#about`}>{labels.about}</a>
+          <a href={`${home}#research`}>{labels.research}</a>
+          <a href={publications}>{labels.publications}</a>
+          <a href={`${home}#cv`}>{labels.cv}</a>
+        </nav>
+        <a class="language-link" href={alternatePath} hreflang={locale === "ja" ? "en" : "ja"}>{labels.language}</a>
+      </div>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-footer">
+      <div class="shell footer-inner">
+        <p>© {new Date().getFullYear()} {profile.name}</p>
+        <p>{locale === "ja" ? "Astroで静的に構築" : "Statically built with Astro"}</p>
+      </div>
+    </footer>
+  </body>
+</html>
