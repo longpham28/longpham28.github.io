@@ -1,6 +1,6 @@
 # Content sources
 
-Last reviewed: 2026-09-03
+Last reviewed: 2026-09-04
 
 ## Primary sources
 
@@ -9,6 +9,7 @@ Last reviewed: 2026-09-03
 - GitHub profile: https://github.com/longpham28
 - ORCID: https://orcid.org/0009-0002-4857-7004
 - KASYS laboratory: https://kasys.slis.tsukuba.ac.jp/
+- Ohshima Laboratory: https://ohshimalab.github.io/
 - Database Society of Japan: https://dbsj.org/
 - Information Processing Society of Japan: https://www.ipsj.or.jp/index.html
 - User-supplied illustrated avatar: `src/assets/avatar.png`

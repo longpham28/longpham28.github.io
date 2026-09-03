@@ -1,6 +1,6 @@
 # Project status
 
-Last updated: 2026-09-03
+Last updated: 2026-09-04
 
 ## Current phase
 
@@ -34,6 +34,7 @@ Initial implementation, validation, and deployment are complete. The Astro site 
 - Corrected the desktop hero grid so the `01` marker remains aligned with the profile content and capped the hero height to avoid excessive whitespace in tall viewports.
 - Simplified the bilingual biography to focus on information retrieval, machine learning, and machine-learning-model retrieval.
 - Added the KASYS laboratory affiliation and official website link to both home-page language versions.
+- Added the Ohshima Laboratory affiliation and official website link to the master's and doctoral education records.
 
 ## Next steps
 

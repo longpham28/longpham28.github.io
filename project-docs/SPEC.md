@@ -1,7 +1,7 @@
 # Website specification
 
 Status: Approved for implementation  
-Last updated: 2026-09-03
+Last updated: 2026-09-04
 
 ## Purpose
 
@@ -62,6 +62,7 @@ I am a Specially Appointed Assistant Professor at the Institute of Library, Info
 - Preserve Japanese-language publication and presentation titles in Japanese on both language versions.
 - Link DOI and other authoritative publication URLs when present.
 - Present experience, education, awards, and service as compact chronological lists with dates in a narrow column.
+- Link the Ohshima Laboratory from both the master's and doctoral education records.
 
 ## Academic memberships
 

@@ -11,6 +11,10 @@ interface Item {
   department?: Localized;
   degree?: Localized;
   organization?: Localized;
+  laboratory?: {
+    name: Localized;
+    href: string;
+  };
 }
 interface Props { items: Item[]; locale: Locale }
 const { items, locale } = Astro.props;
@@ -24,6 +28,8 @@ const { items, locale } = Astro.props;
     const organizationText = organization ? text(organization, locale) : "";
     const detailText = detail ? text(detail, locale) : "";
     const degreeText = item.degree ? text(item.degree, locale) : "";
+    const laboratoryText = item.laboratory ? text(item.laboratory.name, locale) : "";
+    const laboratoryLabel = locale === "ja" ? "所属研究室：" : "Laboratory: ";
     return (
       <li>
         <p class="timeline-date">{formatRange(item.fromDate, item.toDate, locale)}</p>
@@ -31,6 +37,7 @@ const { items, locale } = Astro.props;
           {roleText && <p class="timeline-title">{roleText}</p>}
           {organizationText && <p>{organizationText}</p>}
           {detailText && <p class="muted">{detailText}</p>}
+          {laboratoryText && <p class="timeline-laboratory">{laboratoryLabel}<a href={item.laboratory!.href}>{laboratoryText}<span aria-hidden="true">↗</span></a></p>}
           {degreeText && <p class="muted">{degreeText}</p>}
         </div>
       </li>

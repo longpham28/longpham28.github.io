@@ -117,6 +117,13 @@
       "degree": {
         "en": "Ph.D. in Information Science",
         "ja": "博士（情報科学）"
+      },
+      "laboratory": {
+        "name": {
+          "en": "Ohshima Laboratory",
+          "ja": "大島研究室"
+        },
+        "href": "https://ohshimalab.github.io/"
       }
     },
     {
@@ -134,6 +141,13 @@
       "role": {
         "en": "Master's Program",
         "ja": "博士前期課程"
+      },
+      "laboratory": {
+        "name": {
+          "en": "Ohshima Laboratory",
+          "ja": "大島研究室"
+        },
+        "href": "https://ohshimalab.github.io/"
       }
     }
   ],

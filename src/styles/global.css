@@ -141,6 +141,8 @@ h1, h2 { font-family: ui-serif, Georgia, "Noto Serif JP", serif; font-weight: 50
 .timeline-date, .compact-list time, .compact-list > li > span { color: var(--muted); font-size: .76rem; font-variant-numeric: tabular-nums; }
 .timeline-title, .compact-list strong { font-size: .92rem; font-weight: 700; }
 .timeline li div > p:not(.timeline-title), .compact-list p { color: var(--tertiary-text); font-size: .82rem; }
+.timeline-laboratory a { color: var(--accent); font-weight: 700; }
+.timeline-laboratory span { margin-left: .25rem; }
 .muted { color: var(--muted) !important; }
 .memberships-heading { margin-top: 3rem; }
 .membership-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
