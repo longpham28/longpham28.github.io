@@ -22,11 +22,12 @@ Initial implementation, validation, and deployment are complete. The Astro site 
 - Pushed the atomic commits to `master` and confirmed the custom Pages workflow completed successfully.
 - Confirmed the public URL serves Astro 7.2.10 content.
 - The repository owner changed **Settings → Pages → Build and deployment → Source** from branch deployment to **GitHub Actions** and confirmed a successful workflow run without errors.
+- Added the user-supplied illustrated avatar to both language versions. Astro converts the 1 MB source PNG into an approximately 8 KB WebP asset during the build.
 
 ## Next steps
 
 1. Perform an optional visual review and content corrections after publication.
-2. Add a portrait or blog only when those features are intentionally brought into scope.
+2. Add a photographic portrait or blog only when those features are intentionally brought into scope.
 
 ## Important constraints
 

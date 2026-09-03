@@ -10,6 +10,7 @@ Last reviewed: 2026-09-03
 - ORCID: https://orcid.org/0009-0002-4857-7004
 - Database Society of Japan: https://dbsj.org/
 - Information Processing Society of Japan: https://www.ipsj.or.jp/index.html
+- User-supplied illustrated avatar: `src/assets/avatar.png`
 
 ## Import policy
 
@@ -21,11 +22,11 @@ Last reviewed: 2026-09-03
 
 ## Content intentionally omitted
 
-- Portrait image
+- Photographic portrait
 - Email address
 - Non-public researchmap fields
 - Blog content from the previous Gatsby site
 
 ## Manual content
 
-The bilingual biography and academic-membership list were approved during the specification interview and are maintained as site content rather than imported from researchmap.
+The bilingual biography, academic-membership list, and illustrated avatar were approved by the user and are maintained as site content rather than imported from researchmap.

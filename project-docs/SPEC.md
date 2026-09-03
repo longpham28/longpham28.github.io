@@ -37,7 +37,7 @@ Blog functionality is explicitly out of scope for the initial release. The struc
 9. Academic memberships
 10. Links to GitHub, ORCID, and researchmap
 
-No portrait or email address is included in the initial release. The affiliation does not need to be linked.
+An illustrated avatar is included on both home pages. No photographic portrait or email address is included. The affiliation does not need to be linked.
 
 ## Biography
 
@@ -70,7 +70,8 @@ I am a Specially Appointed Assistant Professor at the Institute of Library, Info
 - White background, dark charcoal text, and one restrained navy accent.
 - Light theme only for the initial release.
 - Generous whitespace, thin rules, restrained typography, and subtle interaction states.
-- No decorative imagery. A portrait may be added later.
+- Use the supplied illustrated bear avatar as the single profile image.
+- A photographic portrait may be added later if requested.
 - Responsive from small phones to wide desktop screens.
 
 ## Technical requirements
