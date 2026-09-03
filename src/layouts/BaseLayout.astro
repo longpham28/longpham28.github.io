@@ -14,8 +14,8 @@ interface Props {
 const { locale, title, description, path, alternatePath } = Astro.props;
 const origin = "https://longpham28.github.io";
 const labels = locale === "ja"
-  ? { about: "概要", research: "研究", publications: "業績", cv: "経歴", language: "English" }
-  : { about: "About", research: "Research", publications: "Publications", cv: "CV", language: "日本語" };
+  ? { about: "概要", research: "研究", publications: "業績", cv: "経歴", language: "English", appearance: "表示テーマ", system: "システム", light: "ライト", dark: "ダーク" }
+  : { about: "About", research: "Research", publications: "Publications", cv: "CV", language: "日本語", appearance: "Appearance", system: "System", light: "Light", dark: "Dark" };
 const home = locale === "ja" ? "/ja/" : "/";
 const publications = locale === "ja" ? "/ja/publications/" : "/publications/";
 const englishPath = locale === "en" ? path : alternatePath;
@@ -33,13 +33,13 @@ const structuredData = {
 ---
 
 <!doctype html>
-<html lang={locale}>
+<html lang={locale} class="no-js">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#15395b" />
+    <meta name="theme-color" content="#ffffff" />
     <link rel="canonical" href={new URL(path, origin)} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -50,6 +50,17 @@ const structuredData = {
     <link rel="alternate" hreflang="x-default" href={`${origin}/`} />
     <title>{title}</title>
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
+    <script is:inline>
+      (() => {
+        const root = document.documentElement;
+        root.classList.remove("no-js");
+        let saved = null;
+        try { saved = localStorage.getItem("preferred-theme"); } catch {}
+        if (saved === "light" || saved === "dark") root.dataset.theme = saved;
+        const dark = saved === "dark" || (saved !== "light" && matchMedia("(prefers-color-scheme: dark)").matches);
+        document.querySelector('meta[name="theme-color"]')?.setAttribute("content", dark ? "#151410" : "#ffffff");
+      })();
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">{locale === "ja" ? "本文へ移動" : "Skip to content"}</a>
@@ -62,7 +73,23 @@ const structuredData = {
           <a href={publications}>{labels.publications}</a>
           <a href={`${home}#cv`}>{labels.cv}</a>
         </nav>
-        <a class="language-link" href={alternatePath} hreflang={locale === "ja" ? "en" : "ja"}>{labels.language}</a>
+        <div class="header-actions">
+          <a class="language-link" href={alternatePath} hreflang={locale === "ja" ? "en" : "ja"}>{labels.language}</a>
+          <details class="theme-picker">
+            <summary aria-label={labels.appearance} title={labels.appearance}>
+              <svg class="theme-icon" viewBox="0 0 20 20" aria-hidden="true">
+                <circle cx="10" cy="10" r="6.5"></circle>
+                <path d="M10 3.5a6.5 6.5 0 0 1 0 13Z"></path>
+              </svg>
+              <span class="sr-only">{labels.appearance}</span>
+            </summary>
+            <div class="theme-menu">
+              <button class="theme-option" type="button" data-theme-option="system" aria-pressed="true">{labels.system}</button>
+              <button class="theme-option" type="button" data-theme-option="light" aria-pressed="false">{labels.light}</button>
+              <button class="theme-option" type="button" data-theme-option="dark" aria-pressed="false">{labels.dark}</button>
+            </div>
+          </details>
+        </div>
       </div>
     </header>
     <main id="main"><slot /></main>
@@ -72,5 +99,60 @@ const structuredData = {
         <p>{locale === "ja" ? "Astroで静的に構築" : "Statically built with Astro"}</p>
       </div>
     </footer>
+    <script is:inline>
+      (() => {
+        const root = document.documentElement;
+        const picker = document.querySelector(".theme-picker");
+        const pickerSummary = picker?.querySelector("summary");
+        const options = [...document.querySelectorAll("[data-theme-option]")];
+        const media = matchMedia("(prefers-color-scheme: dark)");
+        const themeColor = document.querySelector('meta[name="theme-color"]');
+        if (!picker || !options.length) return;
+
+        const readTheme = () => {
+          try {
+            const saved = localStorage.getItem("preferred-theme");
+            return saved === "light" || saved === "dark" ? saved : "system";
+          } catch { return "system"; }
+        };
+        const updateThemeColor = (theme) => {
+          const dark = theme === "dark" || (theme === "system" && media.matches);
+          themeColor?.setAttribute("content", dark ? "#151410" : "#ffffff");
+        };
+        const showSelection = (theme) => {
+          options.forEach((option) => option.setAttribute("aria-pressed", String(option.dataset.themeOption === theme)));
+          updateThemeColor(theme);
+        };
+        const applyTheme = (theme) => {
+          if (theme === "system") {
+            delete root.dataset.theme;
+            try { localStorage.removeItem("preferred-theme"); } catch {}
+          } else {
+            root.dataset.theme = theme;
+            try { localStorage.setItem("preferred-theme", theme); } catch {}
+          }
+          showSelection(theme);
+        };
+
+        showSelection(readTheme());
+        options.forEach((option) => option.addEventListener("click", () => {
+          applyTheme(option.dataset.themeOption);
+          picker.removeAttribute("open");
+          pickerSummary?.focus();
+        }));
+        picker.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            picker.removeAttribute("open");
+            pickerSummary?.focus();
+          }
+        });
+        document.addEventListener("click", (event) => {
+          if (picker.hasAttribute("open") && !picker.contains(event.target)) picker.removeAttribute("open");
+        });
+        media.addEventListener?.("change", () => {
+          if (readTheme() === "system") updateThemeColor("system");
+        });
+      })();
+    </script>
   </body>
 </html>

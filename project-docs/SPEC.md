@@ -71,7 +71,7 @@ I am a Specially Appointed Assistant Professor at the Institute of Library, Info
 
 - Minimal, elegant, and academic rather than decorative.
 - White background, dark charcoal text, and one restrained muted antique-gold accent (`#75613B`).
-- Light and dark themes follow the visitor's operating-system preference without a theme-specific route or client-side JavaScript.
+- Light and dark themes follow the visitor's operating-system preference by default. A compact header menu allows a persistent System, Light, or Dark override without theme-specific routes.
 - Generous whitespace, thin rules, restrained typography, and subtle interaction states.
 - Use the supplied illustrated bear avatar as the single profile image.
 - A photographic portrait may be added later if requested.
@@ -81,7 +81,7 @@ I am a Specially Appointed Assistant Professor at the Institute of Library, Info
 
 - Astro with static output and TypeScript.
 - No UI framework or client framework unless a future requirement justifies one.
-- Zero client-side JavaScript for the initial content experience.
+- No client framework. Client-side JavaScript is limited to the small theme-preference control; all content remains statically rendered and usable without it.
 - Keep dependencies minimal and commit the lockfile.
 - Use semantic HTML and accessible keyboard/focus behavior.
 - Main text must remain comfortable at browser zoom and text enlargement.

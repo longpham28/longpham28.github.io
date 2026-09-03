@@ -30,17 +30,17 @@ Initial implementation, validation, and deployment are complete. The Astro site 
 - Selected muted antique gold (`#75613B`) as the site's single accent after local comparison with navy and brighter gold, and added restrained link, hover, selection, and focus states.
 - Added an automatic CSS-only dark mode using the visitor's operating-system preference, with warm charcoal surfaces and a lighter gold accent.
 - Verified the dark theme in English, Japanese, and publications views: all sampled text exceeds WCAG AA contrast, with no horizontal overflow or browser warnings.
+- Added the approved compact header appearance menu with persistent System, Light, and Dark options.
 
 ## Next steps
 
-1. Confirm the GitHub Pages workflow publishes the approved visual refinements.
-2. Discuss whether a manual light/dark override is worth adding alongside system preference.
-3. Perform optional visual review and content corrections after publication.
-4. Add a photographic portrait or blog only when those features are intentionally brought into scope.
+1. Confirm the GitHub Pages workflow publishes the appearance menu.
+2. Perform optional visual review and content corrections after publication.
+3. Add a photographic portrait or blog only when those features are intentionally brought into scope.
 
 ## Important constraints
 
 - Do not publish the raw researchmap export.
 - Keep English and Japanese content aligned.
-- Keep initial browser-side JavaScript at zero.
+- Keep browser-side JavaScript limited to the theme-preference control unless a future feature clearly requires more.
 - Use atomic Conventional Commits.

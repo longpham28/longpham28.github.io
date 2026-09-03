@@ -40,4 +40,4 @@ The light visual system uses white, charcoal, and one muted antique-gold accent 
 
 Status: Accepted
 
-Dark mode uses CSS `prefers-color-scheme` with warm charcoal surfaces and a lighter gold accent. It follows the visitor's operating-system preference, requires no client-side JavaScript, and keeps the same English and Japanese URLs. Separate theme routes are avoided because they would duplicate content, metadata, and maintenance work. A manual override may be considered later only if there is a clear need.
+Dark mode uses CSS `prefers-color-scheme` with warm charcoal surfaces and a lighter gold accent. System preference remains the default, while a compact header menu provides persistent System, Light, and Dark overrides. The small script applies a saved preference before rendering to avoid a color flash; with JavaScript unavailable, the site falls back to the fully functional system-responsive theme. Separate theme routes are avoided because they would duplicate content, metadata, and maintenance work.
