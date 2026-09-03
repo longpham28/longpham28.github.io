@@ -37,8 +37,8 @@ const { items, locale } = Astro.props;
           {roleText && <p class="timeline-title">{roleText}</p>}
           {organizationText && <p>{organizationText}</p>}
           {detailText && <p class="muted">{detailText}</p>}
-          {laboratoryText && <p class="timeline-laboratory">{laboratoryLabel}<a href={item.laboratory!.href}>{laboratoryText}<span aria-hidden="true">↗</span></a></p>}
           {degreeText && <p class="muted">{degreeText}</p>}
+          {laboratoryText && <p class="timeline-laboratory">{laboratoryLabel}<a href={item.laboratory!.href}>{laboratoryText}<span aria-hidden="true">↗</span></a></p>}
         </div>
       </li>
     );
