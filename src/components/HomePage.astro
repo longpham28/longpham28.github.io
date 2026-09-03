@@ -2,6 +2,8 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PublicationItem from "./PublicationItem.astro";
 import Timeline from "./Timeline.astro";
+import { Image } from "astro:assets";
+import avatar from "../assets/avatar.png";
 import { profile } from "../data/profile";
 import { formatDate, formatRange, research, text, type Locale, type Publication } from "../lib/content";
 
@@ -32,9 +34,24 @@ const labels = isJa ? {
   <section class="hero shell" id="about">
     <div class="hero-index" aria-hidden="true">01</div>
     <div class="hero-content">
-      <p class="eyebrow">{labels.eyebrow}</p>
-      <h1>{profile.name}</h1>
-      <p class="japanese-name" lang="ja">{profile.japaneseName}</p>
+      <div class="hero-intro">
+        <div>
+          <p class="eyebrow">{labels.eyebrow}</p>
+          <h1>{profile.name}</h1>
+          <p class="japanese-name" lang="ja">{profile.japaneseName}</p>
+        </div>
+        <Image
+          class="avatar"
+          src={avatar}
+          alt={isJa ? "Huu-Long Phamを表すクマのアバター" : "Bear avatar representing Huu-Long Pham"}
+          width={360}
+          height={360}
+          format="webp"
+          quality={82}
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
       <p class="position">{profile.role[locale]}<br />{profile.affiliation[locale]}</p>
       <p class="lede">{profile.biography[locale]}</p>
       <div class="profile-links" aria-label={labels.links}>

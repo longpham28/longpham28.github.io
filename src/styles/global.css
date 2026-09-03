@@ -30,6 +30,8 @@ h1, h2 { font-family: ui-serif, Georgia, "Noto Serif JP", serif; font-weight: 50
 .hero { min-height: calc(100svh - var(--header-height)); display: grid; grid-template-columns: minmax(4rem, 1fr) minmax(0, 5fr); align-items: center; padding-block: clamp(5rem, 11vw, 9rem); }
 .hero-index, .section-number { align-self: start; color: var(--navy); font-size: .72rem; font-weight: 750; letter-spacing: .12em; }
 .hero-content { max-width: 52rem; }
+.hero-intro { display: grid; grid-template-columns: minmax(0, 1fr) clamp(9rem, 18vw, 12rem); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.avatar { width: 100%; height: auto; aspect-ratio: 1; border: 1px solid var(--line); border-radius: 50%; object-fit: cover; box-shadow: 0 1.2rem 3rem rgba(21,57,91,.1); }
 .eyebrow { margin-bottom: 1.4rem; color: var(--navy); font-size: .76rem; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
 .hero h1, .page-intro h1 { margin-bottom: .25rem; font-size: clamp(3.4rem, 9vw, 7.6rem); line-height: .98; }
 .japanese-name { margin-bottom: 3rem; color: var(--muted); font-size: .9rem; letter-spacing: .14em; }
@@ -103,6 +105,8 @@ h1, h2 { font-family: ui-serif, Georgia, "Noto Serif JP", serif; font-weight: 50
   .language-link { grid-column: 2; }
   .hero { min-height: auto; grid-template-columns: 2rem minmax(0, 1fr); gap: 0; padding-block: 5rem 6rem; }
   .hero h1 { font-size: clamp(3rem, 15vw, 4.8rem); }
+  .hero-intro { grid-template-columns: 1fr; gap: 1.75rem; }
+  .avatar { order: -1; width: 7.5rem; }
   .japanese-name { margin-bottom: 2rem; }
   .section { grid-template-columns: 1fr; gap: 2.5rem; }
   .section-heading { grid-template-columns: 2rem 1fr; align-items: start; }
