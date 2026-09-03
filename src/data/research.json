@@ -35,12 +35,12 @@
     {
       "id": "53293696",
       "discipline": {
-        "en": "Informatics",
-        "ja": "情報通信"
+        "en": "",
+        "ja": ""
       },
       "field": {
-        "en": "Web and service informatics",
-        "ja": "ウェブ情報学、サービス情報学"
+        "en": "Information Retrieval, Machine Learning",
+        "ja": "情報検索、機械学習"
       }
     }
   ],
@@ -75,25 +75,25 @@
         "ja": ""
       },
       "role": {
-        "en": "リサーチ・アシスタント",
+        "en": "Research Assistant",
         "ja": "リサーチ・アシスタント"
       }
     },
     {
       "id": "49484063",
       "fromDate": "2021-04",
-      "toDate": "2024-08",
+      "toDate": "2024-07",
       "affiliation": {
-        "en": "コベルコシステム株式会社",
+        "en": "Kobelco Systems Corporation",
         "ja": "コベルコシステム株式会社"
       },
       "section": {
-        "en": "デジタルイノベーションセンター",
+        "en": "Digital Innovation Center",
         "ja": "デジタルイノベーションセンター"
       },
       "role": {
-        "en": "",
-        "ja": ""
+        "en": "Systems Engineer",
+        "ja": "システムエンジニア"
       }
     }
   ],
@@ -107,8 +107,16 @@
         "ja": "兵庫県立大学"
       },
       "department": {
-        "en": "情報科学研究科",
+        "en": "Graduate School of Information Science",
         "ja": "情報科学研究科"
+      },
+      "role": {
+        "en": "Doctoral Program",
+        "ja": "博士後期課程"
+      },
+      "degree": {
+        "en": "Ph.D. in Information Science",
+        "ja": "博士（情報科学）"
       }
     },
     {
@@ -120,8 +128,12 @@
         "ja": "兵庫県立大学"
       },
       "department": {
-        "en": "応用情報科学研究科",
+        "en": "Graduate School of Applied Informatics",
         "ja": "応用情報科学研究科"
+      },
+      "role": {
+        "en": "Master's Program",
+        "ja": "博士前期課程"
       }
     }
   ],
@@ -132,7 +144,7 @@
       "toDate": "2027",
       "role": {
         "en": "Sponsor Chair",
-        "ja": "Sponsor Chair"
+        "ja": "スポンサー担当"
       },
       "organization": {
         "en": "2027 IEEE International Conference on Big Data and Smart Computing (BigComp 2027)",
@@ -145,7 +157,7 @@
       "toDate": "2026",
       "role": {
         "en": "Sponsor Chair",
-        "ja": "Sponsor Chair"
+        "ja": "スポンサー担当"
       },
       "organization": {
         "en": "NTCIR-19",
@@ -158,7 +170,7 @@
       "toDate": "2026",
       "role": {
         "en": "Task Organizer",
-        "ja": "Task Organizer"
+        "ja": "タスクオーガナイザー"
       },
       "organization": {
         "en": "NTCIR-19 ModelRetrieval Task",
@@ -171,7 +183,7 @@
       "id": "51209386",
       "date": "2025-09",
       "name": {
-        "en": "学生奨励賞",
+        "en": "Student Encouragement Award",
         "ja": "学生奨励賞"
       },
       "title": {
@@ -179,7 +191,7 @@
         "ja": "画像部分特徴に着目したインスタンスセグメンテーションモデルの検索"
       },
       "organization": {
-        "en": "情報処理学会 第160回 情報基礎とアクセス技術研究会",
+        "en": "160th Meeting of the IPSJ Special Interest Group on Information Fundamentals and Access Technologies",
         "ja": "情報処理学会 第160回 情報基礎とアクセス技術研究会"
       }
     },
@@ -187,7 +199,7 @@
       "id": "49484119",
       "date": "2025-03",
       "name": {
-        "en": "上河賞",
+        "en": "Uekawa Prize",
         "ja": "上河賞"
       },
       "title": {
@@ -195,7 +207,7 @@
         "ja": "Pre-trained BERT Model Retrieval: Inference-Based No-Learning Approach using k-Nearest Neighbour Algorithm"
       },
       "organization": {
-        "en": "兵庫県立大学",
+        "en": "University of Hyogo",
         "ja": "兵庫県立大学"
       }
     },
@@ -203,7 +215,7 @@
       "id": "49484105",
       "date": "2025-03",
       "name": {
-        "en": "スポンサー賞 (株式会社リクルート賞)",
+        "en": "Sponsor Award (Recruit Award)",
         "ja": "スポンサー賞 (株式会社リクルート賞)"
       },
       "title": {
@@ -211,7 +223,7 @@
         "ja": "性能予測およびランキング学習を用いた画像インスタンスセグメンテーションモデル検索"
       },
       "organization": {
-        "en": "第17回データ工学と情報マネジメントに関するフォーラム (DEIM 2025)",
+        "en": "17th Forum on Data Engineering and Information Management (DEIM 2025)",
         "ja": "第17回データ工学と情報マネジメントに関するフォーラム (DEIM 2025)"
       }
     },
@@ -219,7 +231,7 @@
       "id": "49484092",
       "date": "2025-03",
       "name": {
-        "en": "学生プレゼンテーション賞",
+        "en": "Student Presentation Award",
         "ja": "学生プレゼンテーション賞"
       },
       "title": {
@@ -227,7 +239,7 @@
         "ja": "性能予測およびランキング学習を用いた画像インスタンスセグメンテーションモデル検索"
       },
       "organization": {
-        "en": "第17回データ工学と情報マネジメントに関するフォーラム（DEIM 2025)",
+        "en": "17th Forum on Data Engineering and Information Management (DEIM 2025)",
         "ja": "第17回データ工学と情報マネジメントに関するフォーラム（DEIM 2025)"
       }
     },
@@ -235,7 +247,7 @@
       "id": "49484082",
       "date": "2024-03",
       "name": {
-        "en": "学生プレゼンテーション賞",
+        "en": "Student Presentation Award",
         "ja": "学生プレゼンテーション賞"
       },
       "title": {
@@ -243,7 +255,7 @@
         "ja": "k近傍法を用いた事前学習済みBERTモデル検索"
       },
       "organization": {
-        "en": "第16回データ工学と情報マネジメントに関するフォーラム (DEIM 2024)",
+        "en": "16th Forum on Data Engineering and Information Management (DEIM 2024)",
         "ja": "第16回データ工学と情報マネジメントに関するフォーラム (DEIM 2024)"
       }
     }
@@ -753,11 +765,11 @@
       },
       "authors": {
         "en": [
-          "杉田 大知",
-          "ファム フーロン",
-          "大島 裕明",
-          "藤田 澄男",
-          "莊司 慶行"
+          "Daichi Sugita",
+          "Huu-Long Pham",
+          "Hiroaki Ohshima",
+          "Sumio Fujita",
+          "Yoshiyuki Shoji"
         ],
         "ja": [
           "杉田 大知",
@@ -769,7 +781,7 @@
       },
       "date": "2026-03",
       "venue": {
-        "en": "第18回データ工学と情報マネジメントに関するフォーラム (DEIM 2026)",
+        "en": "18th Forum on Data Engineering and Information Management (DEIM 2026)",
         "ja": "第18回データ工学と情報マネジメントに関するフォーラム (DEIM 2026)"
       },
       "publisher": {
@@ -792,13 +804,13 @@
       },
       "authors": {
         "en": [
-          "金田 悠路",
-          "大江 優真",
-          "ファム フーロン",
-          "加藤 誠",
-          "大島 裕明",
-          "藤田 澄男",
-          "莊司 慶行"
+          "Yuro Kanada",
+          "Yuma Oe",
+          "Huu-Long Pham",
+          "Makoto P. Kato",
+          "Hiroaki Ohshima",
+          "Sumio Fujita",
+          "Yoshiyuki Shoji"
         ],
         "ja": [
           "金田 悠路",
@@ -812,7 +824,7 @@
       },
       "date": "2026-03",
       "venue": {
-        "en": "第18回データ工学と情報マネジメントに関するフォーラム (DEIM 2026)",
+        "en": "18th Forum on Data Engineering and Information Management (DEIM 2026)",
         "ja": "第18回データ工学と情報マネジメントに関するフォーラム (DEIM 2026)"
       },
       "publisher": {
@@ -835,13 +847,13 @@
       },
       "authors": {
         "en": [
-          "ファム フーロン",
-          "三林 亮太",
-          "莊司 慶行",
-          "加藤 誠",
-          "山本 岳洋",
-          "山本 祐輔",
-          "大島 裕明"
+          "Huu-Long Pham",
+          "Ryota Mibayashi",
+          "Yoshiyuki Shoji",
+          "Makoto P. Kato",
+          "Takehiro Yamamoto",
+          "Yusuke Yamamoto",
+          "Hiroaki Ohshima"
         ],
         "ja": [
           "ファム フーロン",
@@ -855,7 +867,7 @@
       },
       "date": "2026-03",
       "venue": {
-        "en": "第18回データ工学と情報マネジメントに関するフォーラム (DEIM 2026)",
+        "en": "18th Forum on Data Engineering and Information Management (DEIM 2026)",
         "ja": "第18回データ工学と情報マネジメントに関するフォーラム (DEIM 2026)"
       },
       "publisher": {
@@ -878,11 +890,11 @@
       },
       "authors": {
         "en": [
-          "杉田 大知",
-          "ファム フーロン",
-          "大島 裕明",
-          "田 澄男",
-          "莊司 慶行"
+          "Daichi Sugita",
+          "Huu-Long Pham",
+          "Hiroaki Ohshima",
+          "Sumio Fujita",
+          "Yoshiyuki Shoji"
         ],
         "ja": [
           "杉田 大知",
@@ -894,7 +906,7 @@
       },
       "date": "2025-09",
       "venue": {
-        "en": "第181回データベースとデータサイエンス研究会",
+        "en": "181st Database and Data Science Research Meeting",
         "ja": "第181回データベースとデータサイエンス研究会"
       },
       "publisher": {
@@ -917,13 +929,13 @@
       },
       "authors": {
         "en": [
-          "金田 悠路",
-          "大江 優真",
-          "ファム フーロン",
-          "加藤 誠",
-          "大島 裕明",
-          "藤田 澄男",
-          "莊司 慶"
+          "Yuro Kanada",
+          "Yuma Oe",
+          "Huu-Long Pham",
+          "Makoto P. Kato",
+          "Hiroaki Ohshima",
+          "Sumio Fujita",
+          "Yoshiyuki Shoji"
         ],
         "ja": [
           "金田 悠路",
@@ -937,7 +949,7 @@
       },
       "date": "2025-09",
       "venue": {
-        "en": "情報処理学会 第160回 情報基礎とアクセス技術研究会",
+        "en": "160th Meeting of the IPSJ Special Interest Group on Information Fundamentals and Access Technologies",
         "ja": "情報処理学会 第160回 情報基礎とアクセス技術研究会"
       },
       "publisher": {
@@ -960,11 +972,11 @@
       },
       "authors": {
         "en": [
-          "ファム フーロン",
-          "山本 岳洋",
-          "窪内 将隆",
-          "西本 拓磨",
-          "大島 裕明"
+          "Huu-Long Pham",
+          "Takehiro Yamamoto",
+          "Masataka Kubouchi",
+          "Takuma Nishimoto",
+          "Hiroaki Ohshima"
         ],
         "ja": [
           "ファム フーロン",
@@ -976,7 +988,7 @@
       },
       "date": "2025-09",
       "venue": {
-        "en": "情報処理学会 第160回 情報基礎とアクセス技術研究会",
+        "en": "160th Meeting of the IPSJ Special Interest Group on Information Fundamentals and Access Technologies",
         "ja": "情報処理学会 第160回 情報基礎とアクセス技術研究会"
       },
       "publisher": {
@@ -999,11 +1011,11 @@
       },
       "authors": {
         "en": [
-          "大江 優真",
-          "ブ・ティ・ゴッグ アン",
-          "ファム フーロン",
-          "大島 裕明",
-          "莊司 慶行"
+          "Yuma Oe",
+          "Vu Thi Ngoc Anh",
+          "Huu-Long Pham",
+          "Hiroaki Ohshima",
+          "Yoshiyuki Shoji"
         ],
         "ja": [
           "大江 優真",
@@ -1015,7 +1027,7 @@
       },
       "date": "2025-03",
       "venue": {
-        "en": "第17回データ工学と情報マネジメントに関するフォーラム (DEIM 2025)",
+        "en": "17th Forum on Data Engineering and Information Management (DEIM 2025)",
         "ja": "第17回データ工学と情報マネジメントに関するフォーラム (DEIM 2025)"
       },
       "publisher": {
@@ -1038,11 +1050,11 @@
       },
       "authors": {
         "en": [
-          "ファム フーロン",
-          "山本 岳洋",
-          "窪内 将隆",
-          "西本 拓磨",
-          "大島 裕明"
+          "Huu-Long Pham",
+          "Takehiro Yamamoto",
+          "Masataka Kubouchi",
+          "Takuma Nishimoto",
+          "Hiroaki Ohshima"
         ],
         "ja": [
           "ファム フーロン",
@@ -1054,7 +1066,7 @@
       },
       "date": "2025-03",
       "venue": {
-        "en": "第17回データ工学と情報マネジメントに関するフォーラム (DEIM 2025)",
+        "en": "17th Forum on Data Engineering and Information Management (DEIM 2025)",
         "ja": "第17回データ工学と情報マネジメントに関するフォーラム (DEIM 2025)"
       },
       "publisher": {
@@ -1077,13 +1089,13 @@
       },
       "authors": {
         "en": [
-          "ファム フーロン",
-          "三林 亮太",
-          "山本 岳洋",
-          "加藤 誠",
-          "山本 祐輔",
-          "莊司 慶行",
-          "大島 裕明"
+          "Huu-Long Pham",
+          "Ryota Mibayashi",
+          "Takehiro Yamamoto",
+          "Makoto P. Kato",
+          "Yusuke Yamamoto",
+          "Yoshiyuki Shoji",
+          "Hiroaki Ohshima"
         ],
         "ja": [
           "ファム フーロン",
@@ -1097,7 +1109,7 @@
       },
       "date": "2024-03",
       "venue": {
-        "en": "第16回データ工学と情報マネジメントに関するフォーラム (DEIM 2024)",
+        "en": "16th Forum on Data Engineering and Information Management (DEIM 2024)",
         "ja": "第16回データ工学と情報マネジメントに関するフォーラム (DEIM 2024)"
       },
       "publisher": {
@@ -1120,14 +1132,14 @@
       },
       "authors": {
         "en": [
-          "三林 亮太",
+          "Ryota Mibayashi",
           "日置 淳也",
-          "ファム フーロン",
-          "加藤 誠",
-          "山本 祐輔",
-          "莊司 慶行",
-          "山本 岳洋",
-          "大島 裕明"
+          "Huu-Long Pham",
+          "Makoto P. Kato",
+          "Yusuke Yamamoto",
+          "Yoshiyuki Shoji",
+          "Takehiro Yamamoto",
+          "Hiroaki Ohshima"
         ],
         "ja": [
           "三林 亮太",
@@ -1142,7 +1154,7 @@
       },
       "date": "2023-03",
       "venue": {
-        "en": "第15回データ工学と情報マネジメントに関するフォーラム (DEIM 2023)",
+        "en": "15th Forum on Data Engineering and Information Management (DEIM 2023)",
         "ja": "第15回データ工学と情報マネジメントに関するフォーラム (DEIM 2023)"
       },
       "publisher": {
@@ -1179,7 +1191,7 @@
       },
       "date": "2021-03",
       "venue": {
-        "en": "第13回データ工学と情報マネジメントに関するフォーラム (DEIM 2021)",
+        "en": "13th Forum on Data Engineering and Information Management (DEIM 2021)",
         "ja": "第13回データ工学と情報マネジメントに関するフォーラム (DEIM 2021)"
       },
       "publisher": {
@@ -1202,10 +1214,10 @@
       },
       "authors": {
         "en": [
-          "吉村 拓真",
-          "ファムフーロン",
+          "Takuma Yoshimura",
+          "Huu-Long Pham",
           "和田 真弥",
-          "大島 裕明"
+          "Hiroaki Ohshima"
         ],
         "ja": [
           "吉村 拓真",
@@ -1216,7 +1228,7 @@
       },
       "date": "2021-03",
       "venue": {
-        "en": "第13回データ工学と情報マネジメントに関するフォーラム (DEIM 2021)",
+        "en": "13th Forum on Data Engineering and Information Management (DEIM 2021)",
         "ja": "第13回データ工学と情報マネジメントに関するフォーラム (DEIM 2021)"
       },
       "publisher": {
@@ -1239,13 +1251,13 @@
       },
       "authors": {
         "en": [
-          "ファムフーロン",
+          "Huu-Long Pham",
           "マハルジャンラビン",
-          "橋口 友哉",
+          "Tomoya Hashiguchi",
           "白石 晃",
-          "山本 岳洋",
-          "山本 祐輔",
-          "大島 裕明"
+          "Takehiro Yamamoto",
+          "Yusuke Yamamoto",
+          "Hiroaki Ohshima"
         ],
         "ja": [
           "ファムフーロン",
@@ -1259,7 +1271,7 @@
       },
       "date": "2020-03",
       "venue": {
-        "en": "第12回データ工学と情報マネジメントに関するフォーラム (DEIM 2020)",
+        "en": "12th Forum on Data Engineering and Information Management (DEIM 2020)",
         "ja": "第12回データ工学と情報マネジメントに関するフォーラム (DEIM 2020)"
       },
       "publisher": {

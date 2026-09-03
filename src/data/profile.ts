@@ -9,6 +9,10 @@ export const profile = {
     en: "Specially Appointed Assistant Professor",
     ja: "特任助教",
   },
+  degree: {
+    en: "Ph.D. in Information Science",
+    ja: "博士（情報科学）",
+  },
   biography: {
     en: "I am a Specially Appointed Assistant Professor at the Institute of Library, Information and Media Science, University of Tsukuba. My research focuses on information retrieval and machine learning, particularly the retrieval and evaluation of machine learning models across language, vision, and generative AI.",
     ja: "筑波大学図書館情報メディア系の特任助教です。情報検索と機械学習を基盤に、言語・画像・生成AIを含む機械学習モデルの検索と評価に取り組んでいます。",

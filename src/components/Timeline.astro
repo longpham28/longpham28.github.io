@@ -9,6 +9,7 @@ interface Item {
   section?: Localized;
   role?: Localized;
   department?: Localized;
+  degree?: Localized;
   organization?: Localized;
 }
 interface Props { items: Item[]; locale: Locale }
@@ -22,6 +23,7 @@ const { items, locale } = Astro.props;
     const roleText = item.role ? text(item.role, locale) : "";
     const organizationText = organization ? text(organization, locale) : "";
     const detailText = detail ? text(detail, locale) : "";
+    const degreeText = item.degree ? text(item.degree, locale) : "";
     return (
       <li>
         <p class="timeline-date">{formatRange(item.fromDate, item.toDate, locale)}</p>
@@ -29,6 +31,7 @@ const { items, locale } = Astro.props;
           {roleText && <p class="timeline-title">{roleText}</p>}
           {organizationText && <p>{organizationText}</p>}
           {detailText && <p class="muted">{detailText}</p>}
+          {degreeText && <p class="muted">{degreeText}</p>}
         </div>
       </li>
     );

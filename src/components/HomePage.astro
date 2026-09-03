@@ -53,6 +53,7 @@ const labels = isJa ? {
         />
       </div>
       <p class="position">{profile.role[locale]}<br />{profile.affiliation[locale]}</p>
+      <p class="degree">{profile.degree[locale]}</p>
       <p class="lede">{profile.biography[locale]}</p>
       <div class="profile-links" aria-label={labels.links}>
         {profile.links.map((link) => <a href={link.href}>{link.label}<span aria-hidden="true">↗</span></a>)}
@@ -69,7 +70,7 @@ const labels = isJa ? {
       </div>
       <div>
         <h3 class="minor-heading">{labels.field}</h3>
-        {research.areas.map((area) => <p class="field-name">{text(area.field, locale)}<span>{text(area.discipline, locale)}</span></p>)}
+        {research.areas.map((area) => <p class="field-name">{text(area.field, locale)}{text(area.discipline, locale) && <span>{text(area.discipline, locale)}</span>}</p>)}
       </div>
     </div>
   </section>

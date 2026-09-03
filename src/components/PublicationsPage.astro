@@ -13,17 +13,17 @@ const paperGroups = groupByYear(research.papers as Publication[]);
 const miscGroups = groupByYear(research.misc as Publication[]);
 const labels = isJa ? {
   title: `研究業績 — ${profile.name}`, description: "ファムフーロンの論文および研究発表一覧。", eyebrow: "研究業績", heading: "Publications",
-  intro: "査読論文・国際会議論文と、その他の研究発表を新しい順に掲載しています。", papers: "論文", misc: "その他の研究発表",
+  papers: "論文", misc: "その他の研究発表",
   miscSummary: `その他の研究発表 ${research.misc.length}件を表示`, back: "プロフィールに戻る",
 } : {
   title: `Publications — ${profile.name}`, description: "Published papers and other research outputs by Huu-Long Pham.", eyebrow: "Research output", heading: "Publications",
-  intro: "Peer-reviewed papers, conference proceedings, and other research presentations in reverse chronological order.", papers: "Published papers",
-  misc: "Other publications & presentations", miscSummary: `Show ${research.misc.length} other publications and presentations`, back: "Back to profile",
+  papers: "Published papers", misc: "Other publications & presentations",
+  miscSummary: `Show ${research.misc.length} other publications and presentations`, back: "Back to profile",
 };
 ---
 
 <BaseLayout locale={locale} title={labels.title} description={labels.description} path={path} alternatePath={alternatePath}>
-  <header class="page-intro shell"><p class="eyebrow">{labels.eyebrow}</p><h1>{labels.heading}</h1><p>{labels.intro}</p></header>
+  <header class="page-intro shell"><p class="eyebrow">{labels.eyebrow}</p><h1>{labels.heading}</h1></header>
   <section class="section shell publication-section">
     <div class="section-heading"><p class="section-number">01</p><h2>{labels.papers}<sup>{research.papers.length}</sup></h2></div>
     <div class="section-body year-groups">

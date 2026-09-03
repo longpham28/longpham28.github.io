@@ -36,7 +36,8 @@ h1, h2 { font-family: ui-serif, Georgia, "Noto Serif JP", serif; font-weight: 50
 .eyebrow { margin-bottom: 1.4rem; color: var(--navy); font-size: .76rem; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
 .hero h1, .page-intro h1 { margin-bottom: .25rem; font-size: clamp(3.4rem, 9vw, 7.6rem); line-height: .98; }
 .japanese-name { margin-bottom: 3rem; color: var(--muted); font-size: .9rem; letter-spacing: .14em; }
-.position { margin-bottom: 1.5rem; font-size: clamp(1rem, 2vw, 1.18rem); line-height: 1.55; }
+.position { margin-bottom: .35rem; font-size: clamp(1rem, 2vw, 1.18rem); line-height: 1.55; }
+.degree { margin-bottom: 1.5rem; color: var(--muted); font-size: .86rem; }
 .lede { max-width: 46rem; margin-bottom: 2rem; color: #35424e; font-family: ui-serif, Georgia, "Noto Serif JP", serif; font-size: clamp(1.1rem, 2vw, 1.4rem); line-height: 1.75; }
 .profile-links { display: flex; flex-wrap: wrap; gap: .7rem 1.25rem; }
 .profile-links a, .text-link { color: var(--navy); font-size: .85rem; font-weight: 700; text-decoration: none; }
@@ -81,7 +82,6 @@ h1, h2 { font-family: ui-serif, Georgia, "Noto Serif JP", serif; font-weight: 50
 
 .page-intro { padding-block: clamp(5rem, 10vw, 8rem); }
 .page-intro h1 { font-size: clamp(3.2rem, 8vw, 6.7rem); }
-.page-intro > p:last-child { max-width: 40rem; margin: 2rem 0 0; color: var(--muted); font-family: ui-serif, Georgia, "Noto Serif JP", serif; font-size: 1.2rem; }
 .publication-section { align-items: start; }
 .year-groups { display: grid; gap: 3.5rem; }
 .year-group { display: grid; grid-template-columns: 4rem minmax(0,1fr); gap: 1.5rem; }
