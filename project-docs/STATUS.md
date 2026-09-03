@@ -24,6 +24,7 @@ Initial implementation, validation, and deployment are complete. The Astro site 
 - The repository owner changed **Settings → Pages → Build and deployment → Source** from branch deployment to **GitHub Actions** and confirmed a successful workflow run without errors.
 - Added the user-supplied illustrated avatar to both language versions. Astro converts the 1 MB source PNG into an approximately 8 KB WebP asset during the build.
 - Simplified the home-page publication labels in both English and Japanese.
+- Replaced the boxed `HLP` header mark with a restrained `Huu-Long Pham` typographic wordmark.
 
 ## Next steps
 
