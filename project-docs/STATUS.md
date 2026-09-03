@@ -32,10 +32,11 @@ Initial implementation, validation, and deployment are complete. The Astro site 
 - Verified the dark theme in English, Japanese, and publications views: all sampled text exceeds WCAG AA contrast, with no horizontal overflow or browser warnings.
 - Added the approved compact header appearance menu with persistent System, Light, and Dark options.
 - Corrected the desktop hero grid so the `01` marker remains aligned with the profile content and capped the hero height to avoid excessive whitespace in tall viewports.
+- Simplified the bilingual biography to focus on information retrieval, machine learning, and machine-learning-model retrieval.
 
 ## Next steps
 
-1. Review the corrected hero alignment and spacing locally, then publish the fix.
+1. Confirm the GitHub Pages workflow publishes the latest layout and biography refinements.
 2. Perform optional visual review and content corrections after publication.
 3. Add a photographic portrait or blog only when those features are intentionally brought into scope.
 

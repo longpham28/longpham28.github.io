@@ -45,11 +45,11 @@ The displayed research fields are Information Retrieval and Machine Learning / �
 
 ### English
 
-I am a Specially Appointed Assistant Professor at the Institute of Library, Information and Media Science, University of Tsukuba. My research focuses on information retrieval and machine learning, particularly the retrieval and evaluation of machine learning models across language, vision, and generative AI.
+I am a Specially Appointed Assistant Professor at the Institute of Library, Information and Media Science, University of Tsukuba. My research focuses on information retrieval and machine learning, particularly the retrieval of machine learning models.
 
 ### Japanese
 
-筑波大学図書館情報メディア系の特任助教です。情報検索と機械学習を基盤に、言語・画像・生成AIを含む機械学習モデルの検索と評価に取り組んでいます。
+筑波大学図書館情報メディア系の特任助教です。情報検索と機械学習を基盤に、特に機械学習モデルの検索に取り組んでいます。
 
 ## Publications and other achievements
 
