@@ -4,7 +4,7 @@ Last updated: 2026-09-03
 
 ## Current phase
 
-Specification approved; implementation is starting.
+Implementation and local validation are complete. Publication is pending a push to `master` and confirmation that the repository's Pages source is set to GitHub Actions.
 
 ## Completed
 
@@ -13,16 +13,19 @@ Specification approved; implementation is starting.
 - Agreed on audience, routes, content scope, bilingual behavior, visual direction, and deployment architecture.
 - Confirmed that the initial release has no blog, portrait, or email address.
 - Confirmed academic memberships and external profile links.
+- Replaced Gatsby with Astro 7.2.10 while preserving the previous implementation in Git history.
+- Added English and Japanese profile and publications routes.
+- Imported 43 publicly disclosed researchmap records into curated local data.
+- Added compact year-grouped publications, collapsed MISC, timelines, awards, service, and memberships.
+- Added a GitHub Pages deployment workflow.
+- Passed the content-integrity check and a clean production build of all five pages.
 
 ## Next steps
 
-1. Commit the approved specification and project handoff documents.
-2. Replace the active Gatsby source with a minimal Astro project while preserving Git history.
-3. Curate disclosed researchmap records into typed site data.
-4. Build the bilingual pages and visual system.
-5. Add the GitHub Pages workflow.
-6. Run production and content-integrity checks.
-7. Update this status document and publish through `master`.
+1. Push the completed commits to `master`.
+2. Set **Pages → Build and deployment → Source** to **GitHub Actions** if it still points to `master/docs`.
+3. Confirm the deployment workflow succeeds and the public URL serves the Astro site.
+4. Perform an optional visual review and content corrections after publication.
 
 ## Important constraints
 
