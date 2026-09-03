@@ -100,6 +100,9 @@ h1, h2 { font-family: ui-serif, Georgia, "Noto Serif JP", serif; font-weight: 50
 .hero h1, .page-intro h1 { margin-bottom: .25rem; font-size: clamp(3.4rem, 9vw, 7.6rem); line-height: .98; }
 .japanese-name { margin-bottom: 3rem; color: var(--muted); font-size: .9rem; letter-spacing: .14em; }
 .position { margin-bottom: .35rem; font-size: clamp(1rem, 2vw, 1.18rem); line-height: 1.55; }
+.laboratory { margin-bottom: .25rem; color: var(--muted); font-size: .86rem; }
+.laboratory a { color: var(--accent); font-weight: 700; }
+.laboratory span { margin-left: .25rem; }
 .degree { margin-bottom: 1.5rem; color: var(--muted); font-size: .86rem; }
 .lede { max-width: 46rem; margin-bottom: 2rem; color: var(--secondary-text); font-family: ui-serif, Georgia, "Noto Serif JP", serif; font-size: clamp(1.1rem, 2vw, 1.4rem); line-height: 1.75; }
 .profile-links { display: flex; flex-wrap: wrap; gap: .7rem 1.25rem; }

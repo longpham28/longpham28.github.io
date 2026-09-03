@@ -9,6 +9,10 @@ export const profile = {
     en: "Specially Appointed Assistant Professor",
     ja: "特任助教",
   },
+  laboratory: {
+    name: "KASYS",
+    href: "https://kasys.slis.tsukuba.ac.jp/",
+  },
   degree: {
     en: "Ph.D. in Information Science",
     ja: "博士（情報科学）",

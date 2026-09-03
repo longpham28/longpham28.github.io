@@ -33,6 +33,7 @@ Initial implementation, validation, and deployment are complete. The Astro site 
 - Added the approved compact header appearance menu with persistent System, Light, and Dark options.
 - Corrected the desktop hero grid so the `01` marker remains aligned with the profile content and capped the hero height to avoid excessive whitespace in tall viewports.
 - Simplified the bilingual biography to focus on information retrieval, machine learning, and machine-learning-model retrieval.
+- Added the KASYS laboratory affiliation and official website link to both home-page language versions.
 
 ## Next steps
 

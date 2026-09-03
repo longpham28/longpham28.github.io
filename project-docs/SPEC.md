@@ -38,6 +38,7 @@ Blog functionality is explicitly out of scope for the initial release. The struc
 10. Links to GitHub, ORCID, and researchmap
 
 An illustrated avatar is included on both home pages. No photographic portrait or email address is included. The affiliation does not need to be linked.
+The affiliated laboratory, KASYS, is linked from the profile details on both home pages.
 
 The displayed research fields are Information Retrieval and Machine Learning / 情報検索、機械学習.
 

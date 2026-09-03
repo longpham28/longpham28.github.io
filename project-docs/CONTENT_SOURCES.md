@@ -8,6 +8,7 @@ Last reviewed: 2026-09-03
 - Public profile: https://researchmap.jp/huulongpham
 - GitHub profile: https://github.com/longpham28
 - ORCID: https://orcid.org/0009-0002-4857-7004
+- KASYS laboratory: https://kasys.slis.tsukuba.ac.jp/
 - Database Society of Japan: https://dbsj.org/
 - Information Processing Society of Japan: https://www.ipsj.or.jp/index.html
 - User-supplied illustrated avatar: `src/assets/avatar.png`
