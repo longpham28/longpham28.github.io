@@ -35,6 +35,7 @@ Initial implementation, validation, and deployment are complete. The Astro site 
 - Simplified the bilingual biography to focus on information retrieval, machine learning, and machine-learning-model retrieval.
 - Added the KASYS laboratory affiliation and official website link to both home-page language versions.
 - Added the Ohshima Laboratory affiliation and official website link to the master's and doctoral education records.
+- Added a branded favicon, social-sharing image, and Open Graph and Twitter/X card metadata.
 
 ## Next steps
 

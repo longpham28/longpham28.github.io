@@ -88,6 +88,7 @@ I am a Specially Appointed Assistant Professor at the Institute of Library, Info
 - Use semantic HTML and accessible keyboard/focus behavior.
 - Main text must remain comfortable at browser zoom and text enlargement.
 - Include appropriate titles, descriptions, canonical URLs, language alternates, and Person structured data.
+- Include a favicon and a large social-sharing image with Open Graph and Twitter/X card metadata.
 - Use local build-time content. Do not fetch researchmap at page-view time.
 - Include only records explicitly marked public in the researchmap export.
 - Never copy the raw researchmap export into a public output directory.

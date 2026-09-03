@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect x="64" y="64" width="1072" height="502" rx="4" fill="none" stroke="#d9e0e5" stroke-width="2"/>
+  <rect x="64" y="64" width="10" height="502" fill="#75613b"/>
+  <text x="118" y="145" fill="#75613b" font-family="Arial, 'Noto Sans', sans-serif" font-size="22" font-weight="700" letter-spacing="4">INFORMATION RETRIEVAL × MACHINE LEARNING</text>
+  <text x="112" y="286" fill="#18222c" font-family="Georgia, 'Times New Roman', serif" font-size="82" font-weight="500" letter-spacing="-2">Huu-Long Pham</text>
+  <text x="118" y="350" fill="#65717d" font-family="Arial, 'Noto Sans JP', sans-serif" font-size="27" letter-spacing="5">ファムフーロン</text>
+  <line x1="118" y1="404" x2="1082" y2="404" stroke="#d9e0e5" stroke-width="2"/>
+  <text x="118" y="461" fill="#35424e" font-family="Arial, 'Noto Sans', sans-serif" font-size="25">Specially Appointed Assistant Professor</text>
+  <text x="118" y="503" fill="#65717d" font-family="Arial, 'Noto Sans', sans-serif" font-size="22">University of Tsukuba · KASYS</text>
+  <circle cx="1034" cy="139" r="34" fill="#75613b"/>
+  <text x="1034" y="147" fill="#ffffff" font-family="Georgia, 'Times New Roman', serif" font-size="24" text-anchor="middle">H</text>
+</svg>
