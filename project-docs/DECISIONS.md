@@ -34,4 +34,10 @@ Publications and achievements are grouped by year. MISC uses a native disclosure
 
 Status: Accepted
 
-The initial visual system uses white, charcoal, and navy, with a light theme only. Typography and spacing carry the design; portraits and decorative imagery are deferred. Later refinements should favor stronger heading hierarchy and a single restrained hero accent over alternating section backgrounds or repeated decorative rules.
+The light visual system uses white, charcoal, and one muted antique-gold accent (`#75613B`). The warm accent was chosen after local comparison with navy and a brighter gold because it harmonizes with the illustrated avatar while remaining calm and legible. Typography and spacing carry the design; refinements favor stronger heading hierarchy and subtle interaction states over colored section backgrounds or repeated decorative rules.
+
+## ADR-007: System-responsive dark mode
+
+Status: Accepted
+
+Dark mode uses CSS `prefers-color-scheme` with warm charcoal surfaces and a lighter gold accent. It follows the visitor's operating-system preference, requires no client-side JavaScript, and keeps the same English and Japanese URLs. Separate theme routes are avoided because they would duplicate content, metadata, and maintenance work. A manual override may be considered later only if there is a clear need.

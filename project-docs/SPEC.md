@@ -70,8 +70,8 @@ I am a Specially Appointed Assistant Professor at the Institute of Library, Info
 ## Visual direction
 
 - Minimal, elegant, and academic rather than decorative.
-- White background, dark charcoal text, and one restrained navy accent.
-- Light theme only for the initial release.
+- White background, dark charcoal text, and one restrained muted antique-gold accent (`#75613B`).
+- Light and dark themes follow the visitor's operating-system preference without a theme-specific route or client-side JavaScript.
 - Generous whitespace, thin rules, restrained typography, and subtle interaction states.
 - Use the supplied illustrated bear avatar as the single profile image.
 - A photographic portrait may be added later if requested.

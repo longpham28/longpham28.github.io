@@ -25,13 +25,18 @@ Initial implementation, validation, and deployment are complete. The Astro site 
 - Added the user-supplied illustrated avatar to both language versions. Astro converts the 1 MB source PNG into an approximately 8 KB WebP asset during the build.
 - Simplified the home-page publication labels in both English and Japanese.
 - Replaced the boxed `HLP` header mark with a restrained `Huu-Long Pham` typographic wordmark.
-- Refined the visual hierarchy with slightly larger navy section headings and one subtle vertical accent in the hero.
+- Refined the visual hierarchy with slightly larger accent-colored section headings and one subtle vertical accent in the hero.
 - Corrected the bilingual research fields, Kobelco Systems role and end date, graduate-program dates and labels, degree, service-role translations, award labels, and publication-page introductory copy.
+- Selected muted antique gold (`#75613B`) as the site's single accent after local comparison with navy and brighter gold, and added restrained link, hover, selection, and focus states.
+- Added an automatic CSS-only dark mode using the visitor's operating-system preference, with warm charcoal surfaces and a lighter gold accent.
+- Verified the dark theme in English, Japanese, and publications views: all sampled text exceeds WCAG AA contrast, with no horizontal overflow or browser warnings.
 
 ## Next steps
 
-1. Perform an optional visual review and content corrections after publication.
-2. Add a photographic portrait or blog only when those features are intentionally brought into scope.
+1. Confirm the GitHub Pages workflow publishes the approved visual refinements.
+2. Discuss whether a manual light/dark override is worth adding alongside system preference.
+3. Perform optional visual review and content corrections after publication.
+4. Add a photographic portrait or blog only when those features are intentionally brought into scope.
 
 ## Important constraints
 
