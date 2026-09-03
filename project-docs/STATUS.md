@@ -4,7 +4,7 @@ Last updated: 2026-09-03
 
 ## Current phase
 
-Implementation and local validation are complete. Publication is pending a push to `master` and confirmation that the repository's Pages source is set to GitHub Actions.
+Implementation, validation, and the first GitHub Actions deployment are complete. The Astro site is live at https://longpham28.github.io/.
 
 ## Completed
 
@@ -19,13 +19,13 @@ Implementation and local validation are complete. Publication is pending a push 
 - Added compact year-grouped publications, collapsed MISC, timelines, awards, service, and memberships.
 - Added a GitHub Pages deployment workflow.
 - Passed the content-integrity check and a clean production build of all five pages.
+- Pushed the atomic commits to `master` and confirmed the custom Pages workflow completed successfully.
+- Confirmed the public URL serves Astro 7.2.10 content.
 
 ## Next steps
 
-1. Push the completed commits to `master`.
-2. Set **Pages → Build and deployment → Source** to **GitHub Actions** if it still points to `master/docs`.
-3. Confirm the deployment workflow succeeds and the public URL serves the Astro site.
-4. Perform an optional visual review and content corrections after publication.
+1. In GitHub, confirm **Settings → Pages → Build and deployment → Source** is set to **GitHub Actions**. The legacy branch-based Pages process also ran after the migration and failed because `master/docs` was intentionally removed; the custom Actions deployment succeeded independently.
+2. Perform an optional visual review and content corrections after publication.
 
 ## Important constraints
 
