@@ -1,6 +1,6 @@
 # Project status
 
-Last updated: 2026-09-04
+Last updated: 2026-09-06
 
 ## Current phase
 
@@ -36,10 +36,12 @@ Initial implementation, validation, and deployment are complete. The Astro site 
 - Added the KASYS laboratory affiliation and official website link to both home-page language versions.
 - Added the Ohshima Laboratory affiliation and official website link to the master's and doctoral education records.
 - Added a branded favicon, social-sharing image, and Open Graph and Twitter/X card metadata.
+- Added the user-supplied Google Search Console verification meta tag to the shared layout for both languages.
 
 ## Next steps
 
 1. Confirm the GitHub Pages workflow publishes the latest layout and biography refinements.
+   After deployment, complete HTML-tag verification in Google Search Console and submit the existing `sitemap.xml`.
 2. Perform optional visual review and content corrections after publication.
 3. Add a photographic portrait or blog only when those features are intentionally brought into scope.
 
