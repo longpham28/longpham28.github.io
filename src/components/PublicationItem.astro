@@ -24,6 +24,7 @@ const details = [
       </p>
     )}
     {details.length > 0 && <p class="publication-meta"><cite>{details[0]}</cite>{details.slice(1).map((detail) => ` · ${detail}`)}</p>}
+    {item.description && <p class="publication-meta">{text(item.description, locale)}</p>}
     {!compact && item.doi && <p class="doi">DOI: <a href={`https://doi.org/${item.doi}`}>{item.doi}</a></p>}
   </div>
 </article>

@@ -1,10 +1,11 @@
 # Content sources
 
-Last reviewed: 2026-09-04
+Last reviewed: 2026-09-08
 
 ## Primary sources
 
 - Supplied researchmap export: `rm_researchers20260903.jsonl`
+- User-supplied disclosed researchmap record `54881577` (2026-09-08): ICADL 2026 paper, with the supplied English title, author order, venue, year, and “To appear.” status; the Japanese status is “掲載予定”.
 - Public profile: https://researchmap.jp/huulongpham
 - GitHub profile: https://github.com/longpham28
 - ORCID: https://orcid.org/0009-0002-4857-7004

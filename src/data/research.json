@@ -276,6 +276,49 @@
   ],
   "papers": [
     {
+      "id": "54881577",
+      "title": {
+        "en": "Retrieving Instance Segmentation Models using Local Image Features via Transformer Encoder",
+        "ja": "Retrieving Instance Segmentation Models using Local Image Features via Transformer Encoder"
+      },
+      "authors": {
+        "en": [
+          "Huu-Long Pham",
+          "Masataka Kubouchi",
+          "Takuma Nishimoto",
+          "Takehiro Yamamoto",
+          "Hiroaki Ohshima"
+        ],
+        "ja": [
+          "Huu-Long Pham",
+          "Masataka Kubouchi",
+          "Takuma Nishimoto",
+          "Takehiro Yamamoto",
+          "Hiroaki Ohshima"
+        ]
+      },
+      "date": "2026",
+      "venue": {
+        "en": "The 28th International Conference on Asia-Pacific Digital Libraries (ICADL 2026)",
+        "ja": "The 28th International Conference on Asia-Pacific Digital Libraries (ICADL 2026)"
+      },
+      "description": {
+        "en": "To appear.",
+        "ja": "掲載予定"
+      },
+      "publisher": {
+        "en": "",
+        "ja": ""
+      },
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "",
+      "url": "",
+      "peerReviewed": true,
+      "type": "international_conference_proceedings"
+    },
+    {
       "id": "54824578",
       "title": {
         "en": "Which LoRA Should Be Merged Next? Retrieving an Additional LoRA from a Target Image",

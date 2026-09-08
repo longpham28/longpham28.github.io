@@ -9,6 +9,7 @@ export type Publication = {
   authors: { en: string[]; ja: string[] };
   date: string;
   venue: Localized;
+  description?: Localized;
   publisher: Localized;
   volume: string;
   issue: string;
