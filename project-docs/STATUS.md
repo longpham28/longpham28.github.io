@@ -8,7 +8,7 @@ Initial implementation, validation, and deployment are complete. The Astro site 
 
 ## Completed
 
-- Updated the ICADL 2026 venue in both languages to “In Proceedings of the 28th International Conference on Asia-Pacific Digital Libraries (ICADL 2026)” at the user's request.
+- Updated the ICADL 2026 venue in both languages to “Proceedings of the 28th International Conference on Asia-Pacific Digital Libraries (ICADL 2026)” at the user's request.
 - Added the user-supplied ICADL 2026 paper to the shared publication data, bringing the paper count to 13, with “To appear.” / “掲載予定” shown on both home and publications pages.
 - Reviewed the current public Gatsby site and repository structure.
 - Reviewed the supplied researchmap JSONL export.
