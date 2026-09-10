@@ -10,6 +10,8 @@ Vietnamese support is implemented and validated locally on 2026-09-10, following
 
 ## Completed
 
+- Kept `Hữu Long` together in the Vietnamese profile heading, allowing wrapping only after `Phạm`.
+
 - Shortened the Vietnamese role to `Giáo sư trợ lý` in the profile, biography, and experience at the user’s request.
 
 - Applied the user-supplied name `Phạm Hữu Long` throughout Vietnamese profile identity and metadata, preserving original publication author names.

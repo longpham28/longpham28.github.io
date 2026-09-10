@@ -43,7 +43,7 @@ const labels = copy[locale];
       <div class="hero-intro">
         <div>
           <p class="eyebrow">{labels.eyebrow}</p>
-          <h1>{displayName}</h1>
+          <h1>{locale === "vi" ? displayName.replace(/ (?=\S+$)/, "\u00a0") : displayName}</h1>
           <p class="japanese-name" lang="ja">{profile.japaneseName}</p>
         </div>
         <Image
