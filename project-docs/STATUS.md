@@ -10,6 +10,8 @@ Vietnamese support is implemented and validated locally on 2026-09-10, following
 
 ## Completed
 
+- Shortened the Vietnamese role to `Giáo sư trợ lý` in the profile, biography, and experience at the user’s request.
+
 - Applied the user-supplied name `Phạm Hữu Long` throughout Vietnamese profile identity and metadata, preserving original publication author names.
 
 - Applied the user’s Vietnamese terminology corrections: `Task Organizer` remains English, and `Giáo sư trợ lý` is used consistently in the current role, biography, and experience.

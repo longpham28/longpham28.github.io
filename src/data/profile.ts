@@ -8,7 +8,7 @@ export const profile = {
     ja: "筑波大学 図書館情報メディア系",
   },
   role: {
-    vi: "Giáo sư trợ lý được bổ nhiệm đặc biệt",
+    vi: "Giáo sư trợ lý",
     en: "Specially Appointed Assistant Professor",
     ja: "特任助教",
   },
@@ -22,7 +22,7 @@ export const profile = {
     ja: "博士（情報科学）",
   },
   biography: {
-    vi: "Tôi hiện là giáo sư trợ lý được bổ nhiệm đặc biệt tại Institute of Library, Information and Media Science, University of Tsukuba. Nghiên cứu của tôi tập trung vào truy hồi thông tin và học máy, đặc biệt là truy hồi mô hình học máy.",
+    vi: "Tôi hiện là giáo sư trợ lý tại Institute of Library, Information and Media Science, University of Tsukuba. Nghiên cứu của tôi tập trung vào truy hồi thông tin và học máy, đặc biệt là truy hồi mô hình học máy.",
     en: "I am a Specially Appointed Assistant Professor at the Institute of Library, Information and Media Science, University of Tsukuba. My research focuses on information retrieval and machine learning, particularly the retrieval of machine learning models.",
     ja: "筑波大学図書館情報メディア系の特任助教です。情報検索と機械学習を基盤に、特に機械学習モデルの検索に取り組んでいます。",
   },
