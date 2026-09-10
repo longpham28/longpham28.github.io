@@ -6,7 +6,7 @@ Last updated: 2026-09-10
 
 Initial implementation, validation, and deployment are complete. The Astro site is live at https://longpham28.github.io/, and GitHub Pages now uses GitHub Actions as its publishing source.
 
-Vietnamese support is implemented and validated locally on 2026-09-10, following [VIETNAMESE_DESIGN.md](VIETNAMESE_DESIGN.md). The site now builds English, Japanese, and Vietnamese profile/publications pages plus the shared 404. These changes have not yet been pushed or deployed.
+Vietnamese support is implemented, validated, and published on 2026-09-10, following [VIETNAMESE_DESIGN.md](VIETNAMESE_DESIGN.md). The site now builds English, Japanese, and Vietnamese profile/publications pages plus the shared 404. GitHub Pages deployment of `a7e9d3e` succeeded (Actions run `34420638004`); live Vietnamese profile and publications pages were verified, including all requested terminology, name spelling, and wrapping corrections.
 
 ## Completed
 
@@ -62,12 +62,9 @@ Vietnamese support is implemented and validated locally on 2026-09-10, following
 
 ## Next steps
 
-1. Review the local Vietnamese version and publish the committed changes when requested.
-
-2. After publishing, confirm the GitHub Pages workflow deploys all three languages.
-   After deployment, complete HTML-tag verification in Google Search Console and submit the existing `sitemap.xml`.
-3. Perform optional visual review and content corrections after publication.
-4. Add a photographic portrait or blog only when those features are intentionally brought into scope.
+1. Complete HTML-tag verification in Google Search Console and submit the updated `sitemap.xml`.
+2. Perform optional content corrections after publication.
+3. Add a photographic portrait or blog only when those features are intentionally brought into scope.
 
 ## Important constraints
 

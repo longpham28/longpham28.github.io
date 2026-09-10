@@ -1,11 +1,11 @@
 # Vietnamese language support
 
 Date: 2026-09-10
-Status: Implemented locally; deployment pending
+Status: Implemented and published (2026-09-10)
 
 ## Scope and intent
 
-Add a Vietnamese interface and profile to the existing academic website. All three languages share the same research records, sections, ordering, links, and visual system. This document records the agreed design, now implemented locally.
+Add a Vietnamese interface and profile to the existing academic website. All three languages share the same research records, sections, ordering, links, and visual system. This document records the agreed design, now implemented and published.
 
 The user confirmed that research and publication details should retain their original language. An English paper title stays English on English, Japanese, and Vietnamese pages; a Japanese presentation title stays Japanese on all three. No Vietnamese translation of the bibliography is needed.
 

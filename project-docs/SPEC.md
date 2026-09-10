@@ -1,6 +1,6 @@
 # Website specification
 
-Status: English, Japanese, and Vietnamese implemented; latest deployment pending
+Status: English, Japanese, and Vietnamese implemented and published
 Last updated: 2026-09-10
 
 ## Purpose
