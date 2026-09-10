@@ -58,7 +58,7 @@ I am a Specially Appointed Assistant Professor at the Institute of Library, Info
 
 ### Vietnamese
 
-Tôi hiện là trợ lý giáo sư được bổ nhiệm đặc biệt tại Institute of Library, Information and Media Science, University of Tsukuba. Nghiên cứu của tôi tập trung vào truy hồi thông tin và học máy, đặc biệt là truy hồi mô hình học máy.
+Tôi hiện là giáo sư trợ lý được bổ nhiệm đặc biệt tại Institute of Library, Information and Media Science, University of Tsukuba. Nghiên cứu của tôi tập trung vào truy hồi thông tin và học máy, đặc biệt là truy hồi mô hình học máy.
 
 ## Publications and other achievements
 

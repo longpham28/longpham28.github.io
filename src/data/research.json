@@ -68,7 +68,7 @@
       "role": {
         "en": "Specially Appointed Assistant Professor",
         "ja": "特任助教",
-        "vi": "Trợ lý giáo sư được bổ nhiệm đặc biệt"
+        "vi": "Giáo sư trợ lý được bổ nhiệm đặc biệt"
       }
     },
     {
@@ -213,7 +213,7 @@
       "role": {
         "en": "Task Organizer",
         "ja": "タスクオーガナイザー",
-        "vi": "Tổ chức tác vụ đánh giá"
+        "vi": "Task Organizer"
       },
       "organization": {
         "en": "NTCIR-19 ModelRetrieval Task",

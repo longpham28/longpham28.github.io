@@ -10,6 +10,8 @@ Vietnamese support is implemented and validated locally on 2026-09-10, following
 
 ## Completed
 
+- Applied the user’s Vietnamese terminology corrections: `Task Organizer` remains English, and `Giáo sư trợ lý` is used consistently in the current role, biography, and experience.
+
 - Added `/vi/` and `/vi/publications/`, Vietnamese interface/profile copy, localized dates and publication status, and visible three-language navigation.
 - Preserved equivalent pages and targeted profile sections when switching languages, using static links and CSS without new client-side JavaScript.
 - Audited all 26 paper/MISC records against the disclosed 2026-09-08 export and migrated bibliographic fields to shared original wording with field-specific language tags; retained the user-corrected ICADL venue.

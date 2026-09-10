@@ -37,6 +37,8 @@ The bilingual biography, academic-membership list, illustrated avatar, research-
 
 ## Vietnamese extension policy (2026-09-10)
 
+- User terminology correction: retain `Task Organizer` in English on Vietnamese pages; render Assistant Professor as `Giáo sư trợ lý`, retaining the specially appointed qualifier in the current role.
+
 - The user confirmed that research and publication details should stay in their original language across language pages.
 - Translate navigation, section headings, biography, generic research-field labels, profile explanations, accessibility labels, and editorial status text into Vietnamese. These translations derive from existing approved content and must not add claims.
 - Do not create Vietnamese translations of publication/presentation titles, author names, journals, proceedings, or publishers. Keep identifiers, links, dates, volume, issue, and pages unchanged; date display may be localized.
