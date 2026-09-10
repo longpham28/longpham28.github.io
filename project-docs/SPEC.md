@@ -1,6 +1,6 @@
 # Website specification
 
-Status: Existing site implemented; Vietnamese extension designed, implementation pending
+Status: English, Japanese, and Vietnamese implemented; latest deployment pending
 Last updated: 2026-09-10
 
 ## Purpose
@@ -12,7 +12,7 @@ Create a fast, multilingual academic profile for Huu-Long Pham. The site should 
 - Primary audience: researchers, potential collaborators, students, and conference participants.
 - English is served at `/` and is the default language. Each language page has its own canonical URL.
 - Japanese is served under `/ja/`.
-- Planned: Vietnamese is served under `/vi/`.
+- Vietnamese is served under `/vi/`.
 - Detailed extension design: [Vietnamese language support](VIETNAMESE_DESIGN.md).
 - Language switching links to the equivalent page without automatic redirection.
 
@@ -22,8 +22,8 @@ Create a fast, multilingual academic profile for Huu-Long Pham. The site should 
 - `/publications/`: English publications and MISC
 - `/ja/`: Japanese profile
 - `/ja/publications/`: Japanese publications and MISC
-- `/vi/`: Vietnamese profile (planned)
-- `/vi/publications/`: Vietnamese publications and MISC (planned)
+- `/vi/`: Vietnamese profile
+- `/vi/publications/`: Vietnamese publications and MISC
 - `/404.html`: shared not-found page
 
 Blog functionality is explicitly out of scope for the initial release. The structure should not prevent adding Astro Content Collections later.
@@ -55,6 +55,10 @@ I am a Specially Appointed Assistant Professor at the Institute of Library, Info
 ### Japanese
 
 筑波大学図書館情報メディア系の特任助教です。情報検索と機械学習を基盤に、特に機械学習モデルの検索に取り組んでいます。
+
+### Vietnamese
+
+Tôi hiện là trợ lý giáo sư được bổ nhiệm đặc biệt tại Institute of Library, Information and Media Science, University of Tsukuba. Nghiên cứu của tôi tập trung vào truy hồi thông tin và học máy, đặc biệt là truy hồi mô hình học máy.
 
 ## Publications and other achievements
 

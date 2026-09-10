@@ -1,4 +1,5 @@
 ---
+import { routes, ui } from "../lib/i18n";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PublicationItem from "./PublicationItem.astro";
 import Timeline from "./Timeline.astro";
@@ -9,11 +10,10 @@ import { formatDate, formatRange, research, text, type Locale, type Publication 
 
 interface Props { locale: Locale }
 const { locale } = Astro.props;
-const isJa = locale === "ja";
-const home = isJa ? "/ja/" : "/";
-const publicationPath = isJa ? "/ja/publications/" : "/publications/";
+const home = routes.home[locale];
+const publicationPath = routes.publications[locale];
 const latestPapers = research.papers.slice(0, 3) as Publication[];
-const labels = isJa ? {
+const copy = { ja: {
   pageTitle: `${profile.name} — 研究者プロフィール`,
   description: "ファムフーロンの研究、論文、経歴、学術活動。筑波大学図書館情報メディア系。",
   eyebrow: "情報検索 × 機械学習",
@@ -21,7 +21,7 @@ const labels = isJa ? {
   laboratory: "所属研究室",
   publications: "論文", allPublications: "すべての論文", cv: "経歴", experience: "職歴",
   education: "学歴", recognition: "受賞・学術活動", awards: "受賞", service: "委員歴", memberships: "所属学会",
-} : {
+}, en: {
   pageTitle: `${profile.name} — Academic Profile`,
   description: "Research, publications, experience, and academic activities of Huu-Long Pham at the University of Tsukuba.",
   eyebrow: "Information Retrieval × Machine Learning",
@@ -29,10 +29,13 @@ const labels = isJa ? {
   laboratory: "Laboratory",
   publications: "Publications", allPublications: "View all publications", cv: "Curriculum vitae", experience: "Experience",
   education: "Education", recognition: "Recognition & service", awards: "Awards", service: "Academic service", memberships: "Memberships",
-};
+}, vi: {
+  pageTitle: `${profile.name} — Hồ sơ học thuật`, description: "Nghiên cứu, công bố khoa học, kinh nghiệm và hoạt động học thuật của Huu-Long Pham tại University of Tsukuba.", eyebrow: "Truy hồi thông tin × Học máy", links: "Hồ sơ", research: "Nghiên cứu", interests: "Hướng nghiên cứu", field: "Lĩnh vực nghiên cứu", laboratory: "Phòng nghiên cứu", publications: "Công bố khoa học", allPublications: "Xem tất cả công bố", cv: "Quá trình công tác và học tập", experience: "Kinh nghiệm", education: "Học vấn", recognition: "Giải thưởng và hoạt động", awards: "Giải thưởng", service: "Hoạt động học thuật", memberships: "Thành viên các hội học thuật",
+} } satisfies Record<Locale, Record<string, string>>;
+const labels = copy[locale];
 ---
 
-<BaseLayout locale={locale} title={labels.pageTitle} description={labels.description} path={home} alternatePath={isJa ? "/" : "/ja/"}>
+<BaseLayout locale={locale} title={labels.pageTitle} description={labels.description} path={home} page="home">
   <section class="hero shell" id="about">
     <div class="hero-index" aria-hidden="true">01</div>
     <div class="hero-content">
@@ -45,7 +48,7 @@ const labels = isJa ? {
         <Image
           class="avatar"
           src={avatar}
-          alt={isJa ? "Huu-Long Phamを表すクマのアバター" : "Bear avatar representing Huu-Long Pham"}
+          alt={ui[locale].avatar}
           width={360}
           height={360}
           format="webp"

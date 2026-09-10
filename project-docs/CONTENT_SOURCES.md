@@ -5,6 +5,7 @@ Last reviewed: 2026-09-10
 ## Primary sources
 
 - Supplied researchmap export: `rm_researchers20260903.jsonl`
+- Disclosed records in the supplied `rm_researchers20260908.jsonl`: verified original bibliography fields during the Vietnamese implementation.
 - User-supplied disclosed researchmap record `54881577` (2026-09-08): ICADL 2026 paper, with the supplied English title, author order, venue, year, and “To appear.” status; the Japanese status is “掲載予定”.
 - Public profile: https://researchmap.jp/huulongpham
 - GitHub profile: https://github.com/longpham28
@@ -42,4 +43,12 @@ The bilingual biography, academic-membership list, illustrated avatar, research-
 - Retain proper names and established organization/laboratory names; do not invent Vietnamese official names or a new spelling of the researcher's name. Existing approved English/Japanese profile name variants may remain outside bibliographic records.
 - Existing `en`/`ja` bibliographic fields may contain translations or transliterations. During implementation, verify the original wording against the disclosed source or authoritative publication before choosing the shared display value. A locale key alone is not evidence of the original language.
 - Keep source provenance in curated private-safe data or documentation. Never publish the raw export or non-public fields.
-- Vietnamese wording in the design document is draft interface copy, not a new factual source. Full profile translation and source-field verification remain implementation work.
+- Vietnamese interface and profile translations are now implemented from the existing approved facts; proper organization names remain in their established form.
+
+## Original bibliography audit (2026-09-10)
+
+All 26 existing papers/MISC records were matched by ID against the disclosed entries of the 2026-09-08 export. Source title, authors, venue, and publisher fields each had either a single supplied value or identical variants, so no ambiguous variant selection was necessary. The user-corrected ICADL 2026 proceedings name takes precedence over the export's shorter conference name.
+
+The curated bibliography now stores single original strings/author lists plus field-specific language tags. Language tags were reviewed from the text, not inferred solely from source keys: the English NTCIR titles and the English “Distraction Detection…” title occur under Japanese source keys. The latter keeps its Japanese DEIM venue. Original source spellings, including unusual author punctuation and apparently shortened Japanese names, are preserved without speculative corrections. Dates, IDs, record order, DOI, URLs, and bibliographic numbers were checked against the pre-migration data.
+
+The import command now writes a temporary review candidate and leaves the curated site file untouched. Existing corrections and translations take precedence, while explicitly non-disclosed records are excluded. New records with differing source variants require review; new records also need reviewed language tags and profile translations before being applied. The candidate contains only curated eligible fields, never the raw export.

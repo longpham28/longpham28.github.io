@@ -1,16 +1,17 @@
 import researchData from "../data/research.json";
 
-export type Locale = "en" | "ja";
-export type Localized = { en: string; ja: string };
+export type Locale = "en" | "ja" | "vi";
+export type Localized = { en: string; ja: string; vi: string };
 
 export type Publication = {
   id: string;
-  title: Localized;
-  authors: { en: string[]; ja: string[] };
+  title: string;
+  authors: string[];
   date: string;
-  venue: Localized;
-  description?: Localized;
-  publisher: Localized;
+  venue: string;
+  status?: string;
+  fieldLanguages: Partial<Record<"title" | "authors" | "venue" | "publisher", string>>;
+  publisher: string;
   volume: string;
   issue: string;
   pages: string;
@@ -21,7 +22,7 @@ export type Publication = {
 };
 
 export const research = researchData;
-export const text = (value: Localized, locale: Locale) => value[locale] || value.en || value.ja;
+export const text = (value: Localized, locale: Locale) => value[locale];
 export const yearOf = (date: string) => date.slice(0, 4);
 
 export const groupByYear = <T extends { date: string }>(items: T[]) =>
@@ -34,10 +35,10 @@ export const groupByYear = <T extends { date: string }>(items: T[]) =>
 
 const formatSingleDate = (date: string, locale: Locale) => {
   if (!date) return "";
-  if (date === "9999") return locale === "ja" ? "現在" : "Present";
+  if (date === "9999") return ({ en: "Present", ja: "現在", vi: "Hiện tại" })[locale];
   const [year, month, day] = date.split("-").map(Number);
   if (!month) return String(year);
-  return new Intl.DateTimeFormat(locale === "ja" ? "ja-JP" : "en-US", {
+  return new Intl.DateTimeFormat(({ en: "en-US", ja: "ja-JP", vi: "vi-VN" })[locale], {
     year: "numeric",
     month: locale === "ja" ? "numeric" : "short",
     ...(day ? { day: "numeric" } : {}),

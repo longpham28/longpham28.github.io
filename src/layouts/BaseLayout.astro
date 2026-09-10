@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css";
 import { profile } from "../data/profile";
+import { locales, languageNames, ogLocales, routes, ui, type Page } from "../lib/i18n";
 import type { Locale } from "../lib/content";
 
 interface Props {
@@ -8,22 +9,18 @@ interface Props {
   title: string;
   description: string;
   path: string;
-  alternatePath: string;
+  page?: Page;
 }
 
-const { locale, title, description, path, alternatePath } = Astro.props;
+const { locale, title, description, path, page } = Astro.props;
 const origin = "https://longpham28.github.io";
 const socialImage = new URL("/social-card.png", origin);
-const socialImageAlt = locale === "ja"
-  ? "Huu-Long Phamの研究者プロフィール"
-  : "Academic profile of Huu-Long Pham";
-const labels = locale === "ja"
-  ? { about: "概要", research: "研究", publications: "業績", cv: "経歴", language: "English", appearance: "表示テーマ", system: "システム", light: "ライト", dark: "ダーク" }
-  : { about: "About", research: "Research", publications: "Publications", cv: "CV", language: "日本語", appearance: "Appearance", system: "System", light: "Light", dark: "Dark" };
-const home = locale === "ja" ? "/ja/" : "/";
-const publications = locale === "ja" ? "/ja/publications/" : "/publications/";
-const englishPath = locale === "en" ? path : alternatePath;
-const japanesePath = locale === "ja" ? path : alternatePath;
+const labels = ui[locale];
+const socialImageAlt = labels.social;
+const home = routes.home[locale];
+const publications = routes.publications[locale];
+const equivalents = routes[page ?? "home"];
+const fragments = page === "home" ? ["", "about", "research", "publications", "cv", "recognition"] : [""];
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -52,7 +49,8 @@ const structuredData = {
     <meta property="og:type" content="website" />
     <meta property="og:url" content={new URL(path, origin)} />
     <meta property="og:site_name" content={profile.name} />
-    <meta property="og:locale" content={locale === "ja" ? "ja_JP" : "en_US"} />
+    <meta property="og:locale" content={ogLocales[locale]} />
+    {page && locales.filter((lang) => lang !== locale).map((lang) => <meta property="og:locale:alternate" content={ogLocales[lang]} />)}
     <meta property="og:image" content={socialImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -62,9 +60,10 @@ const structuredData = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
     <meta name="twitter:image:alt" content={socialImageAlt} />
-    <link rel="alternate" hreflang="en" href={new URL(englishPath, origin)} />
-    <link rel="alternate" hreflang="ja" href={new URL(japanesePath, origin)} />
-    <link rel="alternate" hreflang="x-default" href={`${origin}/`} />
+    {page && <>
+      {locales.map((lang) => <link rel="alternate" hreflang={lang} href={new URL(equivalents[lang], origin)} />)}
+      <link rel="alternate" hreflang="x-default" href={new URL(equivalents.en, origin)} />
+    </>}
     <title>{title}</title>
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
     <script is:inline>
@@ -80,18 +79,20 @@ const structuredData = {
     </script>
   </head>
   <body>
-    <a class="skip-link" href="#main">{locale === "ja" ? "本文へ移動" : "Skip to content"}</a>
+    <a class="skip-link" href="#main">{labels.skip}</a>
     <header class="site-header">
       <div class="shell header-inner">
-        <a class="wordmark" href={home} aria-label={`${profile.name} — Home`}><span>{profile.name}</span></a>
-        <nav aria-label={locale === "ja" ? "メインナビゲーション" : "Main navigation"}>
+        <a class="wordmark" href={home} aria-label={`${profile.name} — ${labels.home}`}><span>{profile.name}</span></a>
+        <nav class="main-navigation" aria-label={labels.navigation}>
           <a href={`${home}#about`}>{labels.about}</a>
           <a href={`${home}#research`}>{labels.research}</a>
           <a href={publications}>{labels.publications}</a>
           <a href={`${home}#cv`}>{labels.cv}</a>
         </nav>
         <div class="header-actions">
-          <a class="language-link" href={alternatePath} hreflang={locale === "ja" ? "en" : "ja"}>{labels.language}</a>
+          <nav class="language-navigation" aria-label={labels.language}>
+            {fragments.map((fragment) => <span class="language-group" data-fragment={fragment}>{locales.map((lang) => <a class="language-link" href={`${equivalents[lang]}${fragment ? `#${fragment}` : ""}`} lang={lang} hreflang={lang} aria-current={page && lang === locale ? "page" : undefined}>{languageNames[lang]}</a>)}</span>)}
+          </nav>
           <details class="theme-picker">
             <summary aria-label={labels.appearance} title={labels.appearance}>
               <svg class="theme-icon" viewBox="0 0 20 20" aria-hidden="true">
@@ -113,7 +114,7 @@ const structuredData = {
     <footer class="site-footer">
       <div class="shell footer-inner">
         <p>© {new Date().getFullYear()} {profile.name}</p>
-        <p>{locale === "ja" ? "Astroで静的に構築" : "Statically built with Astro"}</p>
+        <p>{labels.footer}</p>
       </div>
     </footer>
     <script is:inline>

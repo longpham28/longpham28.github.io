@@ -6,9 +6,17 @@ Last updated: 2026-09-10
 
 Initial implementation, validation, and deployment are complete. The Astro site is live at https://longpham28.github.io/, and GitHub Pages now uses GitHub Actions as its publishing source.
 
-Vietnamese support is now designed in [VIETNAMESE_DESIGN.md](VIETNAMESE_DESIGN.md). This is a documentation-only milestone: the site still has English and Japanese routes; Vietnamese content, routes, and the research-field migration are not implemented.
+Vietnamese support is implemented and validated locally on 2026-09-10, following [VIETNAMESE_DESIGN.md](VIETNAMESE_DESIGN.md). The site now builds English, Japanese, and Vietnamese profile/publications pages plus the shared 404. These changes have not yet been pushed or deployed.
 
 ## Completed
+
+- Added `/vi/` and `/vi/publications/`, Vietnamese interface/profile copy, localized dates and publication status, and visible three-language navigation.
+- Preserved equivalent pages and targeted profile sections when switching languages, using static links and CSS without new client-side JavaScript.
+- Audited all 26 paper/MISC records against the disclosed 2026-09-08 export and migrated bibliographic fields to shared original wording with field-specific language tags; retained the user-corrected ICADL venue.
+- Updated reciprocal language metadata, self-canonicals, page-specific `x-default`, Open Graph locales, and the sitemap.
+- Changed the importer to produce review candidates without overwriting curated records; retained approved corrections/translations and excluded explicitly non-disclosed records.
+- Passed the seven-page production build, content checks, and the new `check:build` validation for bibliography parity, internal links/fragments, language metadata, sitemap coverage, and public-output exclusions.
+- Verified all six content pages at 320, 768, and 1440 pixels in both themes. Checked no-JavaScript language/section switching and MISC disclosure, keyboard skip navigation, persisted theme selection, and 200% text enlargement. Fixed timeline overflow during these checks.
 
 - Documented Vietnamese routes, three-language navigation, translation boundaries, shared original-language research records, and implementation acceptance criteria (2026-09-10).
 
@@ -46,9 +54,9 @@ Vietnamese support is now designed in [VIETNAMESE_DESIGN.md](VIETNAMESE_DESIGN.m
 
 ## Next steps
 
-1. On a subsequent implementation request, follow `VIETNAMESE_DESIGN.md`: verify original bibliographic fields, add Vietnamese interface/profile copy and routes, update navigation/metadata, then validate all three languages.
+1. Review the local Vietnamese version and publish the committed changes when requested.
 
-2. Confirm the GitHub Pages workflow publishes the latest layout and biography refinements.
+2. After publishing, confirm the GitHub Pages workflow deploys all three languages.
    After deployment, complete HTML-tag verification in Google Search Console and submit the existing `sitemap.xml`.
 3. Perform optional visual review and content corrections after publication.
 4. Add a photographic portrait or blog only when those features are intentionally brought into scope.
@@ -56,7 +64,7 @@ Vietnamese support is now designed in [VIETNAMESE_DESIGN.md](VIETNAMESE_DESIGN.m
 ## Important constraints
 
 - Do not publish the raw researchmap export.
-- Keep English and Japanese content aligned; extend the same factual and structural parity to Vietnamese when implemented.
+- Keep English, Japanese, and Vietnamese content aligned.
 - Preserve original-language research records across every language page.
 - Keep browser-side JavaScript limited to the theme-preference control unless a future feature clearly requires more.
 - Use atomic Conventional Commits.

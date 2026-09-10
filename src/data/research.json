@@ -6,28 +6,32 @@
       "id": "49483912",
       "label": {
         "en": "Computer Vision",
-        "ja": "画像処理"
+        "ja": "画像処理",
+        "vi": "Thị giác máy tính"
       }
     },
     {
       "id": "49483909",
       "label": {
         "en": "Natural Language Processing",
-        "ja": "自然言語処理"
+        "ja": "自然言語処理",
+        "vi": "Xử lý ngôn ngữ tự nhiên"
       }
     },
     {
       "id": "49483907",
       "label": {
         "en": "Machine Learning Model Retrieval",
-        "ja": "機械学習モデル検索"
+        "ja": "機械学習モデル検索",
+        "vi": "Truy hồi mô hình học máy"
       }
     },
     {
       "id": "49480271",
       "label": {
         "en": "Information Retrieval",
-        "ja": "情報検索"
+        "ja": "情報検索",
+        "vi": "Truy hồi thông tin"
       }
     }
   ],
@@ -36,11 +40,13 @@
       "id": "53293696",
       "discipline": {
         "en": "",
-        "ja": ""
+        "ja": "",
+        "vi": ""
       },
       "field": {
         "en": "Information Retrieval, Machine Learning",
-        "ja": "情報検索、機械学習"
+        "ja": "情報検索、機械学習",
+        "vi": "Truy hồi thông tin, học máy"
       }
     }
   ],
@@ -51,15 +57,18 @@
       "toDate": "9999",
       "affiliation": {
         "en": "University of Tsukuba",
-        "ja": "筑波大学"
+        "ja": "筑波大学",
+        "vi": "University of Tsukuba"
       },
       "section": {
         "en": "Faculty of Library, Information and Media Science",
-        "ja": "図書館情報メディア系"
+        "ja": "図書館情報メディア系",
+        "vi": "Faculty of Library, Information and Media Science"
       },
       "role": {
         "en": "Specially Appointed Assistant Professor",
-        "ja": "特任助教"
+        "ja": "特任助教",
+        "vi": "Trợ lý giáo sư được bổ nhiệm đặc biệt"
       }
     },
     {
@@ -68,15 +77,18 @@
       "toDate": "2026-03",
       "affiliation": {
         "en": "Research Organization of Information and Systems",
-        "ja": "情報・システム研究機構"
+        "ja": "情報・システム研究機構",
+        "vi": "Research Organization of Information and Systems"
       },
       "section": {
         "en": "",
-        "ja": ""
+        "ja": "",
+        "vi": ""
       },
       "role": {
         "en": "Research Assistant",
-        "ja": "リサーチ・アシスタント"
+        "ja": "リサーチ・アシスタント",
+        "vi": "Trợ lý nghiên cứu"
       }
     },
     {
@@ -85,15 +97,18 @@
       "toDate": "2024-07",
       "affiliation": {
         "en": "Kobelco Systems Corporation",
-        "ja": "コベルコシステム株式会社"
+        "ja": "コベルコシステム株式会社",
+        "vi": "Kobelco Systems Corporation"
       },
       "section": {
         "en": "Digital Innovation Center",
-        "ja": "デジタルイノベーションセンター"
+        "ja": "デジタルイノベーションセンター",
+        "vi": "Digital Innovation Center"
       },
       "role": {
         "en": "Systems Engineer",
-        "ja": "システムエンジニア"
+        "ja": "システムエンジニア",
+        "vi": "Kỹ sư hệ thống"
       }
     }
   ],
@@ -104,24 +119,29 @@
       "toDate": "2026-03",
       "affiliation": {
         "en": "University of Hyogo",
-        "ja": "兵庫県立大学"
+        "ja": "兵庫県立大学",
+        "vi": "University of Hyogo"
       },
       "department": {
         "en": "Graduate School of Information Science",
-        "ja": "情報科学研究科"
+        "ja": "情報科学研究科",
+        "vi": "Graduate School of Information Science"
       },
       "role": {
         "en": "Doctoral Program",
-        "ja": "博士後期課程"
+        "ja": "博士後期課程",
+        "vi": "Chương trình tiến sĩ"
       },
       "degree": {
         "en": "Ph.D. in Information Science",
-        "ja": "博士（情報科学）"
+        "ja": "博士（情報科学）",
+        "vi": "Tiến sĩ Khoa học thông tin"
       },
       "laboratory": {
         "name": {
           "en": "Ohshima Laboratory",
-          "ja": "大島研究室"
+          "ja": "大島研究室",
+          "vi": "Ohshima Laboratory"
         },
         "href": "https://ohshimalab.github.io/"
       }
@@ -132,20 +152,24 @@
       "toDate": "2021-03",
       "affiliation": {
         "en": "University of Hyogo",
-        "ja": "兵庫県立大学"
+        "ja": "兵庫県立大学",
+        "vi": "University of Hyogo"
       },
       "department": {
         "en": "Graduate School of Applied Informatics",
-        "ja": "応用情報科学研究科"
+        "ja": "応用情報科学研究科",
+        "vi": "Graduate School of Applied Informatics"
       },
       "role": {
         "en": "Master's Program",
-        "ja": "博士前期課程"
+        "ja": "博士前期課程",
+        "vi": "Chương trình thạc sĩ"
       },
       "laboratory": {
         "name": {
           "en": "Ohshima Laboratory",
-          "ja": "大島研究室"
+          "ja": "大島研究室",
+          "vi": "Ohshima Laboratory"
         },
         "href": "https://ohshimalab.github.io/"
       }
@@ -158,11 +182,13 @@
       "toDate": "2027",
       "role": {
         "en": "Sponsor Chair",
-        "ja": "スポンサー担当"
+        "ja": "スポンサー担当",
+        "vi": "Phụ trách tài trợ"
       },
       "organization": {
         "en": "2027 IEEE International Conference on Big Data and Smart Computing (BigComp 2027)",
-        "ja": "2027 IEEE International Conference on Big Data and Smart Computing (BigComp 2027)"
+        "ja": "2027 IEEE International Conference on Big Data and Smart Computing (BigComp 2027)",
+        "vi": "2027 IEEE International Conference on Big Data and Smart Computing (BigComp 2027)"
       }
     },
     {
@@ -171,11 +197,13 @@
       "toDate": "2026",
       "role": {
         "en": "Sponsor Chair",
-        "ja": "スポンサー担当"
+        "ja": "スポンサー担当",
+        "vi": "Phụ trách tài trợ"
       },
       "organization": {
         "en": "NTCIR-19",
-        "ja": "NTCIR-19"
+        "ja": "NTCIR-19",
+        "vi": "NTCIR-19"
       }
     },
     {
@@ -184,11 +212,13 @@
       "toDate": "2026",
       "role": {
         "en": "Task Organizer",
-        "ja": "タスクオーガナイザー"
+        "ja": "タスクオーガナイザー",
+        "vi": "Tổ chức tác vụ đánh giá"
       },
       "organization": {
         "en": "NTCIR-19 ModelRetrieval Task",
-        "ja": "NTCIR-19 ModelRetrieval Task"
+        "ja": "NTCIR-19 ModelRetrieval Task",
+        "vi": "NTCIR-19 ModelRetrieval Task"
       }
     }
   ],
@@ -198,15 +228,18 @@
       "date": "2025-09",
       "name": {
         "en": "Student Encouragement Award",
-        "ja": "学生奨励賞"
+        "ja": "学生奨励賞",
+        "vi": "Giải khuyến khích sinh viên"
       },
       "title": {
         "en": "画像部分特徴に着目したインスタンスセグメンテーションモデルの検索",
-        "ja": "画像部分特徴に着目したインスタンスセグメンテーションモデルの検索"
+        "ja": "画像部分特徴に着目したインスタンスセグメンテーションモデルの検索",
+        "vi": "画像部分特徴に着目したインスタンスセグメンテーションモデルの検索"
       },
       "organization": {
         "en": "160th Meeting of the IPSJ Special Interest Group on Information Fundamentals and Access Technologies",
-        "ja": "情報処理学会 第160回 情報基礎とアクセス技術研究会"
+        "ja": "情報処理学会 第160回 情報基礎とアクセス技術研究会",
+        "vi": "160th Meeting of the IPSJ Special Interest Group on Information Fundamentals and Access Technologies"
       }
     },
     {
@@ -214,15 +247,18 @@
       "date": "2025-03",
       "name": {
         "en": "Uekawa Prize",
-        "ja": "上河賞"
+        "ja": "上河賞",
+        "vi": "Giải Uekawa"
       },
       "title": {
         "en": "Pre-trained BERT Model Retrieval: Inference-Based No-Learning Approach using k-Nearest Neighbour Algorithm",
-        "ja": "Pre-trained BERT Model Retrieval: Inference-Based No-Learning Approach using k-Nearest Neighbour Algorithm"
+        "ja": "Pre-trained BERT Model Retrieval: Inference-Based No-Learning Approach using k-Nearest Neighbour Algorithm",
+        "vi": "Pre-trained BERT Model Retrieval: Inference-Based No-Learning Approach using k-Nearest Neighbour Algorithm"
       },
       "organization": {
         "en": "University of Hyogo",
-        "ja": "兵庫県立大学"
+        "ja": "兵庫県立大学",
+        "vi": "University of Hyogo"
       }
     },
     {
@@ -230,15 +266,18 @@
       "date": "2025-03",
       "name": {
         "en": "Sponsor Award (Recruit Award)",
-        "ja": "スポンサー賞 (株式会社リクルート賞)"
+        "ja": "スポンサー賞 (株式会社リクルート賞)",
+        "vi": "Giải nhà tài trợ (Giải Recruit)"
       },
       "title": {
         "en": "性能予測およびランキング学習を用いた画像インスタンスセグメンテーションモデル検索",
-        "ja": "性能予測およびランキング学習を用いた画像インスタンスセグメンテーションモデル検索"
+        "ja": "性能予測およびランキング学習を用いた画像インスタンスセグメンテーションモデル検索",
+        "vi": "性能予測およびランキング学習を用いた画像インスタンスセグメンテーションモデル検索"
       },
       "organization": {
         "en": "17th Forum on Data Engineering and Information Management (DEIM 2025)",
-        "ja": "第17回データ工学と情報マネジメントに関するフォーラム (DEIM 2025)"
+        "ja": "第17回データ工学と情報マネジメントに関するフォーラム (DEIM 2025)",
+        "vi": "17th Forum on Data Engineering and Information Management (DEIM 2025)"
       }
     },
     {
@@ -246,15 +285,18 @@
       "date": "2025-03",
       "name": {
         "en": "Student Presentation Award",
-        "ja": "学生プレゼンテーション賞"
+        "ja": "学生プレゼンテーション賞",
+        "vi": "Giải thuyết trình sinh viên"
       },
       "title": {
         "en": "性能予測およびランキング学習を用いた画像インスタンスセグメンテーションモデル検索",
-        "ja": "性能予測およびランキング学習を用いた画像インスタンスセグメンテーションモデル検索"
+        "ja": "性能予測およびランキング学習を用いた画像インスタンスセグメンテーションモデル検索",
+        "vi": "性能予測およびランキング学習を用いた画像インスタンスセグメンテーションモデル検索"
       },
       "organization": {
         "en": "17th Forum on Data Engineering and Information Management (DEIM 2025)",
-        "ja": "第17回データ工学と情報マネジメントに関するフォーラム（DEIM 2025)"
+        "ja": "第17回データ工学と情報マネジメントに関するフォーラム（DEIM 2025)",
+        "vi": "17th Forum on Data Engineering and Information Management (DEIM 2025)"
       }
     },
     {
@@ -262,1086 +304,730 @@
       "date": "2024-03",
       "name": {
         "en": "Student Presentation Award",
-        "ja": "学生プレゼンテーション賞"
+        "ja": "学生プレゼンテーション賞",
+        "vi": "Giải thuyết trình sinh viên"
       },
       "title": {
         "en": "k近傍法を用いた事前学習済みBERTモデル検索",
-        "ja": "k近傍法を用いた事前学習済みBERTモデル検索"
+        "ja": "k近傍法を用いた事前学習済みBERTモデル検索",
+        "vi": "k近傍法を用いた事前学習済みBERTモデル検索"
       },
       "organization": {
         "en": "16th Forum on Data Engineering and Information Management (DEIM 2024)",
-        "ja": "第16回データ工学と情報マネジメントに関するフォーラム (DEIM 2024)"
+        "ja": "第16回データ工学と情報マネジメントに関するフォーラム (DEIM 2024)",
+        "vi": "16th Forum on Data Engineering and Information Management (DEIM 2024)"
       }
     }
   ],
   "papers": [
     {
       "id": "54881577",
-      "title": {
-        "en": "Retrieving Instance Segmentation Models using Local Image Features via Transformer Encoder",
-        "ja": "Retrieving Instance Segmentation Models using Local Image Features via Transformer Encoder"
-      },
-      "authors": {
-        "en": [
-          "Huu-Long Pham",
-          "Masataka Kubouchi",
-          "Takuma Nishimoto",
-          "Takehiro Yamamoto",
-          "Hiroaki Ohshima"
-        ],
-        "ja": [
-          "Huu-Long Pham",
-          "Masataka Kubouchi",
-          "Takuma Nishimoto",
-          "Takehiro Yamamoto",
-          "Hiroaki Ohshima"
-        ]
-      },
+      "title": "Retrieving Instance Segmentation Models using Local Image Features via Transformer Encoder",
+      "authors": [
+        "Huu-Long Pham",
+        "Masataka Kubouchi",
+        "Takuma Nishimoto",
+        "Takehiro Yamamoto",
+        "Hiroaki Ohshima"
+      ],
       "date": "2026",
-      "venue": {
-        "en": "Proceedings of the 28th International Conference on Asia-Pacific Digital Libraries (ICADL 2026)",
-        "ja": "Proceedings of the 28th International Conference on Asia-Pacific Digital Libraries (ICADL 2026)"
-      },
-      "description": {
-        "en": "To appear.",
-        "ja": "掲載予定"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "Proceedings of the 28th International Conference on Asia-Pacific Digital Libraries (ICADL 2026)",
+      "publisher": "",
       "volume": "",
       "issue": "",
       "pages": "",
       "doi": "",
       "url": "",
       "peerReviewed": true,
-      "type": "international_conference_proceedings"
+      "type": "international_conference_proceedings",
+      "fieldLanguages": {
+        "title": "en",
+        "authors": "en",
+        "venue": "en"
+      },
+      "status": "to-appear"
     },
     {
       "id": "54824578",
-      "title": {
-        "en": "Which LoRA Should Be Merged Next? Retrieving an Additional LoRA from a Target Image",
-        "ja": "Which LoRA Should Be Merged Next? Retrieving an Additional LoRA from a Target Image"
-      },
-      "authors": {
-        "en": [
-          "Daichi Sugita",
-          "Huu-Long Pham",
-          "Makoto P. Kato",
-          "Hiroaki Ohshima",
-          "Sumio Fujita",
-          "Yoshiyuki Shoji"
-        ],
-        "ja": [
-          "Daichi Sugita",
-          "Huu-Long Pham",
-          "Makoto P. Kato",
-          "Hiroaki Ohshima",
-          "Sumio Fujita",
-          "Yoshiyuki Shoji"
-        ]
-      },
+      "title": "Which LoRA Should Be Merged Next? Retrieving an Additional LoRA from a Target Image",
+      "authors": [
+        "Daichi Sugita",
+        "Huu-Long Pham",
+        "Makoto P. Kato",
+        "Hiroaki Ohshima",
+        "Sumio Fujita",
+        "Yoshiyuki Shoji"
+      ],
       "date": "2026-06-15",
-      "venue": {
-        "en": "Proceedings of the 2026 International Conference on Multimedia Retrieval (ICMR 2026)",
-        "ja": "Proceedings of the 2026 International Conference on Multimedia Retrieval (ICMR 2026)"
-      },
-      "publisher": {
-        "en": "ACM",
-        "ja": "ACM"
-      },
+      "venue": "Proceedings of the 2026 International Conference on Multimedia Retrieval (ICMR 2026)",
+      "publisher": "ACM",
       "volume": "",
       "issue": "",
       "pages": "99–107",
       "doi": "10.1145/3805622.3810865",
       "url": "https://doi.org/10.1145/3805622.3810865",
       "peerReviewed": true,
-      "type": "international_conference_proceedings"
+      "type": "international_conference_proceedings",
+      "fieldLanguages": {
+        "title": "en",
+        "authors": "en",
+        "venue": "en",
+        "publisher": "en"
+      }
     },
     {
       "id": "54824558",
-      "title": {
-        "en": "Retrieval of LoRA Models based on Layer-Wise Weight Embedding without Metadata",
-        "ja": "Retrieval of LoRA Models based on Layer-Wise Weight Embedding without Metadata"
-      },
-      "authors": {
-        "en": [
-          "Yuro Kanada",
-          "Yuma Oe",
-          "Huu-Long Pham",
-          "Makoto P. Kato",
-          "Hiroaki Ohshima",
-          "Sumio Fujita",
-          "Yoshiyuki Shoji"
-        ],
-        "ja": [
-          "Yuro Kanada",
-          "Yuma Oe",
-          "Huu-Long Pham",
-          "Makoto P. Kato",
-          "Hiroaki Ohshima",
-          "Sumio Fujita",
-          "Yoshiyuki Shoji"
-        ]
-      },
+      "title": "Retrieval of LoRA Models based on Layer-Wise Weight Embedding without Metadata",
+      "authors": [
+        "Yuro Kanada",
+        "Yuma Oe",
+        "Huu-Long Pham",
+        "Makoto P. Kato",
+        "Hiroaki Ohshima",
+        "Sumio Fujita",
+        "Yoshiyuki Shoji"
+      ],
       "date": "2026-06-15",
-      "venue": {
-        "en": "Proceedings of the 2026 International Conference on Multimedia Retrieval (ICMR 2026)",
-        "ja": "Proceedings of the 2026 International Conference on Multimedia Retrieval (ICMR 2026)"
-      },
-      "publisher": {
-        "en": "ACM",
-        "ja": "ACM"
-      },
+      "venue": "Proceedings of the 2026 International Conference on Multimedia Retrieval (ICMR 2026)",
+      "publisher": "ACM",
       "volume": "",
       "issue": "",
       "pages": "2818–2825",
       "doi": "10.1145/3805622.3810428",
       "url": "https://doi.org/10.1145/3805622.3810428",
       "peerReviewed": true,
-      "type": "international_conference_proceedings"
+      "type": "international_conference_proceedings",
+      "fieldLanguages": {
+        "title": "en",
+        "authors": "en",
+        "venue": "en",
+        "publisher": "en"
+      }
     },
     {
       "id": "53514623",
-      "title": {
-        "en": "Accident Severity Prediction Using Multi-Zoom-Level Map Images",
-        "ja": "Accident Severity Prediction Using Multi-Zoom-Level Map Images"
-      },
-      "authors": {
-        "en": [
-          "Hiroki, Naito",
-          "Yuki, Nakanishi",
-          "Wakana, Kuwata",
-          "PHAM, Huu Long",
-          "Tomoya, Hashiguchi",
-          "Hiroaki, Ohshima"
-        ],
-        "ja": [
-          "Hiroki, Naito",
-          "Yuki, Nakanishi",
-          "Wakana, Kuwata",
-          "PHAM, Huu Long",
-          "Tomoya, Hashiguchi",
-          "Hiroaki, Ohshima"
-        ]
-      },
+      "title": "Accident Severity Prediction Using Multi-Zoom-Level Map Images",
+      "authors": [
+        "Hiroki, Naito",
+        "Yuki, Nakanishi",
+        "Wakana, Kuwata",
+        "PHAM, Huu Long",
+        "Tomoya, Hashiguchi",
+        "Hiroaki, Ohshima"
+      ],
       "date": "2026-04",
-      "venue": {
-        "en": "Proceedings of the 14th International Conference on Software and Information Engineering (ICSIE 2026)",
-        "ja": "Proceedings of the 14th International Conference on Software and Information Engineering (ICSIE 2026)"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "Proceedings of the 14th International Conference on Software and Information Engineering (ICSIE 2026)",
+      "publisher": "",
       "volume": "",
       "issue": "",
       "pages": "166–173",
       "doi": "",
       "url": "",
       "peerReviewed": true,
-      "type": "international_conference_proceedings"
+      "type": "international_conference_proceedings",
+      "fieldLanguages": {
+        "title": "en",
+        "authors": "en",
+        "venue": "en"
+      }
     },
     {
       "id": "51258526",
-      "title": {
-        "en": "Image Style Transfer Model Retrieval using Transformer Encoder and Learning to Rank",
-        "ja": "Image Style Transfer Model Retrieval using Transformer Encoder and Learning to Rank"
-      },
-      "authors": {
-        "en": [
-          "Huu-Long Pham",
-          "Yoshiyuki Shoji",
-          "Sumio Fujita",
-          "Hiroaki Ohshima"
-        ],
-        "ja": [
-          "Huu-Long Pham",
-          "Yoshiyuki Shoji",
-          "Sumio Fujita",
-          "Hiroaki Ohshima"
-        ]
-      },
+      "title": "Image Style Transfer Model Retrieval using Transformer Encoder and Learning to Rank",
+      "authors": [
+        "Huu-Long Pham",
+        "Yoshiyuki Shoji",
+        "Sumio Fujita",
+        "Hiroaki Ohshima"
+      ],
       "date": "2026-02",
-      "venue": {
-        "en": "IPSJ Transactions on Databases",
-        "ja": "IPSJ Transactions on Databases"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "IPSJ Transactions on Databases",
+      "publisher": "",
       "volume": "34",
       "issue": "",
       "pages": "121–131",
       "doi": "",
       "url": "",
       "peerReviewed": true,
-      "type": "scientific_journal"
+      "type": "scientific_journal",
+      "fieldLanguages": {
+        "title": "en",
+        "authors": "en",
+        "venue": "en"
+      }
     },
     {
       "id": "51258469",
-      "title": {
-        "en": "Instance Segmentation Model Retrieval using Performance Prediction and Learning to Rank",
-        "ja": "Instance Segmentation Model Retrieval using Performance Prediction and Learning to Rank"
-      },
-      "authors": {
-        "en": [
-          "Huu-Long Pham",
-          "Masataka Kubouchi",
-          "Takuma Nishimoto",
-          "Takehiro Yamamoto",
-          "Hiroaki Ohshima"
-        ],
-        "ja": [
-          "Huu-Long Pham",
-          "Masataka Kubouchi",
-          "Takuma Nishimoto",
-          "Takehiro Yamamoto",
-          "Hiroaki Ohshima"
-        ]
-      },
+      "title": "Instance Segmentation Model Retrieval using Performance Prediction and Learning to Rank",
+      "authors": [
+        "Huu-Long Pham",
+        "Masataka Kubouchi",
+        "Takuma Nishimoto",
+        "Takehiro Yamamoto",
+        "Hiroaki Ohshima"
+      ],
       "date": "2025-10",
-      "venue": {
-        "en": "IPSJ Transactions on Databases",
-        "ja": "IPSJ Transactions on Databases"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "IPSJ Transactions on Databases",
+      "publisher": "",
       "volume": "33",
       "issue": "",
       "pages": "866–879",
       "doi": "",
       "url": "",
       "peerReviewed": true,
-      "type": "scientific_journal"
+      "type": "scientific_journal",
+      "fieldLanguages": {
+        "title": "en",
+        "authors": "en",
+        "venue": "en"
+      }
     },
     {
       "id": "49484145",
-      "title": {
-        "en": "Pre-trained BERT Model Retrieval: Inference-Based No-Learning Approach using k-Nearest Neighbour Algorithm",
-        "ja": "Pre-trained BERT Model Retrieval: Inference-Based No-Learning Approach using k-Nearest Neighbour Algorithm"
-      },
-      "authors": {
-        "en": [
-          "Huu-Long PHAM",
-          "Ryota MIBAYASHI",
-          "Takehiro YAMAMOTO",
-          "Makoto P. KATO",
-          "Yusuke YAMAMOTO",
-          "Yoshiyuki SHOJI",
-          "Hiroaki OHSHIMA"
-        ],
-        "ja": [
-          "Huu-Long PHAM",
-          "Ryota MIBAYASHI",
-          "Takehiro YAMAMOTO",
-          "Makoto P. KATO",
-          "Yusuke YAMAMOTO",
-          "Yoshiyuki SHOJI",
-          "Hiroaki OHSHIMA"
-        ]
-      },
+      "title": "Pre-trained BERT Model Retrieval: Inference-Based No-Learning Approach using k-Nearest Neighbour Algorithm",
+      "authors": [
+        "Huu-Long PHAM",
+        "Ryota MIBAYASHI",
+        "Takehiro YAMAMOTO",
+        "Makoto P. KATO",
+        "Yusuke YAMAMOTO",
+        "Yoshiyuki SHOJI",
+        "Hiroaki OHSHIMA"
+      ],
       "date": "2025-08",
-      "venue": {
-        "en": "IEICE Transactions on Information and Systems",
-        "ja": "IEICE Transactions on Information and Systems"
-      },
-      "publisher": {
-        "en": "Institute of Electronics, Information and Communications Engineers (IEICE)",
-        "ja": "Institute of Electronics, Information and Communications Engineers (IEICE)"
-      },
+      "venue": "IEICE Transactions on Information and Systems",
+      "publisher": "Institute of Electronics, Information and Communications Engineers (IEICE)",
       "volume": "E108.D",
       "issue": "8",
       "pages": "872–882",
       "doi": "10.1587/transinf.2024dat0003",
       "url": "https://doi.org/10.1587/transinf.2024dat0003",
       "peerReviewed": true,
-      "type": "scientific_journal"
+      "type": "scientific_journal",
+      "fieldLanguages": {
+        "title": "en",
+        "authors": "en",
+        "venue": "en",
+        "publisher": "en"
+      }
     },
     {
       "id": "49484123",
-      "title": {
-        "en": "Image-Generation AI Model Retrieval by Contrastive Learning-Based Style Distance Calculation.",
-        "ja": "Image-Generation AI Model Retrieval by Contrastive Learning-Based Style Distance Calculation."
-      },
-      "authors": {
-        "en": [
-          "Vu Thi Ngoc Anh",
-          "Yoshiyuki Shoji",
-          "Yuma Oe",
-          "Huu-Long Pham",
-          "Hiroaki Ohshima"
-        ],
-        "ja": [
-          "Vu Thi Ngoc Anh",
-          "Yoshiyuki Shoji",
-          "Yuma Oe",
-          "Huu-Long Pham",
-          "Hiroaki Ohshima"
-        ]
-      },
+      "title": "Image-Generation AI Model Retrieval by Contrastive Learning-Based Style Distance Calculation.",
+      "authors": [
+        "Vu Thi Ngoc Anh",
+        "Yoshiyuki Shoji",
+        "Yuma Oe",
+        "Huu-Long Pham",
+        "Hiroaki Ohshima"
+      ],
       "date": "2025",
-      "venue": {
-        "en": "MMM (2)",
-        "ja": "MMM (2)"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "MMM (2)",
+      "publisher": "",
       "volume": "",
       "issue": "",
       "pages": "101–114",
       "doi": "10.1007/978-981-96-2061-6_8",
       "url": "https://doi.org/10.1007/978-981-96-2061-6_8",
       "peerReviewed": true,
-      "type": "international_conference_proceedings"
+      "type": "international_conference_proceedings",
+      "fieldLanguages": {
+        "title": "en",
+        "authors": "en",
+        "venue": "en"
+      }
     },
     {
       "id": "49484125",
-      "title": {
-        "en": "Inference-Based No-Learning Approach on Pre-Trained BERT Model Retrieval.",
-        "ja": "Inference-Based No-Learning Approach on Pre-Trained BERT Model Retrieval."
-      },
-      "authors": {
-        "en": [
-          "Huu-Long Pham",
-          "Ryota Mibayashi",
-          "Takehiro Yamamoto",
-          "Makoto P. Kato",
-          "Yusuke Yamamoto",
-          "Yoshiyuki Shoji",
-          "Hiroaki Ohshima"
-        ],
-        "ja": [
-          "Huu-Long Pham",
-          "Ryota Mibayashi",
-          "Takehiro Yamamoto",
-          "Makoto P. Kato",
-          "Yusuke Yamamoto",
-          "Yoshiyuki Shoji",
-          "Hiroaki Ohshima"
-        ]
-      },
+      "title": "Inference-Based No-Learning Approach on Pre-Trained BERT Model Retrieval.",
+      "authors": [
+        "Huu-Long Pham",
+        "Ryota Mibayashi",
+        "Takehiro Yamamoto",
+        "Makoto P. Kato",
+        "Yusuke Yamamoto",
+        "Yoshiyuki Shoji",
+        "Hiroaki Ohshima"
+      ],
       "date": "2024",
-      "venue": {
-        "en": "IEEE International Conference on Big Data and Smart Computing(BigComp)",
-        "ja": "IEEE International Conference on Big Data and Smart Computing(BigComp)"
-      },
-      "publisher": {
-        "en": "IEEE",
-        "ja": "IEEE"
-      },
+      "venue": "IEEE International Conference on Big Data and Smart Computing(BigComp)",
+      "publisher": "IEEE",
       "volume": "",
       "issue": "",
       "pages": "234–241",
       "doi": "10.1109/BigComp60711.2024.00044",
       "url": "https://doi.org/10.1109/BigComp60711.2024.00044",
       "peerReviewed": true,
-      "type": "international_conference_proceedings"
+      "type": "international_conference_proceedings",
+      "fieldLanguages": {
+        "title": "en",
+        "authors": "en",
+        "venue": "en",
+        "publisher": "en"
+      }
     },
     {
       "id": "49484166",
-      "title": {
-        "en": "KANDUH at the NTCIR-17 Transfer Task",
-        "ja": "KANDUH at the NTCIR-17 Transfer Task"
-      },
-      "authors": {
-        "en": [
-          "Tomoya Hashiguchi",
-          "Ryota Mibayashi",
-          "Huu-Long Pham",
-          "Wakana Kuwata",
-          "Yuka Kawada",
-          "Yuya Tsuda",
-          "Takehiro Yamamoto",
-          "Hiroaki Ohshima"
-        ],
-        "ja": [
-          "Tomoya Hashiguchi",
-          "Ryota Mibayashi",
-          "Huu-Long Pham",
-          "Wakana Kuwata",
-          "Yuka Kawada",
-          "Yuya Tsuda",
-          "Takehiro Yamamoto",
-          "Hiroaki Ohshima"
-        ]
-      },
+      "title": "KANDUH at the NTCIR-17 Transfer Task",
+      "authors": [
+        "Tomoya Hashiguchi",
+        "Ryota Mibayashi",
+        "Huu-Long Pham",
+        "Wakana Kuwata",
+        "Yuka Kawada",
+        "Yuya Tsuda",
+        "Takehiro Yamamoto",
+        "Hiroaki Ohshima"
+      ],
       "date": "2023-12-12",
-      "venue": {
-        "en": "NTCIR-17 Conference",
-        "ja": "NTCIR-17 Conference"
-      },
-      "publisher": {
-        "en": "NII Institutional Repository",
-        "ja": "NII Institutional Repository"
-      },
+      "venue": "NTCIR-17 Conference",
+      "publisher": "NII Institutional Repository",
       "volume": "",
       "issue": "",
       "pages": "",
       "doi": "10.20736/0002001330",
       "url": "https://doi.org/10.20736/0002001330",
       "peerReviewed": false,
-      "type": ""
+      "type": "",
+      "fieldLanguages": {
+        "title": "en",
+        "authors": "en",
+        "venue": "en",
+        "publisher": "en"
+      }
     },
     {
       "id": "49484126",
-      "title": {
-        "en": "Quiz Generation on the Electronic Guide Application for Improving Learning Experience in the Museum.",
-        "ja": "Quiz Generation on the Electronic Guide Application for Improving Learning Experience in the Museum."
-      },
-      "authors": {
-        "en": [
-          "Masaki Ueta",
-          "Tomoya Hashiguchi",
-          "Huu-Long Pham",
-          "Yoshiyuki Shoji",
-          "Noriko Kando",
-          "Yusuke Yamamoto",
-          "Takehiro Yamamoto",
-          "Hiroaki Ohshima"
-        ],
-        "ja": [
-          "Masaki Ueta",
-          "Tomoya Hashiguchi",
-          "Huu-Long Pham",
-          "Yoshiyuki Shoji",
-          "Noriko Kando",
-          "Yusuke Yamamoto",
-          "Takehiro Yamamoto",
-          "Hiroaki Ohshima"
-        ]
-      },
+      "title": "Quiz Generation on the Electronic Guide Application for Improving Learning Experience in the Museum.",
+      "authors": [
+        "Masaki Ueta",
+        "Tomoya Hashiguchi",
+        "Huu-Long Pham",
+        "Yoshiyuki Shoji",
+        "Noriko Kando",
+        "Yusuke Yamamoto",
+        "Takehiro Yamamoto",
+        "Hiroaki Ohshima"
+      ],
       "date": "2021",
-      "venue": {
-        "en": "Joint Proceedings of the Second Workshop on Bridging the Gap between Information Science, Information Retrieval and Data Science, and Third Workshop on Evaluation of Personalisation in Information Retrieval co-located with 6th ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2021)(BIRDS+WEPIR@CHIIR)",
-        "ja": "Joint Proceedings of the Second Workshop on Bridging the Gap between Information Science, Information Retrieval and Data Science, and Third Workshop on Evaluation of Personalisation in Information Retrieval co-located with 6th ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2021)(BIRDS+WEPIR@CHIIR)"
-      },
-      "publisher": {
-        "en": "CEUR-WS.org",
-        "ja": "CEUR-WS.org"
-      },
+      "venue": "Joint Proceedings of the Second Workshop on Bridging the Gap between Information Science, Information Retrieval and Data Science, and Third Workshop on Evaluation of Personalisation in Information Retrieval co-located with 6th ACM SIGIR Conference on Human Information Interaction and Retrieval (CHIIR 2021)(BIRDS+WEPIR@CHIIR)",
+      "publisher": "CEUR-WS.org",
       "volume": "",
       "issue": "",
       "pages": "96–104",
       "doi": "",
       "url": "https://dblp.org/rec/conf/chiir/UetaHPSKYYO21",
       "peerReviewed": false,
-      "type": "international_conference_proceedings"
+      "type": "international_conference_proceedings",
+      "fieldLanguages": {
+        "title": "en",
+        "authors": "en",
+        "venue": "en",
+        "publisher": "en"
+      }
     },
     {
       "id": "49484182",
-      "title": {
-        "en": "Uhai at the NTCIR-15 Data Search task",
-        "ja": "Uhai at the NTCIR-15 Data Search task"
-      },
-      "authors": {
-        "en": [
-          "Ryota Mibayashi",
-          "Huulong Pham",
-          "Naoaki Matsumoto",
-          "Takehiro Yamamoto",
-          "Hiroaki Ohshima"
-        ],
-        "ja": [
-          "Ryota Mibayashi",
-          "Huulong Pham",
-          "Naoaki Matsumoto",
-          "Takehiro Yamamoto",
-          "Hiroaki Ohshima"
-        ]
-      },
+      "title": "Uhai at the NTCIR-15 Data Search task",
+      "authors": [
+        "Ryota Mibayashi",
+        "Huulong Pham",
+        "Naoaki Matsumoto",
+        "Takehiro Yamamoto",
+        "Hiroaki Ohshima"
+      ],
       "date": "2020",
-      "venue": {
-        "en": "Proceedings of the 15th NTCIR Conference on Evaluation of Information Access Technologies, December 8-11, 2020",
-        "ja": "Proceedings of the 15th NTCIR Conference on Evaluation of Information Access Technologies, December 8-11, 2020"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "Proceedings of the 15th NTCIR Conference on Evaluation of Information Access Technologies, December 8-11, 2020",
+      "publisher": "",
       "volume": "15",
       "issue": "",
       "pages": "293–298",
       "doi": "",
       "url": "https://cir.nii.ac.jp/crid/1010009142270851844?lang=ja",
       "peerReviewed": true,
-      "type": "scientific_journal"
+      "type": "scientific_journal",
+      "fieldLanguages": {
+        "title": "en",
+        "authors": "en",
+        "venue": "en"
+      }
     },
     {
       "id": "49484178",
-      "title": {
-        "en": "Behavioral Classification Using Feature Selection in the Micro Activity Retrieval Task",
-        "ja": "Behavioral Classification Using Feature Selection in the Micro Activity Retrieval Task"
-      },
-      "authors": {
-        "en": [
-          "Takuma Yoshimura",
-          "Pham Huulong",
-          "Ryota Mibayashi",
-          "Rui Kimura",
-          "Hiroaki Ohshima"
-        ],
-        "ja": [
-          "Takuma Yoshimura",
-          "Pham Huulong",
-          "Ryota Mibayashi",
-          "Rui Kimura",
-          "Hiroaki Ohshima"
-        ]
-      },
+      "title": "Behavioral Classification Using Feature Selection in the Micro Activity Retrieval Task",
+      "authors": [
+        "Takuma Yoshimura",
+        "Pham Huulong",
+        "Ryota Mibayashi",
+        "Rui Kimura",
+        "Hiroaki Ohshima"
+      ],
       "date": "2020",
-      "venue": {
-        "en": "Proceedings of the 15th NTCIR Conference on Evaluation of Information Access Technologies, December 8-11, 2020",
-        "ja": "Proceedings of the 15th NTCIR Conference on Evaluation of Information Access Technologies, December 8-11, 2020"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "Proceedings of the 15th NTCIR Conference on Evaluation of Information Access Technologies, December 8-11, 2020",
+      "publisher": "",
       "volume": "15",
       "issue": "",
       "pages": "304–308",
       "doi": "",
       "url": "https://cir.nii.ac.jp/crid/1010009142270851842?lang=ja",
       "peerReviewed": true,
-      "type": "scientific_journal"
+      "type": "scientific_journal",
+      "fieldLanguages": {
+        "title": "en",
+        "authors": "en",
+        "venue": "en"
+      }
     }
   ],
   "misc": [
     {
       "id": "53293661",
-      "title": {
-        "en": "モデルのトークンエンベディングによる目標画像を生成するためにマージすべきLoRAの検索",
-        "ja": "モデルのトークンエンベディングによる目標画像を生成するためにマージすべきLoRAの検索"
-      },
-      "authors": {
-        "en": [
-          "Daichi Sugita",
-          "Huu-Long Pham",
-          "Hiroaki Ohshima",
-          "Sumio Fujita",
-          "Yoshiyuki Shoji"
-        ],
-        "ja": [
-          "杉田 大知",
-          "ファム フーロン",
-          "大島 裕明",
-          "藤田 澄男",
-          "莊司 慶行"
-        ]
-      },
+      "title": "モデルのトークンエンベディングによる目標画像を生成するためにマージすべきLoRAの検索",
+      "authors": [
+        "杉田 大知",
+        "ファム フーロン",
+        "大島 裕明",
+        "藤田 澄男",
+        "莊司 慶行"
+      ],
       "date": "2026-03",
-      "venue": {
-        "en": "18th Forum on Data Engineering and Information Management (DEIM 2026)",
-        "ja": "第18回データ工学と情報マネジメントに関するフォーラム (DEIM 2026)"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "第18回データ工学と情報マネジメントに関するフォーラム (DEIM 2026)",
+      "publisher": "",
       "volume": "",
       "issue": "",
       "pages": "",
       "doi": "",
       "url": "",
       "peerReviewed": false,
-      "type": ""
+      "type": "",
+      "fieldLanguages": {
+        "title": "ja",
+        "authors": "ja",
+        "venue": "ja"
+      }
     },
     {
       "id": "53293647",
-      "title": {
-        "en": "画風変換LoRAの内部パラメータによる変換特徴を考慮したモデルの埋め込み表現の獲得",
-        "ja": "画風変換LoRAの内部パラメータによる変換特徴を考慮したモデルの埋め込み表現の獲得"
-      },
-      "authors": {
-        "en": [
-          "Yuro Kanada",
-          "Yuma Oe",
-          "Huu-Long Pham",
-          "Makoto P. Kato",
-          "Hiroaki Ohshima",
-          "Sumio Fujita",
-          "Yoshiyuki Shoji"
-        ],
-        "ja": [
-          "金田 悠路",
-          "大江 優真",
-          "ファム フーロン",
-          "加藤 誠",
-          "大島 裕明",
-          "藤田 澄男",
-          "莊司 慶行"
-        ]
-      },
+      "title": "画風変換LoRAの内部パラメータによる変換特徴を考慮したモデルの埋め込み表現の獲得",
+      "authors": [
+        "金田 悠路",
+        "大江 優真",
+        "ファム フーロン",
+        "加藤 誠",
+        "大島 裕明",
+        "藤田 澄男",
+        "莊司 慶行"
+      ],
       "date": "2026-03",
-      "venue": {
-        "en": "18th Forum on Data Engineering and Information Management (DEIM 2026)",
-        "ja": "第18回データ工学と情報マネジメントに関するフォーラム (DEIM 2026)"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "第18回データ工学と情報マネジメントに関するフォーラム (DEIM 2026)",
+      "publisher": "",
       "volume": "",
       "issue": "",
       "pages": "",
       "doi": "",
       "url": "",
       "peerReviewed": false,
-      "type": ""
+      "type": "",
+      "fieldLanguages": {
+        "title": "ja",
+        "authors": "ja",
+        "venue": "ja"
+      }
     },
     {
       "id": "53293613",
-      "title": {
-        "en": "事前学習済みBERTモデル検索タスクのための評価データセット",
-        "ja": "事前学習済みBERTモデル検索タスクのための評価データセット"
-      },
-      "authors": {
-        "en": [
-          "Huu-Long Pham",
-          "Ryota Mibayashi",
-          "Yoshiyuki Shoji",
-          "Makoto P. Kato",
-          "Takehiro Yamamoto",
-          "Yusuke Yamamoto",
-          "Hiroaki Ohshima"
-        ],
-        "ja": [
-          "ファム フーロン",
-          "三林 亮太",
-          "莊司 慶行",
-          "加藤 誠",
-          "山本 岳洋",
-          "山本 祐輔",
-          "大島 裕明"
-        ]
-      },
+      "title": "事前学習済みBERTモデル検索タスクのための評価データセット",
+      "authors": [
+        "ファム フーロン",
+        "三林 亮太",
+        "莊司 慶行",
+        "加藤 誠",
+        "山本 岳洋",
+        "山本 祐輔",
+        "大島 裕明"
+      ],
       "date": "2026-03",
-      "venue": {
-        "en": "18th Forum on Data Engineering and Information Management (DEIM 2026)",
-        "ja": "第18回データ工学と情報マネジメントに関するフォーラム (DEIM 2026)"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "第18回データ工学と情報マネジメントに関するフォーラム (DEIM 2026)",
+      "publisher": "",
       "volume": "",
       "issue": "",
       "pages": "",
       "doi": "",
       "url": "",
       "peerReviewed": false,
-      "type": ""
+      "type": "",
+      "fieldLanguages": {
+        "title": "ja",
+        "authors": "ja",
+        "venue": "ja"
+      }
     },
     {
       "id": "53293548",
-      "title": {
-        "en": "目標画像と使用中のLoRAを入力とするマージすべきLoRAアダプタの検索",
-        "ja": "目標画像と使用中のLoRAを入力とするマージすべきLoRAアダプタの検索"
-      },
-      "authors": {
-        "en": [
-          "Daichi Sugita",
-          "Huu-Long Pham",
-          "Hiroaki Ohshima",
-          "Sumio Fujita",
-          "Yoshiyuki Shoji"
-        ],
-        "ja": [
-          "杉田 大知",
-          "ファム フーロン",
-          "大島 裕明",
-          "田 澄男",
-          "莊司 慶行"
-        ]
-      },
+      "title": "目標画像と使用中のLoRAを入力とするマージすべきLoRAアダプタの検索",
+      "authors": [
+        "杉田 大知",
+        "ファム フーロン",
+        "大島 裕明",
+        "田 澄男",
+        "莊司 慶行"
+      ],
       "date": "2025-09",
-      "venue": {
-        "en": "181st Database and Data Science Research Meeting",
-        "ja": "第181回データベースとデータサイエンス研究会"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "第181回データベースとデータサイエンス研究会",
+      "publisher": "",
       "volume": "",
       "issue": "",
       "pages": "",
       "doi": "",
       "url": "",
       "peerReviewed": false,
-      "type": ""
+      "type": "",
+      "fieldLanguages": {
+        "title": "ja",
+        "authors": "ja",
+        "venue": "ja"
+      }
     },
     {
       "id": "53293512",
-      "title": {
-        "en": "画風変換LoRAの内部パラメータによるモデルの埋め込み表現の獲得",
-        "ja": "画風変換LoRAの内部パラメータによるモデルの埋め込み表現の獲得"
-      },
-      "authors": {
-        "en": [
-          "Yuro Kanada",
-          "Yuma Oe",
-          "Huu-Long Pham",
-          "Makoto P. Kato",
-          "Hiroaki Ohshima",
-          "Sumio Fujita",
-          "Yoshiyuki Shoji"
-        ],
-        "ja": [
-          "金田 悠路",
-          "大江 優真",
-          "ファム フーロン",
-          "加藤 誠",
-          "大島 裕明",
-          "藤田 澄男",
-          "莊司 慶"
-        ]
-      },
+      "title": "画風変換LoRAの内部パラメータによるモデルの埋め込み表現の獲得",
+      "authors": [
+        "金田 悠路",
+        "大江 優真",
+        "ファム フーロン",
+        "加藤 誠",
+        "大島 裕明",
+        "藤田 澄男",
+        "莊司 慶"
+      ],
       "date": "2025-09",
-      "venue": {
-        "en": "160th Meeting of the IPSJ Special Interest Group on Information Fundamentals and Access Technologies",
-        "ja": "情報処理学会 第160回 情報基礎とアクセス技術研究会"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "情報処理学会 第160回 情報基礎とアクセス技術研究会",
+      "publisher": "",
       "volume": "",
       "issue": "",
       "pages": "",
       "doi": "",
       "url": "",
       "peerReviewed": false,
-      "type": ""
+      "type": "",
+      "fieldLanguages": {
+        "title": "ja",
+        "authors": "ja",
+        "venue": "ja"
+      }
     },
     {
       "id": "51209411",
-      "title": {
-        "en": "画像部分特徴に着目したインスタンスセグメンテーションモデルの検索",
-        "ja": "画像部分特徴に着目したインスタンスセグメンテーションモデルの検索"
-      },
-      "authors": {
-        "en": [
-          "Huu-Long Pham",
-          "Takehiro Yamamoto",
-          "Masataka Kubouchi",
-          "Takuma Nishimoto",
-          "Hiroaki Ohshima"
-        ],
-        "ja": [
-          "ファム フーロン",
-          "山本 岳洋",
-          "窪内 将隆",
-          "西本 拓磨",
-          "大島 裕明"
-        ]
-      },
+      "title": "画像部分特徴に着目したインスタンスセグメンテーションモデルの検索",
+      "authors": [
+        "ファム フーロン",
+        "山本 岳洋",
+        "窪内 将隆",
+        "西本 拓磨",
+        "大島 裕明"
+      ],
       "date": "2025-09",
-      "venue": {
-        "en": "160th Meeting of the IPSJ Special Interest Group on Information Fundamentals and Access Technologies",
-        "ja": "情報処理学会 第160回 情報基礎とアクセス技術研究会"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "情報処理学会 第160回 情報基礎とアクセス技術研究会",
+      "publisher": "",
       "volume": "",
       "issue": "",
       "pages": "",
       "doi": "",
       "url": "",
       "peerReviewed": false,
-      "type": ""
+      "type": "",
+      "fieldLanguages": {
+        "title": "ja",
+        "authors": "ja",
+        "venue": "ja"
+      }
     },
     {
       "id": "49484239",
-      "title": {
-        "en": "スタイル距離計算に基づく画像を入力とする画像生成AIモデル検索",
-        "ja": "スタイル距離計算に基づく画像を入力とする画像生成AIモデル検索"
-      },
-      "authors": {
-        "en": [
-          "Yuma Oe",
-          "Vu Thi Ngoc Anh",
-          "Huu-Long Pham",
-          "Hiroaki Ohshima",
-          "Yoshiyuki Shoji"
-        ],
-        "ja": [
-          "大江 優真",
-          "ブ・ティ・ゴッグ アン",
-          "ファム フーロン",
-          "大島 裕明",
-          "莊司 慶行"
-        ]
-      },
+      "title": "スタイル距離計算に基づく画像を入力とする画像生成AIモデル検索",
+      "authors": [
+        "大江 優真",
+        "ブ・ティ・ゴッグ アン",
+        "ファム フーロン",
+        "大島 裕明",
+        "莊司 慶行"
+      ],
       "date": "2025-03",
-      "venue": {
-        "en": "17th Forum on Data Engineering and Information Management (DEIM 2025)",
-        "ja": "第17回データ工学と情報マネジメントに関するフォーラム (DEIM 2025)"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "第17回データ工学と情報マネジメントに関するフォーラム (DEIM 2025)",
+      "publisher": "",
       "volume": "",
       "issue": "",
       "pages": "",
       "doi": "",
       "url": "",
       "peerReviewed": false,
-      "type": "summary_national_conference"
+      "type": "summary_national_conference",
+      "fieldLanguages": {
+        "title": "ja",
+        "authors": "ja",
+        "venue": "ja"
+      }
     },
     {
       "id": "49484234",
-      "title": {
-        "en": "性能予測およびランキング学習を用いた画像インスタンスセグメンテーションモデル検索",
-        "ja": "性能予測およびランキング学習を用いた画像インスタンスセグメンテーションモデル検索"
-      },
-      "authors": {
-        "en": [
-          "Huu-Long Pham",
-          "Takehiro Yamamoto",
-          "Masataka Kubouchi",
-          "Takuma Nishimoto",
-          "Hiroaki Ohshima"
-        ],
-        "ja": [
-          "ファム フーロン",
-          "山本 岳洋",
-          "窪内 将隆",
-          "西本 拓磨",
-          "大島 裕明"
-        ]
-      },
+      "title": "性能予測およびランキング学習を用いた画像インスタンスセグメンテーションモデル検索",
+      "authors": [
+        "ファム フーロン",
+        "山本 岳洋",
+        "窪内 将隆",
+        "西本 拓磨",
+        "大島 裕明"
+      ],
       "date": "2025-03",
-      "venue": {
-        "en": "17th Forum on Data Engineering and Information Management (DEIM 2025)",
-        "ja": "第17回データ工学と情報マネジメントに関するフォーラム (DEIM 2025)"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "第17回データ工学と情報マネジメントに関するフォーラム (DEIM 2025)",
+      "publisher": "",
       "volume": "",
       "issue": "",
       "pages": "",
       "doi": "",
       "url": "",
       "peerReviewed": false,
-      "type": "summary_national_conference"
+      "type": "summary_national_conference",
+      "fieldLanguages": {
+        "title": "ja",
+        "authors": "ja",
+        "venue": "ja"
+      }
     },
     {
       "id": "49484231",
-      "title": {
-        "en": "k近傍法を用いた事前学習済みBERTモデル検索",
-        "ja": "k近傍法を用いた事前学習済みBERTモデル検索"
-      },
-      "authors": {
-        "en": [
-          "Huu-Long Pham",
-          "Ryota Mibayashi",
-          "Takehiro Yamamoto",
-          "Makoto P. Kato",
-          "Yusuke Yamamoto",
-          "Yoshiyuki Shoji",
-          "Hiroaki Ohshima"
-        ],
-        "ja": [
-          "ファム フーロン",
-          "三林 亮太",
-          "山本 岳洋",
-          "加藤 誠",
-          "山本 祐輔",
-          "莊司 慶行",
-          "大島 裕明"
-        ]
-      },
+      "title": "k近傍法を用いた事前学習済みBERTモデル検索",
+      "authors": [
+        "ファム フーロン",
+        "三林 亮太",
+        "山本 岳洋",
+        "加藤 誠",
+        "山本 祐輔",
+        "莊司 慶行",
+        "大島 裕明"
+      ],
       "date": "2024-03",
-      "venue": {
-        "en": "16th Forum on Data Engineering and Information Management (DEIM 2024)",
-        "ja": "第16回データ工学と情報マネジメントに関するフォーラム (DEIM 2024)"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "第16回データ工学と情報マネジメントに関するフォーラム (DEIM 2024)",
+      "publisher": "",
       "volume": "",
       "issue": "",
       "pages": "",
       "doi": "",
       "url": "",
       "peerReviewed": false,
-      "type": "summary_national_conference"
+      "type": "summary_national_conference",
+      "fieldLanguages": {
+        "title": "ja",
+        "authors": "ja",
+        "venue": "ja"
+      }
     },
     {
       "id": "49484222",
-      "title": {
-        "en": "文書分類タスクにおける事前学習済みBERTモデルの検索",
-        "ja": "文書分類タスクにおける事前学習済みBERTモデルの検索"
-      },
-      "authors": {
-        "en": [
-          "Ryota Mibayashi",
-          "日置 淳也",
-          "Huu-Long Pham",
-          "Makoto P. Kato",
-          "Yusuke Yamamoto",
-          "Yoshiyuki Shoji",
-          "Takehiro Yamamoto",
-          "Hiroaki Ohshima"
-        ],
-        "ja": [
-          "三林 亮太",
-          "日置 淳也",
-          "ファム フーロン",
-          "加藤 誠",
-          "山本 祐輔",
-          "莊司 慶行",
-          "山本 岳洋",
-          "大島 裕明"
-        ]
-      },
+      "title": "文書分類タスクにおける事前学習済みBERTモデルの検索",
+      "authors": [
+        "三林 亮太",
+        "日置 淳也",
+        "ファム フーロン",
+        "加藤 誠",
+        "山本 祐輔",
+        "莊司 慶行",
+        "山本 岳洋",
+        "大島 裕明"
+      ],
       "date": "2023-03",
-      "venue": {
-        "en": "15th Forum on Data Engineering and Information Management (DEIM 2023)",
-        "ja": "第15回データ工学と情報マネジメントに関するフォーラム (DEIM 2023)"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "第15回データ工学と情報マネジメントに関するフォーラム (DEIM 2023)",
+      "publisher": "",
       "volume": "",
       "issue": "",
       "pages": "",
       "doi": "",
       "url": "",
       "peerReviewed": true,
-      "type": "summary_national_conference"
+      "type": "summary_national_conference",
+      "fieldLanguages": {
+        "title": "ja",
+        "authors": "ja",
+        "venue": "ja"
+      }
     },
     {
       "id": "49484207",
-      "title": {
-        "en": "Distraction Detection using Wearable Device and its Application to Concentration Level Improvement",
-        "ja": "Distraction Detection using Wearable Device and its Application to Concentration Level Improvement"
-      },
-      "authors": {
-        "en": [
-          "Huu-Long Pham",
-          "Yusuke Yamamoto",
-          "Takehiro Yamamoto",
-          "Hiroaki Ohshima"
-        ],
-        "ja": [
-          "Huu-Long Pham",
-          "Yusuke Yamamoto",
-          "Takehiro Yamamoto",
-          "Hiroaki Ohshima"
-        ]
-      },
+      "title": "Distraction Detection using Wearable Device and its Application to Concentration Level Improvement",
+      "authors": [
+        "Huu-Long Pham",
+        "Yusuke Yamamoto",
+        "Takehiro Yamamoto",
+        "Hiroaki Ohshima"
+      ],
       "date": "2021-03",
-      "venue": {
-        "en": "13th Forum on Data Engineering and Information Management (DEIM 2021)",
-        "ja": "第13回データ工学と情報マネジメントに関するフォーラム (DEIM 2021)"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "第13回データ工学と情報マネジメントに関するフォーラム (DEIM 2021)",
+      "publisher": "",
       "volume": "",
       "issue": "",
       "pages": "",
       "doi": "",
       "url": "",
       "peerReviewed": false,
-      "type": "summary_national_conference"
+      "type": "summary_national_conference",
+      "fieldLanguages": {
+        "title": "en",
+        "authors": "en",
+        "venue": "ja"
+      }
     },
     {
       "id": "49484198",
-      "title": {
-        "en": "空間的特徴量とパーソナリティ分析を用いたストレス推定",
-        "ja": "空間的特徴量とパーソナリティ分析を用いたストレス推定"
-      },
-      "authors": {
-        "en": [
-          "Takuma Yoshimura",
-          "Huu-Long Pham",
-          "和田 真弥",
-          "Hiroaki Ohshima"
-        ],
-        "ja": [
-          "吉村 拓真",
-          "ファムフーロン",
-          "和田 真弥",
-          "大島 裕明"
-        ]
-      },
+      "title": "空間的特徴量とパーソナリティ分析を用いたストレス推定",
+      "authors": [
+        "吉村 拓真",
+        "ファムフーロン",
+        "和田 真弥",
+        "大島 裕明"
+      ],
       "date": "2021-03",
-      "venue": {
-        "en": "13th Forum on Data Engineering and Information Management (DEIM 2021)",
-        "ja": "第13回データ工学と情報マネジメントに関するフォーラム (DEIM 2021)"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "第13回データ工学と情報マネジメントに関するフォーラム (DEIM 2021)",
+      "publisher": "",
       "volume": "",
       "issue": "",
       "pages": "",
       "doi": "",
       "url": "",
       "peerReviewed": false,
-      "type": "summary_national_conference"
+      "type": "summary_national_conference",
+      "fieldLanguages": {
+        "title": "ja",
+        "authors": "ja",
+        "venue": "ja"
+      }
     },
     {
       "id": "49484218",
-      "title": {
-        "en": "センサデバイスからの行動認識と話題生成による独居高齢者のコミュニケーション促進",
-        "ja": "センサデバイスからの行動認識と話題生成による独居高齢者のコミュニケーション促進"
-      },
-      "authors": {
-        "en": [
-          "Huu-Long Pham",
-          "マハルジャンラビン",
-          "Tomoya Hashiguchi",
-          "白石 晃",
-          "Takehiro Yamamoto",
-          "Yusuke Yamamoto",
-          "Hiroaki Ohshima"
-        ],
-        "ja": [
-          "ファムフーロン",
-          "マハルジャンラビン",
-          "橋口 友哉",
-          "白石 晃",
-          "山本 岳洋",
-          "山本 祐輔",
-          "大島 裕明"
-        ]
-      },
+      "title": "センサデバイスからの行動認識と話題生成による独居高齢者のコミュニケーション促進",
+      "authors": [
+        "ファムフーロン",
+        "マハルジャンラビン",
+        "橋口 友哉",
+        "白石 晃",
+        "山本 岳洋",
+        "山本 祐輔",
+        "大島 裕明"
+      ],
       "date": "2020-03",
-      "venue": {
-        "en": "12th Forum on Data Engineering and Information Management (DEIM 2020)",
-        "ja": "第12回データ工学と情報マネジメントに関するフォーラム (DEIM 2020)"
-      },
-      "publisher": {
-        "en": "",
-        "ja": ""
-      },
+      "venue": "第12回データ工学と情報マネジメントに関するフォーラム (DEIM 2020)",
+      "publisher": "",
       "volume": "",
       "issue": "",
       "pages": "",
       "doi": "",
       "url": "",
       "peerReviewed": false,
-      "type": "summary_national_conference"
+      "type": "summary_national_conference",
+      "fieldLanguages": {
+        "title": "ja",
+        "authors": "ja",
+        "venue": "ja"
+      }
     }
   ]
 }

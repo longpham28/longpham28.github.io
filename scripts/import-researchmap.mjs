@@ -1,5 +1,6 @@
-import { readFile, writeFile } from "node:fs/promises";
-import { dirname, resolve } from "node:path";
+import { readFile, writeFile, mkdtemp } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { basename, dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const inputPath = process.argv[2];
@@ -10,7 +11,10 @@ if (!inputPath) {
 }
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const outputPath = resolve(projectRoot, "src/data/research.json");
+// Imports are review candidates, never replacements for curated public content.
+const curatedPath = resolve(projectRoot, "src/data/research.json");
+const curated = JSON.parse(await readFile(curatedPath, "utf8"));
+const outputPath = resolve(await mkdtemp(resolve(tmpdir(), "researchmap-review-")), "research.json");
 const lines = (await readFile(resolve(inputPath), "utf8")).split("\n").filter(Boolean);
 const records = lines.map((line) => JSON.parse(line));
 const disclosed = records.filter((record) => record.merge?.display === "disclosed");
@@ -25,11 +29,6 @@ const authorList = (items = []) => {
   const names = items.map((author) => author.name);
   return names.length === 1 && names[0].split(", ").length > 2 ? names[0].split(", ") : names;
 };
-
-const authors = (value) => ({
-  en: authorList(value?.en ?? value?.ja),
-  ja: authorList(value?.ja ?? value?.en),
-});
 
 const firstLink = (data) =>
   data.see_also?.find((link) => link.label === "doi")?.["@id"] ??
@@ -47,15 +46,31 @@ const pageRange = (data) => {
 const byDate = (a, b) => (b.date ?? b.fromDate ?? "").localeCompare(a.date ?? a.fromDate ?? "");
 const ofType = (type) => disclosed.filter((record) => record.insert.type === type);
 
+const original = (value, id, field) => {
+  if (!value) return field === "authors" ? [] : "";
+  if (typeof value === "string") return value;
+  const variants = Object.values(value);
+  if (!variants.every((entry) => JSON.stringify(entry) === JSON.stringify(variants[0]))) {
+    throw new Error(`Record ${id}: review original ${field} before import; differing source variants.`);
+  }
+  return field === "authors" ? authorList(variants[0]) : (variants[0] ?? "");
+};
 const publication = (record) => {
   const data = record.merge;
+  const existing = [...curated.papers, ...curated.misc].find((item) => item.id === record.insert.id);
+  if (existing) return existing;
+  const fields = {
+    title: original(data.paper_title, record.insert.id, "title"),
+    authors: original(data.authors, record.insert.id, "authors"),
+    venue: original(data.publication_name, record.insert.id, "venue"),
+    publisher: original(data.publisher, record.insert.id, "publisher"),
+  };
   return {
     id: record.insert.id,
-    title: localized(data.paper_title),
-    authors: authors(data.authors),
+    ...fields,
+    // Language tags for new records require review; field keys are not evidence.
+    fieldLanguages: {},
     date: data.publication_date ?? "",
-    venue: localized(data.publication_name),
-    publisher: localized(data.publisher),
     volume: data.volume ?? "",
     issue: data.number ?? "",
     pages: pageRange(data),
@@ -67,8 +82,8 @@ const publication = (record) => {
 };
 
 const result = {
-  source: "researchmap export rm_researchers20260903.jsonl",
-  importedOn: "2026-09-03",
+  source: `researchmap export ${basename(inputPath)}`,
+  importedOn: new Date().toISOString().slice(0, 10),
   interests: ofType("research_interests").map((record) => ({ id: record.insert.id, label: localized(record.merge.keyword) })),
   areas: ofType("research_areas").map((record) => ({
     id: record.insert.id,
@@ -108,5 +123,15 @@ const result = {
   misc: ofType("misc").map(publication).sort(byDate),
 };
 
+// Preserve manual additions, translations, dates, and other approved corrections.
+// Explicitly non-disclosed records in this source must not survive the merge.
+const hidden = new Set(records.filter((record) => record.merge?.display !== "disclosed").map((record) => record.insert.id));
+for (const [key, items] of Object.entries(result)) {
+  if (!Array.isArray(items)) continue;
+  const existing = new Map((curated[key] ?? []).filter((item) => !hidden.has(item.id)).map((item) => [item.id, item]));
+  for (const item of items) if (!existing.has(item.id)) existing.set(item.id, item);
+  result[key] = [...existing.values()];
+  // Keep approved display order (including forthcoming papers); review placement of additions.
+}
 await writeFile(outputPath, `${JSON.stringify(result, null, 2)}\n`, "utf8");
-console.log(`Imported ${disclosed.length} disclosed records into ${outputPath}`);
+console.log(`Review candidate written to ${outputPath}. Curated site data is unchanged. Review new records, language tags, and translations before applying.`);

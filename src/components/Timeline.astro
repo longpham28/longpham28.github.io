@@ -1,4 +1,5 @@
 ---
+import { ui } from "../lib/i18n";
 import { formatRange, text, type Locale, type Localized } from "../lib/content";
 
 interface Item {
@@ -29,7 +30,7 @@ const { items, locale } = Astro.props;
     const detailText = detail ? text(detail, locale) : "";
     const degreeText = item.degree ? text(item.degree, locale) : "";
     const laboratoryText = item.laboratory ? text(item.laboratory.name, locale) : "";
-    const laboratoryLabel = locale === "ja" ? "所属研究室：" : "Laboratory: ";
+    const laboratoryLabel = `${ui[locale].laboratory}: `;
     return (
       <li>
         <p class="timeline-date">{formatRange(item.fromDate, item.toDate, locale)}</p>

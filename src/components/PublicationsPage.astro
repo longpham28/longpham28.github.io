@@ -1,4 +1,5 @@
 ---
+import { routes } from "../lib/i18n";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PublicationItem from "./PublicationItem.astro";
 import { groupByYear, research, type Locale, type Publication } from "../lib/content";
@@ -6,23 +7,24 @@ import { profile } from "../data/profile";
 
 interface Props { locale: Locale }
 const { locale } = Astro.props;
-const isJa = locale === "ja";
-const path = isJa ? "/ja/publications/" : "/publications/";
-const alternatePath = isJa ? "/publications/" : "/ja/publications/";
+const path = routes.publications[locale];
 const paperGroups = groupByYear(research.papers as Publication[]);
 const miscGroups = groupByYear(research.misc as Publication[]);
-const labels = isJa ? {
+const copy = { ja: {
   title: `研究業績 — ${profile.name}`, description: "ファムフーロンの論文および研究発表一覧。", eyebrow: "研究業績", heading: "Publications",
   papers: "論文", misc: "その他の研究発表",
   miscSummary: `その他の研究発表 ${research.misc.length}件を表示`, back: "プロフィールに戻る",
-} : {
+}, en: {
   title: `Publications — ${profile.name}`, description: "Published papers and other research outputs by Huu-Long Pham.", eyebrow: "Research output", heading: "Publications",
   papers: "Published papers", misc: "Other publications & presentations",
   miscSummary: `Show ${research.misc.length} other publications and presentations`, back: "Back to profile",
-};
+}, vi: {
+  title: `Công bố khoa học — ${profile.name}`, description: "Các bài báo và công trình nghiên cứu khác của Huu-Long Pham.", eyebrow: "Kết quả nghiên cứu", heading: "Công bố khoa học", papers: "Bài báo khoa học", misc: "Các công trình khác", miscSummary: `Xem ${research.misc.length} công trình và bài trình bày khác`, back: "Trở về hồ sơ",
+} } satisfies Record<Locale, Record<string, string>>;
+const labels = copy[locale];
 ---
 
-<BaseLayout locale={locale} title={labels.title} description={labels.description} path={path} alternatePath={alternatePath}>
+<BaseLayout locale={locale} title={labels.title} description={labels.description} path={path} page="publications">
   <header class="page-intro shell"><p class="eyebrow">{labels.eyebrow}</p><h1>{labels.heading}</h1></header>
   <section class="section shell publication-section">
     <div class="section-heading"><p class="section-number">01</p><h2>{labels.papers}<sup>{research.papers.length}</sup></h2></div>
@@ -45,5 +47,5 @@ const labels = isJa ? {
       </details>
     </div>
   </section>
-  <div class="shell page-end"><a class="text-link" href={isJa ? "/ja/" : "/"}><span aria-hidden="true">←</span>{labels.back}</a></div>
+  <div class="shell page-end"><a class="text-link" href={routes.home[locale]}><span aria-hidden="true">←</span>{labels.back}</a></div>
 </BaseLayout>

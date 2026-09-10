@@ -1,11 +1,11 @@
 # Vietnamese language support
 
 Date: 2026-09-10
-Status: Design documented; implementation pending
+Status: Implemented locally; deployment pending
 
 ## Scope and intent
 
-Add a Vietnamese interface and profile to the existing academic website. All three languages share the same research records, sections, ordering, links, and visual system. This document defines the extension before implementation; it does not claim that Vietnamese pages or final translations exist.
+Add a Vietnamese interface and profile to the existing academic website. All three languages share the same research records, sections, ordering, links, and visual system. This document records the agreed design, now implemented locally.
 
 The user confirmed that research and publication details should retain their original language. An English paper title stays English on English, Japanese, and Vietnamese pages; a Japanese presentation title stays Japanese on all three. No Vietnamese translation of the bibliography is needed.
 
@@ -50,7 +50,7 @@ Draft Vietnamese interface vocabulary:
 | View all publications | Xem tất cả công bố |
 | Appearance / System / Light / Dark | Giao diện / Hệ thống / Sáng / Tối |
 
-Keep `Huu-Long Pham` as the wordmark and existing profile identity. No new Vietnamese personal-name spelling is inferred. Full Vietnamese biography and profile prose will be drafted during implementation from the approved facts, with uncertain academic terminology flagged for review.
+Keep `Huu-Long Pham` as the wordmark and existing profile identity. No new Vietnamese personal-name spelling is inferred. Vietnamese biography and profile prose are implemented from the approved facts. Proper organization names retain their established forms.
 
 ## Content and component design
 

@@ -10,7 +10,7 @@ Astro static output provides the requested performance and allows the initial si
 
 Status: Accepted
 
-English lives at the root and Japanese under `/ja/`. The planned Vietnamese extension adds `/vi/` with equivalent profile and publications pages (2026-09-10). Separate static routes are predictable, indexable, and do not require runtime language detection.
+English lives at the root and Japanese under `/ja/`. The Vietnamese extension adds `/vi/` with equivalent profile and publications pages (2026-09-10). Separate static routes are predictable, indexable, and do not require runtime language detection.
 
 ## ADR-003: GitHub Actions deployment
 
@@ -44,10 +44,10 @@ Dark mode uses CSS `prefers-color-scheme` with warm charcoal surfaces and a ligh
 
 ## ADR-008: Vietnamese interface with shared research records
 
-Status: Accepted design; implementation pending (2026-09-10)
+Status: Implemented (2026-09-10)
 
 Add Vietnamese profile and publications routes using the existing shared Astro components and visual system. Replace the binary language link with visible `English / 日本語 / Tiếng Việt` links to equivalent pages. Keep navigation static and avoid automatic language detection or redirects.
 
 Separate translated interface/profile copy from original bibliographic fields. Maintain one shared set of papers and MISC records rather than copying records into a Vietnamese dataset. Select source-authentic fields explicitly; the page locale must not select an alternative translated title or author spelling. Review ambiguous imported variants against disclosed source content before migration, without inventing an original language from the field key alone.
 
-See [Vietnamese language support](VIETNAMESE_DESIGN.md) for the content boundary, route behavior, implementation sequence, and acceptance criteria. This milestone changes documentation only; site implementation follows a later request.
+See [Vietnamese language support](VIETNAMESE_DESIGN.md) for the content boundary, route behavior, implementation sequence, and acceptance criteria. The implementation uses field-specific original bibliography values and static language links, including CSS-selected links that preserve targeted profile sections without additional JavaScript.
