@@ -10,6 +10,8 @@ Vietnamese support is implemented, validated, and published on 2026-09-10, follo
 
 ## Completed
 
+- Updated the shared avatar with the user-supplied replacement image (2026-09-10); verified the production build and optimized WebP asset for all three profile pages.
+
 - Removed GitHub and ORCID profile links from all language pages and shared Person metadata at the user’s request; retained researchmap.
 
 - Kept `Hữu Long` together in the Vietnamese profile heading, allowing wrapping only after `Phạm`.
