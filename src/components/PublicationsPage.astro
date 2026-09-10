@@ -7,19 +7,20 @@ import { profile } from "../data/profile";
 
 interface Props { locale: Locale }
 const { locale } = Astro.props;
+const displayName = locale === "vi" ? profile.vietnameseName : profile.name;
 const path = routes.publications[locale];
 const paperGroups = groupByYear(research.papers as Publication[]);
 const miscGroups = groupByYear(research.misc as Publication[]);
 const copy = { ja: {
-  title: `研究業績 — ${profile.name}`, description: "ファムフーロンの論文および研究発表一覧。", eyebrow: "研究業績", heading: "Publications",
+  title: `研究業績 — ${displayName}`, description: "ファムフーロンの論文および研究発表一覧。", eyebrow: "研究業績", heading: "Publications",
   papers: "論文", misc: "その他の研究発表",
   miscSummary: `その他の研究発表 ${research.misc.length}件を表示`, back: "プロフィールに戻る",
 }, en: {
-  title: `Publications — ${profile.name}`, description: "Published papers and other research outputs by Huu-Long Pham.", eyebrow: "Research output", heading: "Publications",
+  title: `Publications — ${displayName}`, description: "Published papers and other research outputs by Huu-Long Pham.", eyebrow: "Research output", heading: "Publications",
   papers: "Published papers", misc: "Other publications & presentations",
   miscSummary: `Show ${research.misc.length} other publications and presentations`, back: "Back to profile",
 }, vi: {
-  title: `Công bố khoa học — ${profile.name}`, description: "Các bài báo và công trình nghiên cứu khác của Huu-Long Pham.", eyebrow: "Kết quả nghiên cứu", heading: "Công bố khoa học", papers: "Bài báo khoa học", misc: "Các công trình khác", miscSummary: `Xem ${research.misc.length} công trình và bài trình bày khác`, back: "Trở về hồ sơ",
+  title: `Công bố khoa học — ${displayName}`, description: "Các bài báo và công trình nghiên cứu khác của Phạm Hữu Long.", eyebrow: "Kết quả nghiên cứu", heading: "Công bố khoa học", papers: "Bài báo khoa học", misc: "Các công trình khác", miscSummary: `Xem ${research.misc.length} công trình và bài trình bày khác`, back: "Trở về hồ sơ",
 } } satisfies Record<Locale, Record<string, string>>;
 const labels = copy[locale];
 ---

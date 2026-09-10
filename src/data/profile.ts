@@ -1,5 +1,6 @@
 export const profile = {
   name: "Huu-Long Pham",
+  vietnameseName: "Phạm Hữu Long",
   japaneseName: "ファムフーロン",
   affiliation: {
     vi: "Institute of Library, Information and Media Science, University of Tsukuba",

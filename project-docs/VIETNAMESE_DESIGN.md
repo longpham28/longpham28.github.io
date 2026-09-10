@@ -50,7 +50,7 @@ Draft Vietnamese interface vocabulary:
 | View all publications | Xem tất cả công bố |
 | Appearance / System / Light / Dark | Giao diện / Hệ thống / Sáng / Tối |
 
-Keep `Huu-Long Pham` as the wordmark and existing profile identity. No new Vietnamese personal-name spelling is inferred. Vietnamese biography and profile prose are implemented from the approved facts. Proper organization names retain their established forms.
+Use the user-supplied `Phạm Hữu Long` for Vietnamese profile identity, wordmark, footer, and metadata. English/Japanese pages retain `Huu-Long Pham`; bibliographic author names retain original source spelling. Vietnamese biography and profile prose are implemented from the approved facts. Proper organization names retain their established forms.
 
 ## Content and component design
 

@@ -30,7 +30,7 @@ Blog functionality is explicitly out of scope for the initial release. The struc
 
 ## Home page content
 
-1. Name: `Huu-Long Pham`
+1. Name: `Huu-Long Pham`; Vietnamese display name: `Phạm Hữu Long`
 2. Japanese name: `ファムフーロン`
 3. Current affiliation, position, and degree: Ph.D. in Information Science / 博士（情報科学）
 4. Concise biography

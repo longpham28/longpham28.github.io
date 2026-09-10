@@ -37,6 +37,8 @@ The bilingual biography, academic-membership list, illustrated avatar, research-
 
 ## Vietnamese extension policy (2026-09-10)
 
+- User-supplied Vietnamese name: `Phạm Hữu Long`. Use it for Vietnamese profile identity, header/footer, page metadata, and image descriptions; preserve original bibliographic author names.
+
 - User terminology correction: retain `Task Organizer` in English on Vietnamese pages; render Assistant Professor as `Giáo sư trợ lý`, retaining the specially appointed qualifier in the current role.
 
 - The user confirmed that research and publication details should stay in their original language across language pages.

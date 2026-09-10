@@ -28,7 +28,7 @@ export const ui = {
     about: "Giới thiệu", research: "Nghiên cứu", publications: "Công bố", cv: "Lý lịch",
     appearance: "Giao diện", system: "Hệ thống", light: "Sáng", dark: "Tối",
     language: "Ngôn ngữ", navigation: "Điều hướng chính", home: "Trang chủ", skip: "Chuyển đến nội dung",
-    footer: "Được tạo dưới dạng trang tĩnh bằng Astro", social: "Hồ sơ học thuật của Huu-Long Pham",
-    avatar: "Hình đại diện gấu của Huu-Long Pham", laboratory: "Phòng nghiên cứu", toAppear: "Sắp xuất bản.",
+    footer: "Được tạo dưới dạng trang tĩnh bằng Astro", social: "Hồ sơ học thuật của Phạm Hữu Long",
+    avatar: "Hình đại diện gấu của Phạm Hữu Long", laboratory: "Phòng nghiên cứu", toAppear: "Sắp xuất bản.",
   },
 } satisfies Record<Locale, Record<string, string>>;
