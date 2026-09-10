@@ -1,6 +1,6 @@
 # Content sources
 
-Last reviewed: 2026-09-08
+Last reviewed: 2026-09-10
 
 ## Primary sources
 
@@ -32,4 +32,14 @@ Last reviewed: 2026-09-08
 
 ## Manual content
 
-The bilingual biography, academic-membership list, illustrated avatar, research-field labels, degree, and corrections to employment and education records were approved by the user and are maintained as site content rather than imported from researchmap. User-approved English labels include `Uekawa Prize`, `Sponsor Award`, `Student Presentation Award`, and `Sponsor Chair` rendered as `スポンサー担当` in Japanese. Japanese-language publication and presentation titles remain in Japanese on both language versions.
+The bilingual biography, academic-membership list, illustrated avatar, research-field labels, degree, and corrections to employment and education records were approved by the user and are maintained as site content rather than imported from researchmap. User-approved English labels include `Uekawa Prize`, `Sponsor Award`, `Student Presentation Award`, and `Sponsor Chair` rendered as `スポンサー担当` in Japanese. Publication and presentation titles retain their original language on every page, including English titles on Japanese and Vietnamese pages. Author names/order, venue names, and publisher names likewise retain source-authentic wording.
+
+## Vietnamese extension policy (2026-09-10)
+
+- The user confirmed that research and publication details should stay in their original language across language pages.
+- Translate navigation, section headings, biography, generic research-field labels, profile explanations, accessibility labels, and editorial status text into Vietnamese. These translations derive from existing approved content and must not add claims.
+- Do not create Vietnamese translations of publication/presentation titles, author names, journals, proceedings, or publishers. Keep identifiers, links, dates, volume, issue, and pages unchanged; date display may be localized.
+- Retain proper names and established organization/laboratory names; do not invent Vietnamese official names or a new spelling of the researcher's name. Existing approved English/Japanese profile name variants may remain outside bibliographic records.
+- Existing `en`/`ja` bibliographic fields may contain translations or transliterations. During implementation, verify the original wording against the disclosed source or authoritative publication before choosing the shared display value. A locale key alone is not evidence of the original language.
+- Keep source provenance in curated private-safe data or documentation. Never publish the raw export or non-public fields.
+- Vietnamese wording in the design document is draft interface copy, not a new factual source. Full profile translation and source-field verification remain implementation work.

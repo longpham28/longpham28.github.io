@@ -1,26 +1,30 @@
 # Website specification
 
-Status: Approved for implementation  
-Last updated: 2026-09-04
+Status: Existing site implemented; Vietnamese extension designed, implementation pending
+Last updated: 2026-09-10
 
 ## Purpose
 
-Create a fast, bilingual academic profile for Huu-Long Pham. The site should make current research interests, publications, experience, awards, and academic service easy to scan while remaining simple, elegant, and inexpensive to maintain.
+Create a fast, multilingual academic profile for Huu-Long Pham. The site should make current research interests, publications, experience, awards, and academic service easy to scan while remaining simple, elegant, and inexpensive to maintain.
 
 ## Audience and language
 
 - Primary audience: researchers, potential collaborators, students, and conference participants.
-- English is served at `/` and is the canonical default.
+- English is served at `/` and is the default language. Each language page has its own canonical URL.
 - Japanese is served under `/ja/`.
+- Planned: Vietnamese is served under `/vi/`.
+- Detailed extension design: [Vietnamese language support](VIETNAMESE_DESIGN.md).
 - Language switching links to the equivalent page without automatic redirection.
 
-## Initial routes
+## Routes
 
 - `/`: English profile
 - `/publications/`: English publications and MISC
 - `/ja/`: Japanese profile
 - `/ja/publications/`: Japanese publications and MISC
-- `/404.html`: not-found page
+- `/vi/`: Vietnamese profile (planned)
+- `/vi/publications/`: Vietnamese publications and MISC (planned)
+- `/404.html`: shared not-found page
 
 Blog functionality is explicitly out of scope for the initial release. The structure should not prevent adding Astro Content Collections later.
 
@@ -37,8 +41,8 @@ Blog functionality is explicitly out of scope for the initial release. The struc
 9. Academic memberships
 10. Links to GitHub, ORCID, and researchmap
 
-An illustrated avatar is included on both home pages. No photographic portrait or email address is included. The affiliation does not need to be linked.
-The affiliated laboratory, KASYS, is linked from the profile details on both home pages.
+An illustrated avatar is included on all language home pages. No photographic portrait or email address is included. The affiliation does not need to be linked.
+The affiliated laboratory, KASYS, is linked from the profile details on all language home pages.
 
 The displayed research fields are Information Retrieval and Machine Learning / 情報検索、機械学習.
 
@@ -59,7 +63,9 @@ I am a Specially Appointed Assistant Professor at the Institute of Library, Info
 - Show all MISC records in a compact, initially collapsed section, grouped by year.
 - Use native HTML disclosure elements where collapsing is useful; do not add JavaScript for this behavior.
 - Show titles prominently and keep authors, venue, date, volume, pages, and DOI compact.
-- Preserve Japanese-language publication and presentation titles in Japanese on both language versions.
+- Preserve publication and presentation titles in their original language across all language versions: English stays English and Japanese stays Japanese.
+- Use the same source-authentic author names/order, venue names, and publisher names across language versions; translate interface labels and editorial status text only.
+- Vietnamese navigation, biography, headings, and explanatory profile copy are localized; bibliographic records do not require Vietnamese translations.
 - Link DOI and other authoritative publication URLs when present.
 - Present experience, education, awards, and service as compact chronological lists with dates in a narrow column.
 - Link the Ohshima Laboratory from both the master's and doctoral education records.

@@ -6,11 +6,11 @@ Status: Accepted
 
 Astro static output provides the requested performance and allows the initial site to ship without browser-side JavaScript. It also leaves a direct path to a future Markdown-based blog.
 
-## ADR-002: Bilingual route structure
+## ADR-002: Language route structure
 
 Status: Accepted
 
-English lives at the root and Japanese under `/ja/`. Separate static routes are predictable, indexable, and do not require runtime language detection.
+English lives at the root and Japanese under `/ja/`. The planned Vietnamese extension adds `/vi/` with equivalent profile and publications pages (2026-09-10). Separate static routes are predictable, indexable, and do not require runtime language detection.
 
 ## ADR-003: GitHub Actions deployment
 
@@ -22,7 +22,7 @@ Status: Accepted
 
 Status: Accepted
 
-The site uses curated local data derived from the supplied researchmap export. Runtime fetching is avoided for speed and reliability. Only publicly disclosed records are eligible, and the source export itself is not published. User-confirmed corrections override imported values. Japanese-language research titles remain in their original language on the English site, while surrounding profile labels and metadata may be translated when the meaning is clear.
+The site uses curated local data derived from the supplied researchmap export. Runtime fetching is avoided for speed and reliability. Only publicly disclosed records are eligible, and the source export itself is not published. User-confirmed corrections override imported values. Publication and presentation titles, author names/order, venue names, and publisher names retain source-authentic wording across every language page. English titles remain English and Japanese titles remain Japanese. Surrounding interface labels, profile prose, date formatting, and editorial publication status may be localized without changing facts.
 
 ## ADR-005: Compact achievement presentation
 
@@ -41,3 +41,13 @@ The light visual system uses white, charcoal, and one muted antique-gold accent 
 Status: Accepted
 
 Dark mode uses CSS `prefers-color-scheme` with warm charcoal surfaces and a lighter gold accent. System preference remains the default, while a compact header menu provides persistent System, Light, and Dark overrides. The small script applies a saved preference before rendering to avoid a color flash; with JavaScript unavailable, the site falls back to the fully functional system-responsive theme. Separate theme routes are avoided because they would duplicate content, metadata, and maintenance work.
+
+## ADR-008: Vietnamese interface with shared research records
+
+Status: Accepted design; implementation pending (2026-09-10)
+
+Add Vietnamese profile and publications routes using the existing shared Astro components and visual system. Replace the binary language link with visible `English / 日本語 / Tiếng Việt` links to equivalent pages. Keep navigation static and avoid automatic language detection or redirects.
+
+Separate translated interface/profile copy from original bibliographic fields. Maintain one shared set of papers and MISC records rather than copying records into a Vietnamese dataset. Select source-authentic fields explicitly; the page locale must not select an alternative translated title or author spelling. Review ambiguous imported variants against disclosed source content before migration, without inventing an original language from the field key alone.
+
+See [Vietnamese language support](VIETNAMESE_DESIGN.md) for the content boundary, route behavior, implementation sequence, and acceptance criteria. This milestone changes documentation only; site implementation follows a later request.

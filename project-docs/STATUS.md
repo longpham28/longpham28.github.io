@@ -1,12 +1,16 @@
 # Project status
 
-Last updated: 2026-09-09
+Last updated: 2026-09-10
 
 ## Current phase
 
 Initial implementation, validation, and deployment are complete. The Astro site is live at https://longpham28.github.io/, and GitHub Pages now uses GitHub Actions as its publishing source.
 
+Vietnamese support is now designed in [VIETNAMESE_DESIGN.md](VIETNAMESE_DESIGN.md). This is a documentation-only milestone: the site still has English and Japanese routes; Vietnamese content, routes, and the research-field migration are not implemented.
+
 ## Completed
+
+- Documented Vietnamese routes, three-language navigation, translation boundaries, shared original-language research records, and implementation acceptance criteria (2026-09-10).
 
 - Updated the ICADL 2026 venue in both languages to “Proceedings of the 28th International Conference on Asia-Pacific Digital Libraries (ICADL 2026)” at the user's request.
 - Added the user-supplied ICADL 2026 paper to the shared publication data, bringing the paper count to 13, with “To appear.” / “掲載予定” shown on both home and publications pages.
@@ -42,14 +46,17 @@ Initial implementation, validation, and deployment are complete. The Astro site 
 
 ## Next steps
 
-1. Confirm the GitHub Pages workflow publishes the latest layout and biography refinements.
+1. On a subsequent implementation request, follow `VIETNAMESE_DESIGN.md`: verify original bibliographic fields, add Vietnamese interface/profile copy and routes, update navigation/metadata, then validate all three languages.
+
+2. Confirm the GitHub Pages workflow publishes the latest layout and biography refinements.
    After deployment, complete HTML-tag verification in Google Search Console and submit the existing `sitemap.xml`.
-2. Perform optional visual review and content corrections after publication.
-3. Add a photographic portrait or blog only when those features are intentionally brought into scope.
+3. Perform optional visual review and content corrections after publication.
+4. Add a photographic portrait or blog only when those features are intentionally brought into scope.
 
 ## Important constraints
 
 - Do not publish the raw researchmap export.
-- Keep English and Japanese content aligned.
+- Keep English and Japanese content aligned; extend the same factual and structural parity to Vietnamese when implemented.
+- Preserve original-language research records across every language page.
 - Keep browser-side JavaScript limited to the theme-preference control unless a future feature clearly requires more.
 - Use atomic Conventional Commits.
