@@ -10,6 +10,8 @@ Vietnamese support is implemented, validated, and published on 2026-09-10, follo
 
 ## Completed
 
+- Removed GitHub and ORCID profile links from all language pages and shared Person metadata at the user’s request; retained researchmap.
+
 - Kept `Hữu Long` together in the Vietnamese profile heading, allowing wrapping only after `Phạm`.
 
 - Shortened the Vietnamese role to `Giáo sư trợ lý` in the profile, biography, and experience at the user’s request.

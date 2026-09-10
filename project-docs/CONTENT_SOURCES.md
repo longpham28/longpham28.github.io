@@ -26,6 +26,8 @@ Last reviewed: 2026-09-10
 
 ## Content intentionally omitted
 
+- GitHub and ORCID profile links (removed from page content and Person metadata at the user’s request, 2026-09-10)
+
 - Photographic portrait
 - Email address
 - Non-public researchmap fields

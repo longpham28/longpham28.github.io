@@ -27,8 +27,6 @@ export const profile = {
     ja: "筑波大学図書館情報メディア系の特任助教です。情報検索と機械学習を基盤に、特に機械学習モデルの検索に取り組んでいます。",
   },
   links: [
-    { label: "GitHub", href: "https://github.com/longpham28" },
-    { label: "ORCID", href: "https://orcid.org/0009-0002-4857-7004" },
     { label: "researchmap", href: "https://researchmap.jp/huulongpham" },
   ],
   memberships: [

@@ -39,7 +39,7 @@ Blog functionality is explicitly out of scope for the initial release. The struc
 7. Research experience and education
 8. Awards and academic service
 9. Academic memberships
-10. Links to GitHub, ORCID, and researchmap
+10. Link to researchmap; omit GitHub and ORCID profile links at the user’s request
 
 An illustrated avatar is included on all language home pages. No photographic portrait or email address is included. The affiliation does not need to be linked.
 The affiliated laboratory, KASYS, is linked from the profile details on all language home pages.
