@@ -2,6 +2,7 @@
 import { routes } from "../lib/i18n";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PublicationItem from "./PublicationItem.astro";
+import PresentationsSection from "./PresentationsSection.astro";
 import { groupByYear, research, type Locale, type Publication } from "../lib/content";
 import { profile } from "../data/profile";
 
@@ -48,5 +49,6 @@ const labels = copy[locale];
       </details>
     </div>
   </section>
+  <PresentationsSection locale={locale} number="03" />
   <div class="shell page-end"><a class="text-link" href={routes.home[locale]}><span aria-hidden="true">←</span>{labels.back}</a></div>
 </BaseLayout>

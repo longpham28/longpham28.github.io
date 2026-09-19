@@ -2,6 +2,7 @@
 import { routes, ui } from "../lib/i18n";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PublicationItem from "./PublicationItem.astro";
+import PresentationsSection from "./PresentationsSection.astro";
 import Timeline from "./Timeline.astro";
 import { Image } from "astro:assets";
 import avatar from "../assets/avatar.png";
@@ -90,8 +91,10 @@ const labels = copy[locale];
     </div>
   </section>
 
+  <PresentationsSection locale={locale} number="04" />
+
   <section class="section shell" id="cv">
-    <div class="section-heading"><p class="section-number">04</p><h2>{labels.cv}</h2></div>
+    <div class="section-heading"><p class="section-number">05</p><h2>{labels.cv}</h2></div>
     <div class="section-body split-grid">
       <div><h3 class="minor-heading">{labels.experience}</h3><Timeline items={research.experience} locale={locale} /></div>
       <div><h3 class="minor-heading">{labels.education}</h3><Timeline items={research.education} locale={locale} /></div>
@@ -99,7 +102,7 @@ const labels = copy[locale];
   </section>
 
   <section class="section shell" id="recognition">
-    <div class="section-heading"><p class="section-number">05</p><h2>{labels.recognition}</h2></div>
+    <div class="section-heading"><p class="section-number">06</p><h2>{labels.recognition}</h2></div>
     <div class="section-body split-grid">
       <div>
         <h3 class="minor-heading">{labels.awards}</h3>

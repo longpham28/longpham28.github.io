@@ -21,7 +21,7 @@ const socialImageAlt = labels.social;
 const home = routes.home[locale];
 const publications = routes.publications[locale];
 const equivalents = routes[page ?? "home"];
-const fragments = page === "home" ? ["", "about", "research", "publications", "cv", "recognition"] : [""];
+const fragments = page === "home" ? ["", "about", "research", "publications", "talks", "cv", "recognition"] : page === "publications" ? ["", "talks"] : [""];
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Person",

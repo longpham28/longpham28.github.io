@@ -1,0 +1,32 @@
+---
+import presentations from "../data/presentations.json";
+import { formatDate, isSelf, type Locale } from "../lib/content";
+
+interface Props { locale: Locale; number: string }
+const { locale, number } = Astro.props;
+const labels = {
+  en: { heading: "Talks & tutorials", speakers: "Instructors", official: "Official program" },
+  ja: { heading: "講演・講習会", speakers: "講師", official: "公式プログラム" },
+  vi: { heading: "Bài nói chuyện và hướng dẫn", speakers: "Giảng viên", official: "Chương trình chính thức" },
+}[locale];
+---
+
+<section class="section shell" id="talks">
+  <div class="section-heading"><p class="section-number">{number}</p><h2>{locale === "ja" ? <><span class="presentation-heading-part">講演・</span><wbr /><span class="presentation-heading-part">講習会</span></> : labels.heading}</h2></div>
+  <div class="section-body publication-list">
+    {presentations.map((item) => (
+      <article class="publication" data-presentation-id={item.id}>
+        <p class="publication-date"><time datetime={item.date}>{formatDate(item.date, locale)}</time></p>
+        <div>
+          <h3 lang={item.language}><a href={item.url}>{item.title}</a></h3>
+          <p class="authors">{labels.speakers}: <span lang={item.language}>{item.speakers.map((name, index) => (
+            <>{isSelf(name) ? <strong>{name}</strong> : name}{index < item.speakers.length - 1 ? ", " : ""}</>
+          ))}</span></p>
+          <p class="publication-meta" lang={item.language}><cite>{item.event}</cite></p>
+          <p class="publication-meta" lang={item.language}>{item.location}</p>
+          <p class="publication-meta"><a href={item.officialUrl}>{labels.official}</a></p>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

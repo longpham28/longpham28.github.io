@@ -1,7 +1,7 @@
 # Website specification
 
 Status: English, Japanese, and Vietnamese implemented and published
-Last updated: 2026-09-10
+Last updated: 2026-09-19
 
 ## Purpose
 
@@ -36,6 +36,7 @@ Blog functionality is explicitly out of scope for the initial release. The struc
 4. Concise biography
 5. Research interests
 6. The three most recent published papers
+   - A separate talks and tutorials section follows the recent papers.
 7. Research experience and education
 8. Awards and academic service
 9. Academic memberships
@@ -65,6 +66,7 @@ Tôi hiện là giáo sư trợ lý tại Institute of Library, Information and 
 - Show the three newest papers on each home page.
 - Show all published papers on the publications pages, grouped by year in descending order.
 - Show all MISC records in a compact, initially collapsed section, grouped by year.
+- Show talks and tutorials in a separate, expanded section on each profile and publications page. Preserve original titles, speaker names/order, event names, and locations across languages; localize headings, role labels, and dates. Link the tutorial website and official program.
 - Use native HTML disclosure elements where collapsing is useful; do not add JavaScript for this behavior.
 - Show titles prominently and keep authors, venue, date, volume, pages, and DOI compact.
 - Preserve publication and presentation titles in their original language across all language versions: English stays English and Japanese stays Japanese.

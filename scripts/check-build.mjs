@@ -5,6 +5,7 @@ const root = new URL("../dist/", import.meta.url);
 const origin = "https://longpham28.github.io";
 const paths = ["/", "/ja/", "/vi/", "/publications/", "/ja/publications/", "/vi/publications/"];
 const files = new Map();
+const presentations = JSON.parse(await readFile(new URL("../src/data/presentations.json", import.meta.url), "utf8"));
 for (const path of [...paths, "/404.html"]) files.set(path, await readFile(new URL(path === "/404.html" ? "404.html" : `${path.slice(1)}index.html`, root), "utf8"));
 const attribute = (tag, name) => tag.match(new RegExp(`(?:^|\\s)${name}="([^"]*)"`))?.[1];
 const tags = (html, name) => html.match(new RegExp(`<${name}\\b[^>]*>`, "g")) ?? [];
@@ -30,6 +31,15 @@ for (const [path, html] of files) {
     const records = recordParts(html);
     assert.equal(records.length, suffix ? 26 : 3);
     assert.deepEqual(records, recordParts(files.get(suffix ? "/publications/" : "/")), `Bibliography parity: ${path}`);
+    const talks = [...html.matchAll(/<article\b[^>]*data-presentation-id="([^"]+)"[^>]*>(.*?)<\/article>/gs)];
+    assert.equal(talks.length, presentations.length, `Presentation count: ${path}`);
+    for (const item of presentations) {
+      const talk = talks.find(([, id]) => id === item.id)?.[2];
+      assert(talk, `Missing presentation ${item.id}: ${path}`);
+      for (const value of [item.title, ...item.speakers, item.event, item.location, `datetime="${item.date}"`, `href="${item.url}"`, `href="${item.officialUrl}"`]) {
+        assert(talk.includes(value), `Presentation content ${item.id}: ${path}: ${value}`);
+      }
+    }
   }
   for (const tag of tags(html, "a")) {
     const href = attribute(tag, "href");

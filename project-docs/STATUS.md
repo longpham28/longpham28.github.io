@@ -1,6 +1,6 @@
 # Project status
 
-Last updated: 2026-09-10
+Last updated: 2026-09-19
 
 ## Current phase
 
@@ -9,6 +9,9 @@ Initial implementation, validation, and deployment are complete. The Astro site 
 Vietnamese support is implemented, validated, and published on 2026-09-10, following [VIETNAMESE_DESIGN.md](VIETNAMESE_DESIGN.md). The site now builds English, Japanese, and Vietnamese profile/publications pages plus the shared 404. GitHub Pages deployment of `a7e9d3e` succeeded (Actions run `34420638004`); live Vietnamese profile and publications pages were verified, including all requested terminology, name spelling, and wrapping corrections.
 
 ## Completed
+
+- Added the HI2026 course 3 tutorial (2026-09-16) to researchmap's public 講演・口頭発表等 category as record `54997475` (2026-09-19). Added a shared talks/tutorials section to all six site content pages, with original Japanese title/speakers and links to the tutorial website and official program. The presentation dataset is manually curated separately from the existing researchmap importer.
+- Passed content validation, the seven-page production build, and built-page checks including tutorial content across all three languages. Reviewed the new Japanese profile section in the browser and preserved section-targeted language switching.
 
 - Updated the shared avatar with the user-supplied replacement image (2026-09-10); verified the production build and optimized WebP asset for all three profile pages.
 

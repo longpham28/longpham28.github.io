@@ -1,0 +1,14 @@
+[
+  {
+    "id": "54997475",
+    "researchmapUrl": "https://researchmap.jp/huulongpham/presentations/54997475",
+    "title": "LLM活用入門から応用まで：プロンプト設計・LoRA・RAG",
+    "speakers": ["三林 亮太", "ファム フーロン"],
+    "date": "2026-09-16",
+    "event": "ヒューマンインタフェースシンポジウム2026 講習会 コース3",
+    "location": "岡山大学 津島キャンパス",
+    "language": "ja",
+    "url": "https://sloth-babies.github.io/hi2026-tutorial-llm/",
+    "officialUrl": "https://jp.his.gr.jp/symposium/hi2026-lectures/"
+  }
+]

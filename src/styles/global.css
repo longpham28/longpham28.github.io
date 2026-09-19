@@ -123,6 +123,7 @@ h1, h2 { font-family: ui-serif, Georgia, "Noto Serif JP", serif; font-weight: 50
 .field-name span { display: block; margin-top: .45rem; color: var(--muted); font-family: ui-sans-serif, sans-serif; font-size: .8rem; }
 
 .publication-list { border-top: 1px solid var(--ink); }
+.presentation-heading-part { display: inline-block; }
 .publication { display: grid; grid-template-columns: 7rem minmax(0, 1fr); gap: 1.25rem; padding-block: 1.5rem; border-bottom: 1px solid var(--line); }
 .publication-date { margin: .2rem 0 0; color: var(--muted); font-size: .78rem; font-variant-numeric: tabular-nums; }
 .publication h3 { margin: 0 0 .55rem; font-family: ui-serif, Georgia, "Noto Serif JP", serif; font-size: clamp(1.08rem, 2vw, 1.3rem); font-weight: 500; line-height: 1.45; }
@@ -225,6 +226,8 @@ body:has(#research:target) .language-group[data-fragment=""] { display: none; }
 body:has(#research:target) .language-group[data-fragment="research"] { display: flex; }
 body:has(#publications:target) .language-group[data-fragment=""] { display: none; }
 body:has(#publications:target) .language-group[data-fragment="publications"] { display: flex; }
+body:has(#talks:target) .language-group[data-fragment=""] { display: none; }
+body:has(#talks:target) .language-group[data-fragment="talks"] { display: flex; }
 body:has(#cv:target) .language-group[data-fragment=""] { display: none; }
 body:has(#cv:target) .language-group[data-fragment="cv"] { display: flex; }
 body:has(#recognition:target) .language-group[data-fragment=""] { display: none; }

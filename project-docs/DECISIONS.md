@@ -51,3 +51,9 @@ Add Vietnamese profile and publications routes using the existing shared Astro c
 Separate translated interface/profile copy from original bibliographic fields. Maintain one shared set of papers and MISC records rather than copying records into a Vietnamese dataset. Select source-authentic fields explicitly; the page locale must not select an alternative translated title or author spelling. Review ambiguous imported variants against disclosed source content before migration, without inventing an original language from the field key alone.
 
 See [Vietnamese language support](VIETNAMESE_DESIGN.md) for the content boundary, route behavior, implementation sequence, and acceptance criteria. The implementation uses field-specific original bibliography values and static language links, including CSS-selected links that preserve targeted profile sections without additional JavaScript.
+
+## ADR-009: Talks and tutorials
+
+Status: Accepted (2026-09-19)
+
+Represent tutorial teaching as a presentation, matching researchmap's 講演・口頭発表等 category. Store these records in a shared `src/data/presentations.json` file and render an expanded section on all profile and publications pages. Keep paper/MISC counts and committee roles distinct. Titles, speakers, events, and locations retain original wording across languages. New records are registered in researchmap first and reconciled manually; the existing researchmap importer does not handle presentations. This adds no browser-side JavaScript.
