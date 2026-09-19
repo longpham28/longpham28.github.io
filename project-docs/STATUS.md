@@ -4,6 +4,8 @@ Last updated: 2026-09-19
 
 ## Current phase
 
+The HI2026 tutorial achievement is registered publicly in researchmap and published on the three-language website (2026-09-19). GitHub Pages deployment of `c68f0f9` succeeded in Actions run `35435787938`; the live Japanese profile's talks section was verified.
+
 Initial implementation, validation, and deployment are complete. The Astro site is live at https://longpham28.github.io/, and GitHub Pages now uses GitHub Actions as its publishing source.
 
 Vietnamese support is implemented, validated, and published on 2026-09-10, following [VIETNAMESE_DESIGN.md](VIETNAMESE_DESIGN.md). The site now builds English, Japanese, and Vietnamese profile/publications pages plus the shared 404. GitHub Pages deployment of `a7e9d3e` succeeded (Actions run `34420638004`); live Vietnamese profile and publications pages were verified, including all requested terminology, name spelling, and wrapping corrections.
